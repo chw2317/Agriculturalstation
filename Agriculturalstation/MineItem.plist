@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>个人信息</string>
+		<key>icon</key>
+		<string>ic_mine_1-Small.png</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>发布的任务</string>
+		<key>icon</key>
+		<string>ic_mine_2-Small.png</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>账户信息</string>
+		<key>icon</key>
+		<string>ic_mine_3-Small.png</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>身份认证</string>
+		<key>icon</key>
+		<string>ic_mine_4-Small.png</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>收支明细</string>
+		<key>icon</key>
+		<string>ic_mine_5-Small.png</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>密码管理</string>
+		<key>icon</key>
+		<string>ic_mine_6-Small.png</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>我的消息</string>
+		<key>icon</key>
+		<string>ic_mine_7-Small.png</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>奖罚制度</string>
+		<key>icon</key>
+		<string>ic_mine_8-Small.png</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>安全退出</string>
+		<key>icon</key>
+		<string>ic_mine_9-Small.png</string>
+	</dict>
+</array>
+</plist>
