@@ -18,7 +18,7 @@
 #import "JLPWDManagementViewController.h"
 #import "JLMineMessagesViewController.h"
 #import "JLRewardsSystemViewController.h"
-//#import "UIImageView+WebCache.h"
+#import "UIImageView+WebCache.h"
 
 @interface JLMineViewController ()<UITableViewDelegate,UITableViewDataSource>{
     UITableView *_tableView;
@@ -141,8 +141,8 @@
     }
 //    NSLog(@"REQUEST_URL=%s",REQUEST_URL);
     // 头像，给一张默认图片，先使用默认图片，当图片加载完成后再替换
-//    [avatarImg sd_setImageWithURL:[NSURL URLWithString:[@"http://rifeng.weixinbm.com/" stringByAppendingString:avatarStr]] placeholderImage:[UIImage imageNamed:@"user_avatar.png"]];
-    avatarImg.image = [UIImage imageNamed:@"user_avatar.png"];
+    [avatarImg sd_setImageWithURL:[NSURL URLWithString:[@"http://rifeng.weixinbm.com/" stringByAppendingString:avatarStr]] placeholderImage:[UIImage imageNamed:@"user_avatar.png"]];
+//    avatarImg.image = [UIImage imageNamed:@"user_avatar.png"];
     // 用户名
     userNameLabel.text = [@"用户名：" stringByAppendingString:NULLString(userNameStr)?@"":userNameStr];
     userNameLabel.hidden = !_isLogin;
