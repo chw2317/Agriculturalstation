@@ -9,6 +9,9 @@
 #import "JLLoginViewController.h"
 #import "JLRegisterViewController.h"
 #import "JLForgetPWDViewController.h"
+#import "AFNetworking.h"
+#import "MBProgressHUD.h"
+#import "MBProgressHUD+MJ.h"
 
 @interface JLLoginViewController (){
     UIImageView *_loginLogoLeft; // 左侧Logo
@@ -137,7 +140,50 @@
 
 // 发送数据到服务器进行登录
 -(void)login{
-    NSLog(@"登录");
+    // 显示MBProgressHUD
+    [MBProgressHUD showMessage:@"正在登录..."];
+    // 请求地址
+    NSString *url = @"http://rifeng.weixinbm.com/app-login-op-login.html";
+    // 请求管理者
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
+    // 拼接请求参数
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"username"] = _userName.text;
+    parameters[@"password"] = _passWord.text;
+    // 发起请求
+    [manager POST:url parameters:parameters progress:^(NSProgress *_Nonnull uploadProgress){
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
+        NSDictionary *resultArray = responseObject;
+        // 隐藏MBProgressHUD
+        [MBProgressHUD hideHUD];
+        if([resultArray[@"result"] intValue] == 1){ // 登录成功
+            //弹出“登录成功”的提示；
+            [MBProgressHUD showSuccess:@"登录成功"];
+            // 记录用户登录状态
+            // 获取NSUserDefault单例
+            NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+            // 登录成功后把用户相关信息存储到userDefault
+            [userDefaults setObject:resultArray[@"uid"] forKey:@"uid"]; // uid
+            [userDefaults setObject:resultArray[@"username"] forKey:@"username"]; // 用户名
+            [userDefaults setObject:resultArray[@"phone"] forKey:@"phone"]; // 手机号
+            [userDefaults setObject:resultArray[@"avatar"] forKey:@"avatar"]; // 头像
+            [userDefaults setObject:resultArray[@"regtype"] forKey:@"regtype"]; // 注册类型，农场主 1/农机主 2
+            [userDefaults synchronize];
+            
+            // 登录成功，返回上一页面
+            [self.navigationController popViewControllerAnimated:YES];
+        }else{ // 登录失败
+            //弹出“登录失败”的提示；
+            [MBProgressHUD showError:resultArray[@"msg"]];
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
+        // 隐藏MBProgressHUD
+        [MBProgressHUD hideHUD];
+        //同时弹出“登录失败”的提示；
+        [MBProgressHUD showError:@"登录失败"];
+    }];
 }
 
 // 跳转到忘记密码界面

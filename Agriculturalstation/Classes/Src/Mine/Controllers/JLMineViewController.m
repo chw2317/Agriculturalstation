@@ -18,11 +18,19 @@
 #import "JLPWDManagementViewController.h"
 #import "JLMineMessagesViewController.h"
 #import "JLRewardsSystemViewController.h"
+//#import "UIImageView+WebCache.h"
 
 @interface JLMineViewController ()<UITableViewDelegate,UITableViewDataSource>{
     UITableView *_tableView;
-    BOOL _isLogin; // 记录用户是否登陆了
+    BOOL _isLogin; // 记录用户是否登陆了 true 登录了 false 未登录
     NSArray *_viewModelIndex; // 存放要跳转的Controller
+    UIImageView *avatarImg; // 头像
+    UILabel *userNameLabel; // 用户名
+    UILabel *phoneNumberLabel; // 手机号码
+    UIButton *fillInfoBtn; // 完善资料
+    UIButton *goLoginBtn; // 去登录
+    NSUserDefaults *userDefaults;
+    
 }
 @property (nonatomic, strong)NSArray *mineArray;
 @end
@@ -49,30 +57,49 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _isLogin = false;
+    // 获取userDefaults
+    userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *userNameStr = [userDefaults objectForKey:@"username"];
+    NSString *phoneStr = @"";
+    NSString *avatarStr = @"";
+    if(NULLString(userNameStr)){
+        _isLogin = false;
+    }else{
+        _isLogin = true;
+        phoneStr = [userDefaults objectForKey:@"phone"];
+        avatarStr = [userDefaults objectForKey:@"avatar"];
+    }
+    NSLog(@"我的......");
+    
     // 拿出xib视图
     NSArray *mineInfoXib = [[NSBundle mainBundle]loadNibNamed:@"JLMineInfo" owner:nil options:nil];
     UIView *mineInfoView = [mineInfoXib firstObject];
-    // 头像
-    UIImageView *avatarImg = (UIImageView *)[mineInfoView viewWithTag:1];
-    avatarImg.image = [UIImage imageNamed:@"user_avatar.png"];
-    // 用户名
-    UILabel *userNameLabel = (UILabel *)[mineInfoView viewWithTag:2];
-    userNameLabel.text = @"用户名：hanwen";
-    userNameLabel.hidden = !_isLogin;
-    // 手机号码
-    UILabel *phoneNumberLabel = (UILabel *)[mineInfoView viewWithTag:3];
-    phoneNumberLabel.text = @"130****8823";
-    phoneNumberLabel.hidden = !_isLogin;
-    // 完善资料
-    UIButton *fillInfoBtn = (UIButton *)[mineInfoView viewWithTag:4];
-    [fillInfoBtn addTarget:self action:@selector(goToPerfectInfo) forControlEvents:UIControlEventTouchUpInside];
-    fillInfoBtn.hidden = !_isLogin;
-    // 去登陆
-    UIButton *goLoginBtn = (UIButton *)[mineInfoView viewWithTag:5];
-    [goLoginBtn addTarget:self action:@selector(goToLogin) forControlEvents:UIControlEventTouchUpInside];
-    goLoginBtn.hidden = _isLogin;
     
+    // 头像
+    avatarImg = (UIImageView *)[mineInfoView viewWithTag:1];
+//    avatarImg.image = [UIImage imageNamed:@"user_avatar.png"];
+    
+    // 用户名
+    userNameLabel = (UILabel *)[mineInfoView viewWithTag:2];
+//    userNameLabel.text = [@"用户名：" stringByAppendingString:NULLString(userNameStr)?@"":userNameStr];
+//    userNameLabel.text = @"用户名：hanwen";
+//    userNameLabel.hidden = !_isLogin;
+    
+    // 手机号码
+    phoneNumberLabel = (UILabel *)[mineInfoView viewWithTag:3];
+//    phoneNumberLabel.text = phoneStr;
+//    phoneNumberLabel.text = @"130****8823";
+//    phoneNumberLabel.hidden = !_isLogin;
+    
+    // 完善资料
+    fillInfoBtn = (UIButton *)[mineInfoView viewWithTag:4];
+//    [fillInfoBtn addTarget:self action:@selector(goToPerfectInfo) forControlEvents:UIControlEventTouchUpInside];
+//    fillInfoBtn.hidden = !_isLogin;
+    
+    // 去登陆
+    goLoginBtn = (UIButton *)[mineInfoView viewWithTag:5];
+//    [goLoginBtn addTarget:self action:@selector(goToLogin) forControlEvents:UIControlEventTouchUpInside];
+//    goLoginBtn.hidden = _isLogin;
     
     // 创建一个分组样式的UITableView
     _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
@@ -98,6 +125,36 @@
     JLMineItemViewModel *viewModel7 = [JLMineItemViewModel initTitle:@"我的消息" controllerClass:[JLMineMessagesViewController class]];
     JLMineItemViewModel *viewModel8 = [JLMineItemViewModel initTitle:@"奖罚制度" controllerClass:[JLRewardsSystemViewController class]];
     _viewModelIndex = @[viewModel1,viewModel2,viewModel3,viewModel4,viewModel5,viewModel6,viewModel7,viewModel8];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    NSLog(@"我被执行了，我是viewWillAppear...");
+    NSString *userNameStr = [userDefaults objectForKey:@"username"];
+    NSString *phoneStr = @"";
+    NSString *avatarStr = @"";
+    if(NULLString(userNameStr)){
+        _isLogin = false;
+    }else{
+        _isLogin = true;
+        phoneStr = [userDefaults objectForKey:@"phone"];
+        avatarStr = [userDefaults objectForKey:@"avatar"];
+    }
+//    NSLog(@"REQUEST_URL=%s",REQUEST_URL);
+    // 头像，给一张默认图片，先使用默认图片，当图片加载完成后再替换
+//    [avatarImg sd_setImageWithURL:[NSURL URLWithString:[@"http://rifeng.weixinbm.com/" stringByAppendingString:avatarStr]] placeholderImage:[UIImage imageNamed:@"user_avatar.png"]];
+    avatarImg.image = [UIImage imageNamed:@"user_avatar.png"];
+    // 用户名
+    userNameLabel.text = [@"用户名：" stringByAppendingString:NULLString(userNameStr)?@"":userNameStr];
+    userNameLabel.hidden = !_isLogin;
+    // 手机号码
+    phoneNumberLabel.text = phoneStr;
+    phoneNumberLabel.hidden = !_isLogin;
+    // 完善资料
+    fillInfoBtn.hidden = !_isLogin;
+    [fillInfoBtn addTarget:self action:@selector(goToPerfectInfo) forControlEvents:UIControlEventTouchUpInside];
+    // 去登录
+    goLoginBtn.hidden = _isLogin;
+    [goLoginBtn addTarget:self action:@selector(goToLogin) forControlEvents:UIControlEventTouchUpInside];
 }
 
 // 跳转到完善资料界面
@@ -185,6 +242,17 @@
         vc.title = viewModel.title;
         // 3.跳转
         [self.navigationController pushViewController:vc animated:YES];
+    }else{
+        NSLog(@"安全退出...");
+        // 移除userDefault中存储的用户信息
+//        userDefaults = [NSUserDefaults standardUserDefaults];
+        [userDefaults removeObjectForKey:@"uid"];
+        [userDefaults removeObjectForKey:@"username"];
+        [userDefaults removeObjectForKey:@"phone"];
+        [userDefaults removeObjectForKey:@"avatar"];
+        [userDefaults removeObjectForKey:@"regtype"];
+        [userDefaults synchronize];
+        [self.navigationController pushViewController:[[JLLoginViewController alloc]init] animated:YES];
     }
 }
 

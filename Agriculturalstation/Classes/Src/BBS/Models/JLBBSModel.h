@@ -18,6 +18,7 @@
 @property (nonatomic, copy) NSString *content; // 内容
 @property (nonatomic, assign) int views; // 浏览量
 @property (nonatomic, copy) NSString *time; // 发布时间
+@property (nonatomic, copy) NSString *name;
 
 - (JLBBSModel *)initWithDictionary:(NSDictionary *)dict;
 + (JLBBSModel *)statusWithDictionary:(NSDictionary *)dict;

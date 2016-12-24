@@ -10,6 +10,8 @@
 #import "MJRefresh.h"
 #import "JLBBSModel.h"
 #import "JLBBSTagCell.h"
+#import "MJExtension.h"
+#import "AFNetworking.h"
 
 @interface JLBBSViewController ()<UITableViewDelegate,UITableViewDataSource>{
     UITableView *_tableView;
@@ -71,6 +73,7 @@
             // 结束刷新
             [_tableView.mj_header endRefreshing];
         });
+        [self sendRequest];
     }];
     
     // 设置自动切换透明度（在导航栏下面自动隐藏）
@@ -90,6 +93,29 @@
     NSLog(@"编辑...");
 }
 
+- (void)sendRequest{
+    // 请求地址
+    NSString *url = @"http://rifeng.weixinbm.com/app-forum-op-list.html";
+    // 请求管理者
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
+    // 拼接请求参数
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"uid"] = @"1";
+    // 发起请求
+    [manager POST:url parameters:parameters progress:^(NSProgress *_Nonnull uploadProgress){
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
+        NSLog(@"请求成功：%@",responseObject);
+        NSArray *bbsArray = [JLBBSModel mj_objectArrayWithKeyValuesArray:responseObject];
+        for(JLBBSModel *bbsModel in bbsArray){
+            NSLog(@"name=%@",bbsModel.name);
+        }
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
+        NSLog(@"请求失败:%@", error.description);
+    }];
+}
 
 #pragma mark - UITableView数据源方法
 // 返回分组数

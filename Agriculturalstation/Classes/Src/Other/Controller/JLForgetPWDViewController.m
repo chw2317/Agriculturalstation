@@ -7,6 +7,9 @@
 //
 
 #import "JLForgetPWDViewController.h"
+#import "AFNetworking.h"
+#import "MBProgressHUD.h"
+#import "MBProgressHUD+MJ.h"
 
 @interface JLForgetPWDViewController ()
 // 获取验证码
@@ -43,6 +46,9 @@
 
 // 获取验证码
 - (IBAction)getPhoneCode:(UIButton *)sender {
+    // 获取验证码
+//    [self sendRequest:@"code"];
+    
     __block int timeOut = 120; // 倒计时时间
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_source_t _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
@@ -81,8 +87,51 @@
         // 显示窗口
         [alert show];
     }else{
-        
+        [self sendRequest:@"modify"];
     }
+}
+
+- (void)sendRequest:(NSString *)type{
+    // 请求地址
+    NSString *url = @"";
+    // 请求管理者
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
+    // 拼接请求参数
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    
+    if([type isEqualToString:@"modify"]){ // 找回密码
+        // 显示MBProgressHUD
+        [MBProgressHUD showMessage:@"正在找回..."];
+        // 请求地址
+        url = @"http://rifeng.weixinbm.com/app-register-op-change.html";
+        // 拼接请求参数
+        parameters[@"phone"] = self._phoneNumber.text;
+        parameters[@"newpassword"] = self._passWord.text;
+    }else if ([type isEqualToString:@"code"]){ // 获取验证码
+        // 请求地址
+        url = @"http://rifeng.weixinbm.com/app-register-op-code.html";
+        // 拼接请求参数
+        parameters[@"phone"] = self._phoneNumber.text;
+    }
+    // 发起请求
+    [manager POST:url parameters:parameters progress:^(NSProgress *_Nonnull uploadProgress){
+        
+    } success:^(NSURLSessionDataTask *_Nonnull task, id _Nonnull responseObject){
+        if([type isEqualToString:@"modify"]){
+            // 隐藏MBProgressHUD
+            [MBProgressHUD hideHUD];
+            // 弹出“找回成功”的提示；
+            [MBProgressHUD showSuccess:@"找回成功"];
+            // 找回成功，返回上一页面
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
+        // 隐藏MBProgressHUD
+        [MBProgressHUD hideHUD];
+        // 同时弹出“找回失败”的提示；
+        [MBProgressHUD showError:@"找回失败"];
+    }];
 }
 @end
 

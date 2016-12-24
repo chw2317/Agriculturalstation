@@ -7,6 +7,9 @@
 //
 
 #import "JLRegisterViewController.h"
+#import "AFNetworking.h"
+#import "MBProgressHUD.h"
+#import "MBProgressHUD+MJ.h"
 
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width) // 屏幕宽度
 #define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height) // 屏幕高度
@@ -88,6 +91,9 @@
 
 // 获取手机验证码
 - (IBAction)getPhoneCode {
+    // 获取验证码
+//    [self sendRequest:@"code"];
+    
     __block int timeOut = 120; // 倒计时时间
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_source_t _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
@@ -131,9 +137,59 @@
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:nil message:@"请填写完整信息" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil, nil];
         // 显示窗口
         [alert show];
-    }else{
-        // 提交注册信息到服务器
+    }else{ // 提交注册信息到服务器        
+        [self sendRequest:@"register"];
     }
+}
+
+- (void)sendRequest:(NSString *)type{
+    // 请求地址
+    NSString *url = @"";
+    // 请求管理者
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
+    // 拼接请求参数
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+
+    if([type isEqualToString:@"register"]){ // 注册
+        // 显示MBProgressHUD
+        [MBProgressHUD showMessage:@"正在注册..."];
+        // 请求地址
+        url = @"http://rifeng.weixinbm.com/app-register-op-register.html";
+        // 拼接请求参数
+        parameters[@"regtype"] = @([_guildStr intValue]+1);
+        parameters[@"usertype"] = @([_guildStr intValue]+1);
+        parameters[@"username"] = self._userName.text;
+        parameters[@"password"] = self._passWord.text;
+        parameters[@"phone"] = self._phoneNumber.text;
+    }else if ([type isEqualToString:@"code"]){ // 获取验证码
+        // 请求地址
+        url = @"http://rifeng.weixinbm.com/app-register-op-code.html";
+        // 拼接请求参数
+        parameters[@"phone"] = self._phoneNumber.text;
+    }
+    // 发起请求
+    [manager POST:url parameters:parameters progress:^(NSProgress *_Nonnull uploadProgress){
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
+        if([type isEqualToString:@"register"]){ // 注册
+            NSLog(@"注册成功：%@",responseObject);
+            // 隐藏MBProgressHUD
+            [MBProgressHUD hideHUD];
+            //弹出“注册成功”的提示；
+            [MBProgressHUD showSuccess:@"注册成功"];
+            // 注册成功，返回上一页面
+            [self.navigationController popViewControllerAnimated:YES];
+        }else if([type isEqualToString:@"code"]){ // 获取验证码
+            
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
+        NSLog(@"注册失败:%@", error.description);
+        // 隐藏MBProgressHUD
+        [MBProgressHUD hideHUD];
+        //同时弹出“注册失败”的提示；
+        [MBProgressHUD showError:@"注册失败"];
+    }];
 }
 
 // 去登录
@@ -221,7 +277,7 @@
     }else{
         [self._userTypeBtn setTitle:_selectStr forState:UIControlStateNormal];
     }
-    NSLog(@"选择了---->%@",_selectStr);
+    NSLog(@"选择了---->%@，下标是--->%@",_selectStr,_guildStr);
 //    [self.view removeFromSuperview];
     [_bgButton removeFromSuperview];
 }
@@ -247,7 +303,8 @@
 
 // 返回选中的行
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-    _guildStr = @"1";
+//    _guildStr = @"1";
+    _guildStr = [NSString stringWithFormat:@"%d",row];
     if([_type isEqualToString:@"regType"]){
         _selectStr = [NSString stringWithFormat:@"%@",[_regTypeArray objectAtIndex:row]];
     }else{

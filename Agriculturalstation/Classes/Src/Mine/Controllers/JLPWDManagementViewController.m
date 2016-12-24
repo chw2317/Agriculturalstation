@@ -9,6 +9,9 @@
 // 密码管理
 
 #import "JLPWDManagementViewController.h"
+#import "AFNetworking.h"
+#import "MBProgressHUD.h"
+#import "MBProgressHUD+MJ.h"
 
 @interface JLPWDManagementViewController ()
 // 确认修改
@@ -34,11 +37,51 @@
 // 确认修改
 - (IBAction)confirmModify {
     if(NULLString(self._oldPassWord.text) || NULLString(self._passWord.text) || NULLString(self._confirmPassWord.text)){
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:nil message:@"请填写完整信息" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil, nil];
-        [alert show];
+        [self showAlert:@"请填写完整信息"];
+    }else if(![self._passWord.text isEqualToString:self._confirmPassWord.text]){
+        [self showAlert:@"两次密码输入不一致"];
     }else{
-        
+        // 获取userDefaults
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        // 获取用户的uid
+        NSString *uid = [userDefaults objectForKey:@"uid"];
+        // 显示MBProgressHUD
+        [MBProgressHUD showMessage:nil];
+        // 请求地址
+        NSString *url = @"http://rifeng.weixinbm.com/app-personalinfo-op-password.html";
+        // 请求管理者
+        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+        manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
+        // 拼接请求参数
+        NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+        parameters[@"uid"] = uid;
+        NSLog(@"uid=%@",uid);
+        parameters[@"oldpwd"] = self._oldPassWord.text;
+        parameters[@"newpwd"] = self._passWord.text;
+        // 发起请求
+        [manager POST:url parameters:parameters progress:^(NSProgress *_Nonnull uploadProgress){
+            
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
+            // 隐藏MBProgressHUD
+            [MBProgressHUD hideHUD];
+            // 弹出服务器返回的提示；
+            [MBProgressHUD showSuccess:responseObject[@"msg"]];
+            if([responseObject[@"result"] intValue] > 0){ // 修改成功
+                // 修改成功，返回上一页面
+                [self.navigationController popViewControllerAnimated:YES];
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
+            // 隐藏MBProgressHUD
+            [MBProgressHUD hideHUD];
+            //同时弹出“修改失败”的提示；
+            [MBProgressHUD showError:@"修改失败"];
+        }];
     }
+}
+
+- (void)showAlert:(NSString *)msg{
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:nil message:msg delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil, nil];
+    [alert show];
 }
 @end
 

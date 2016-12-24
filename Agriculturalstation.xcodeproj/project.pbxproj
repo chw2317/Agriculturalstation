@@ -7,7 +7,66 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		62178B511E09844B00A2F649 /* JLReleaseTaskTop.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62178B501E09844B00A2F649 /* JLReleaseTaskTop.xib */; };
+		BA0B28951E0E107600A461D9 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28741E0E107600A461D9 /* AFHTTPSessionManager.m */; };
+		BA0B28961E0E107600A461D9 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28771E0E107600A461D9 /* AFNetworkReachabilityManager.m */; };
+		BA0B28971E0E107600A461D9 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28791E0E107600A461D9 /* AFSecurityPolicy.m */; };
+		BA0B28981E0E107600A461D9 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B287B1E0E107600A461D9 /* AFURLRequestSerialization.m */; };
+		BA0B28991E0E107600A461D9 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B287D1E0E107600A461D9 /* AFURLResponseSerialization.m */; };
+		BA0B289A1E0E107600A461D9 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B287F1E0E107600A461D9 /* AFURLSessionManager.m */; };
+		BA0B289B1E0E107600A461D9 /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28821E0E107600A461D9 /* AFAutoPurgingImageCache.m */; };
+		BA0B289C1E0E107600A461D9 /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28841E0E107600A461D9 /* AFImageDownloader.m */; };
+		BA0B289D1E0E107600A461D9 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28861E0E107600A461D9 /* AFNetworkActivityIndicatorManager.m */; };
+		BA0B289E1E0E107600A461D9 /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28881E0E107600A461D9 /* UIActivityIndicatorView+AFNetworking.m */; };
+		BA0B289F1E0E107600A461D9 /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B288A1E0E107600A461D9 /* UIButton+AFNetworking.m */; };
+		BA0B28A01E0E107600A461D9 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B288D1E0E107600A461D9 /* UIImageView+AFNetworking.m */; };
+		BA0B28A11E0E107600A461D9 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28901E0E107600A461D9 /* UIProgressView+AFNetworking.m */; };
+		BA0B28A21E0E107600A461D9 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28921E0E107600A461D9 /* UIRefreshControl+AFNetworking.m */; };
+		BA0B28A31E0E107600A461D9 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28941E0E107600A461D9 /* UIWebView+AFNetworking.m */; };
+		BA0B28AA1E0E109C00A461D9 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28A61E0E109C00A461D9 /* MBProgressHUD+MJ.m */; };
+		BA0B28AB1E0E109C00A461D9 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BA0B28A71E0E109C00A461D9 /* MBProgressHUD.bundle */; };
+		BA0B28AC1E0E109C00A461D9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28A91E0E109C00A461D9 /* MBProgressHUD.m */; };
+		BA0B28BA1E0E11A400A461D9 /* JLForgetPWDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28AF1E0E11A400A461D9 /* JLForgetPWDViewController.m */; };
+		BA0B28BB1E0E11A400A461D9 /* JLForgetPWDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA0B28B01E0E11A400A461D9 /* JLForgetPWDViewController.xib */; };
+		BA0B28BC1E0E11A400A461D9 /* JLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28B21E0E11A400A461D9 /* JLLoginViewController.m */; };
+		BA0B28BD1E0E11A400A461D9 /* JLRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28B41E0E11A400A461D9 /* JLRegisterViewController.m */; };
+		BA0B28BE1E0E11A400A461D9 /* JLRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA0B28B51E0E11A400A461D9 /* JLRegisterViewController.xib */; };
+		BA0B28BF1E0E11A400A461D9 /* JLUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28B81E0E11A400A461D9 /* JLUserModel.m */; };
+		BA0B28CA1E0E11D200A461D9 /* JLBBSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28C21E0E11D200A461D9 /* JLBBSViewController.m */; };
+		BA0B28CB1E0E11D200A461D9 /* JLBBSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28C51E0E11D200A461D9 /* JLBBSModel.m */; };
+		BA0B28CC1E0E11D200A461D9 /* JLBBSTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28C81E0E11D200A461D9 /* JLBBSTagCell.m */; };
+		BA0B28CD1E0E11D200A461D9 /* JLBBSTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA0B28C91E0E11D200A461D9 /* JLBBSTagCell.xib */; };
+		BA0B28D31E0E120000A461D9 /* JLGrabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28D01E0E120000A461D9 /* JLGrabViewController.m */; };
+		BA0B28DF1E0E122600A461D9 /* JLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28D61E0E122600A461D9 /* JLHomeViewController.m */; };
+		BA0B28E01E0E122600A461D9 /* JLFarmModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28D91E0E122600A461D9 /* JLFarmModel.m */; };
+		BA0B28E11E0E122600A461D9 /* JLOwnerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28DB1E0E122600A461D9 /* JLOwnerModel.m */; };
+		BA0B28E21E0E122600A461D9 /* JLTradeAlertsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28DD1E0E122600A461D9 /* JLTradeAlertsModel.m */; };
+		BA0B28EA1E0E124A00A461D9 /* JLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28E51E0E124A00A461D9 /* JLNavigationController.m */; };
+		BA0B28EB1E0E124A00A461D9 /* JLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28E71E0E124A00A461D9 /* JLTabBarController.m */; };
+		BA0B29121E0E126E00A461D9 /* JLAccountInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28EE1E0E126E00A461D9 /* JLAccountInfoViewController.m */; };
+		BA0B29131E0E126E00A461D9 /* JLAccountInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA0B28EF1E0E126E00A461D9 /* JLAccountInfoViewController.xib */; };
+		BA0B29141E0E126E00A461D9 /* JLBalancePayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28F11E0E126E00A461D9 /* JLBalancePayViewController.m */; };
+		BA0B29151E0E126E00A461D9 /* JLBalancePayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA0B28F21E0E126E00A461D9 /* JLBalancePayViewController.xib */; };
+		BA0B29161E0E126E00A461D9 /* JLIdentityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28F41E0E126E00A461D9 /* JLIdentityViewController.m */; };
+		BA0B29171E0E126E00A461D9 /* JLIdentityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA0B28F51E0E126E00A461D9 /* JLIdentityViewController.xib */; };
+		BA0B29181E0E126E00A461D9 /* JLMineMessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28F71E0E126E00A461D9 /* JLMineMessagesViewController.m */; };
+		BA0B29191E0E126E00A461D9 /* JLMineReleaseTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28F91E0E126E00A461D9 /* JLMineReleaseTaskViewController.m */; };
+		BA0B291A1E0E126E00A461D9 /* JLMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28FB1E0E126E00A461D9 /* JLMineViewController.m */; };
+		BA0B291B1E0E126E00A461D9 /* JLPersonalInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B28FD1E0E126E00A461D9 /* JLPersonalInfoViewController.m */; };
+		BA0B291C1E0E126E00A461D9 /* JLPersonalInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA0B28FE1E0E126E00A461D9 /* JLPersonalInfoViewController.xib */; };
+		BA0B291D1E0E126E00A461D9 /* JLPWDManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B29001E0E126E00A461D9 /* JLPWDManagementViewController.m */; };
+		BA0B291E1E0E126E00A461D9 /* JLPWDManagementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA0B29011E0E126E00A461D9 /* JLPWDManagementViewController.xib */; };
+		BA0B291F1E0E126E00A461D9 /* JLRewardsSystemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B29031E0E126E00A461D9 /* JLRewardsSystemViewController.m */; };
+		BA0B29201E0E126E00A461D9 /* JLUserBaseInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B29051E0E126E00A461D9 /* JLUserBaseInfoViewController.m */; };
+		BA0B29211E0E126E00A461D9 /* JLMineItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B29081E0E126E00A461D9 /* JLMineItem.m */; };
+		BA0B29221E0E126E00A461D9 /* JLMineItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B290A1E0E126E00A461D9 /* JLMineItemViewModel.m */; };
+		BA0B29231E0E126E00A461D9 /* JLMineMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B290C1E0E126E00A461D9 /* JLMineMessageModel.m */; };
+		BA0B29241E0E126E00A461D9 /* JLReleaseTaskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B290E1E0E126E00A461D9 /* JLReleaseTaskModel.m */; };
+		BA0B29251E0E126E00A461D9 /* JLMineInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA0B29101E0E126E00A461D9 /* JLMineInfo.xib */; };
+		BA0B29261E0E126E00A461D9 /* JLUserBaseInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA0B29111E0E126E00A461D9 /* JLUserBaseInfo.xib */; };
+		BA0B29301E0E128F00A461D9 /* JLTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B29291E0E128F00A461D9 /* JLTaskViewController.m */; };
+		BA0B29311E0E128F00A461D9 /* JLReleaseTaskTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B292D1E0E128F00A461D9 /* JLReleaseTaskTagCell.m */; };
+		BA0B29321E0E128F00A461D9 /* JLReleaseTaskTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA0B292E1E0E128F00A461D9 /* JLReleaseTaskTagCell.xib */; };
+		BA0B29331E0E128F00A461D9 /* JLReleaseTaskTop.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA0B292F1E0E128F00A461D9 /* JLReleaseTaskTop.xib */; };
 		BA2B84551DF943E10054C9B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2B84541DF943E10054C9B8 /* main.m */; };
 		BA2B84581DF943E10054C9B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2B84571DF943E10054C9B8 /* AppDelegate.m */; };
 		BA2B845B1DF943E10054C9B8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2B845A1DF943E10054C9B8 /* ViewController.m */; };
@@ -16,10 +75,6 @@
 		BA2B84631DF943E10054C9B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA2B84611DF943E10054C9B8 /* LaunchScreen.storyboard */; };
 		BA2B846E1DF943E10054C9B8 /* AgriculturalstationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2B846D1DF943E10054C9B8 /* AgriculturalstationTests.m */; };
 		BA2B84791DF943E10054C9B8 /* AgriculturalstationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2B84781DF943E10054C9B8 /* AgriculturalstationUITests.m */; };
-		BA2B84AB1DF966D50054C9B8 /* JLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2B84AA1DF966D50054C9B8 /* JLTabBarController.m */; };
-		BA50589A1DFF8B3300E9C010 /* JLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5058991DFF8B3300E9C010 /* JLNavigationController.m */; };
-		BABED8D51E04DC0500B38476 /* JLMineMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BABED8D41E04DC0500B38476 /* JLMineMessageModel.m */; };
-		BABED8D81E04E67C00B38476 /* JLReleaseTaskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BABED8D71E04E67C00B38476 /* JLReleaseTaskModel.m */; };
 		BABED8F21E04E7A500B38476 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BABED8DC1E04E7A500B38476 /* Info.plist */; };
 		BABED8F31E04E7A500B38476 /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = BABED8DF1E04E7A500B38476 /* MJExtensionConst.m */; };
 		BABED8F41E04E7A500B38476 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = BABED8E11E04E7A500B38476 /* MJFoundation.m */; };
@@ -31,34 +86,7 @@
 		BABED8FA1E04E7A500B38476 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = BABED8ED1E04E7A500B38476 /* NSObject+MJKeyValue.m */; };
 		BABED8FB1E04E7A500B38476 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = BABED8EF1E04E7A500B38476 /* NSObject+MJProperty.m */; };
 		BABED8FC1E04E7A500B38476 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BABED8F11E04E7A500B38476 /* NSString+MJExtension.m */; };
-		BABED8FF1E05109500B38476 /* JLTradeAlertsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BABED8FE1E05109500B38476 /* JLTradeAlertsModel.m */; };
-		BABED9021E05117E00B38476 /* JLUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BABED9011E05117E00B38476 /* JLUserModel.m */; };
-		BABED9051E05133500B38476 /* JLBBSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BABED9041E05133500B38476 /* JLBBSModel.m */; };
-		BABED9081E0513F600B38476 /* JLFarmModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BABED9071E0513F600B38476 /* JLFarmModel.m */; };
-		BABED90B1E05143600B38476 /* JLOwnerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BABED90A1E05143600B38476 /* JLOwnerModel.m */; };
-		BACB09C01DFF8F110003861B /* JLBBSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BACB09BF1DFF8F110003861B /* JLBBSViewController.m */; };
 		BACB09C21DFF8F770003861B /* MineItem.plist in Resources */ = {isa = PBXBuildFile; fileRef = BACB09C11DFF8F770003861B /* MineItem.plist */; };
-		BACB09C51DFF919D0003861B /* JLMineItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BACB09C41DFF919D0003861B /* JLMineItem.m */; };
-		BACB09C71DFFA76C0003861B /* JLMineInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = BACB09C61DFFA76C0003861B /* JLMineInfo.xib */; };
-		BACB09CE1DFFD2E50003861B /* JLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BACB09CD1DFFD2E50003861B /* JLLoginViewController.m */; };
-		BACB09D11DFFD3010003861B /* JLRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BACB09D01DFFD3010003861B /* JLRegisterViewController.m */; };
-		BACD45C81E029E40007CA568 /* JLForgetPWDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BACD45C71E029E40007CA568 /* JLForgetPWDViewController.xib */; };
-		BAD260491E07C7C700B47886 /* JLUserBaseInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD260481E07C7C700B47886 /* JLUserBaseInfoViewController.m */; };
-		BAD2604D1E07D8E800B47886 /* JLUserBaseInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAD2604C1E07D8E800B47886 /* JLUserBaseInfo.xib */; };
-		BAD4B9851E03910D0050BCCA /* JLPersonalInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD4B9831E03910D0050BCCA /* JLPersonalInfoViewController.m */; };
-		BAD4B9861E03910D0050BCCA /* JLPersonalInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAD4B9841E03910D0050BCCA /* JLPersonalInfoViewController.xib */; };
-		BAD4B9891E0396F20050BCCA /* JLMineItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD4B9881E0396F20050BCCA /* JLMineItemViewModel.m */; };
-		BAD4B98C1E039D490050BCCA /* JLMineReleaseTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD4B98B1E039D490050BCCA /* JLMineReleaseTaskViewController.m */; };
-		BAD4B9901E039DDF0050BCCA /* JLAccountInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD4B98E1E039DDF0050BCCA /* JLAccountInfoViewController.m */; };
-		BAD4B9911E039DDF0050BCCA /* JLAccountInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAD4B98F1E039DDF0050BCCA /* JLAccountInfoViewController.xib */; };
-		BAD4B9951E03C0270050BCCA /* JLIdentityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD4B9931E03C0270050BCCA /* JLIdentityViewController.m */; };
-		BAD4B9961E03C0270050BCCA /* JLIdentityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAD4B9941E03C0270050BCCA /* JLIdentityViewController.xib */; };
-		BAD4B99A1E03C0560050BCCA /* JLBalancePayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD4B9981E03C0560050BCCA /* JLBalancePayViewController.m */; };
-		BAD4B99B1E03C0560050BCCA /* JLBalancePayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAD4B9991E03C0560050BCCA /* JLBalancePayViewController.xib */; };
-		BAD4B99F1E03C07E0050BCCA /* JLPWDManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD4B99D1E03C07E0050BCCA /* JLPWDManagementViewController.m */; };
-		BAD4B9A01E03C07E0050BCCA /* JLPWDManagementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAD4B99E1E03C07E0050BCCA /* JLPWDManagementViewController.xib */; };
-		BAD4B9A31E03C0A40050BCCA /* JLMineMessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD4B9A21E03C0A40050BCCA /* JLMineMessagesViewController.m */; };
-		BAD4B9A61E03C0D20050BCCA /* JLRewardsSystemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD4B9A51E03C0D20050BCCA /* JLRewardsSystemViewController.m */; };
 		BAD5428A1E08DF5C00B99FC0 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD5425E1E08DF5C00B99FC0 /* MJRefreshAutoFooter.m */; };
 		BAD5428B1E08DF5C00B99FC0 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD542601E08DF5C00B99FC0 /* MJRefreshBackFooter.m */; };
 		BAD5428C1E08DF5C00B99FC0 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD542621E08DF5C00B99FC0 /* MJRefreshComponent.m */; };
@@ -79,17 +107,7 @@
 		BAD5429B1E08DF5C00B99FC0 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD542851E08DF5C00B99FC0 /* UIScrollView+MJExtension.m */; };
 		BAD5429C1E08DF5C00B99FC0 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD542871E08DF5C00B99FC0 /* UIScrollView+MJRefresh.m */; };
 		BAD5429D1E08DF5C00B99FC0 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD542891E08DF5C00B99FC0 /* UIView+MJExtension.m */; };
-		BAD542A11E09030F00B99FC0 /* JLBBSTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD5429F1E09030F00B99FC0 /* JLBBSTagCell.m */; };
-		BAD542A21E09030F00B99FC0 /* JLBBSTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAD542A01E09030F00B99FC0 /* JLBBSTagCell.xib */; };
 		BAD542A41E091B8300B99FC0 /* BBSModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAD542A31E091B8300B99FC0 /* BBSModel.plist */; };
-		BAD542A81E092BBC00B99FC0 /* JLReleaseTaskTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD542A61E092BBC00B99FC0 /* JLReleaseTaskTagCell.m */; };
-		BAD542A91E092BBC00B99FC0 /* JLReleaseTaskTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAD542A71E092BBC00B99FC0 /* JLReleaseTaskTagCell.xib */; };
-		BAF7A5CE1DFF895700D83F41 /* JLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF7A5CD1DFF895700D83F41 /* JLHomeViewController.m */; };
-		BAF7A5D11DFF899100D83F41 /* JLTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF7A5D01DFF899100D83F41 /* JLTaskViewController.m */; };
-		BAF7A5D41DFF8A1700D83F41 /* JLGrabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF7A5D31DFF8A1700D83F41 /* JLGrabViewController.m */; };
-		BAF7A5D71DFF8A8600D83F41 /* JLMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF7A5D61DFF8A8600D83F41 /* JLMineViewController.m */; };
-		BAFF39491E00E5BF008454E7 /* JLForgetPWDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFF39481E00E5BF008454E7 /* JLForgetPWDViewController.m */; };
-		BAFF394B1E00EC4B008454E7 /* JLRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAFF394A1E00EC4B008454E7 /* JLRegisterViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,7 +128,116 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		62178B501E09844B00A2F649 /* JLReleaseTaskTop.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLReleaseTaskTop.xib; sourceTree = "<group>"; };
+		BA0B28731E0E107600A461D9 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		BA0B28741E0E107600A461D9 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		BA0B28751E0E107600A461D9 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		BA0B28761E0E107600A461D9 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		BA0B28771E0E107600A461D9 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		BA0B28781E0E107600A461D9 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		BA0B28791E0E107600A461D9 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		BA0B287A1E0E107600A461D9 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		BA0B287B1E0E107600A461D9 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		BA0B287C1E0E107600A461D9 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		BA0B287D1E0E107600A461D9 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		BA0B287E1E0E107600A461D9 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		BA0B287F1E0E107600A461D9 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		BA0B28811E0E107600A461D9 /* AFAutoPurgingImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFAutoPurgingImageCache.h; sourceTree = "<group>"; };
+		BA0B28821E0E107600A461D9 /* AFAutoPurgingImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFAutoPurgingImageCache.m; sourceTree = "<group>"; };
+		BA0B28831E0E107600A461D9 /* AFImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageDownloader.h; sourceTree = "<group>"; };
+		BA0B28841E0E107600A461D9 /* AFImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageDownloader.m; sourceTree = "<group>"; };
+		BA0B28851E0E107600A461D9 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		BA0B28861E0E107600A461D9 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		BA0B28871E0E107600A461D9 /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
+		BA0B28881E0E107600A461D9 /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
+		BA0B28891E0E107600A461D9 /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+AFNetworking.h"; sourceTree = "<group>"; };
+		BA0B288A1E0E107600A461D9 /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+AFNetworking.m"; sourceTree = "<group>"; };
+		BA0B288B1E0E107600A461D9 /* UIImage+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AFNetworking.h"; sourceTree = "<group>"; };
+		BA0B288C1E0E107600A461D9 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		BA0B288D1E0E107600A461D9 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		BA0B288E1E0E107600A461D9 /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIKit+AFNetworking.h"; sourceTree = "<group>"; };
+		BA0B288F1E0E107600A461D9 /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
+		BA0B28901E0E107600A461D9 /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
+		BA0B28911E0E107600A461D9 /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
+		BA0B28921E0E107600A461D9 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
+		BA0B28931E0E107600A461D9 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
+		BA0B28941E0E107600A461D9 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		BA0B28A51E0E109C00A461D9 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
+		BA0B28A61E0E109C00A461D9 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
+		BA0B28A71E0E109C00A461D9 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		BA0B28A81E0E109C00A461D9 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		BA0B28A91E0E109C00A461D9 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		BA0B28AE1E0E11A400A461D9 /* JLForgetPWDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLForgetPWDViewController.h; sourceTree = "<group>"; };
+		BA0B28AF1E0E11A400A461D9 /* JLForgetPWDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLForgetPWDViewController.m; sourceTree = "<group>"; };
+		BA0B28B01E0E11A400A461D9 /* JLForgetPWDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLForgetPWDViewController.xib; sourceTree = "<group>"; };
+		BA0B28B11E0E11A400A461D9 /* JLLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLLoginViewController.h; sourceTree = "<group>"; };
+		BA0B28B21E0E11A400A461D9 /* JLLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLLoginViewController.m; sourceTree = "<group>"; };
+		BA0B28B31E0E11A400A461D9 /* JLRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLRegisterViewController.h; sourceTree = "<group>"; };
+		BA0B28B41E0E11A400A461D9 /* JLRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLRegisterViewController.m; sourceTree = "<group>"; };
+		BA0B28B51E0E11A400A461D9 /* JLRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLRegisterViewController.xib; sourceTree = "<group>"; };
+		BA0B28B71E0E11A400A461D9 /* JLUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLUserModel.h; sourceTree = "<group>"; };
+		BA0B28B81E0E11A400A461D9 /* JLUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLUserModel.m; sourceTree = "<group>"; };
+		BA0B28C11E0E11D200A461D9 /* JLBBSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLBBSViewController.h; sourceTree = "<group>"; };
+		BA0B28C21E0E11D200A461D9 /* JLBBSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLBBSViewController.m; sourceTree = "<group>"; };
+		BA0B28C41E0E11D200A461D9 /* JLBBSModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLBBSModel.h; sourceTree = "<group>"; };
+		BA0B28C51E0E11D200A461D9 /* JLBBSModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLBBSModel.m; sourceTree = "<group>"; };
+		BA0B28C71E0E11D200A461D9 /* JLBBSTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLBBSTagCell.h; sourceTree = "<group>"; };
+		BA0B28C81E0E11D200A461D9 /* JLBBSTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLBBSTagCell.m; sourceTree = "<group>"; };
+		BA0B28C91E0E11D200A461D9 /* JLBBSTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLBBSTagCell.xib; sourceTree = "<group>"; };
+		BA0B28CF1E0E120000A461D9 /* JLGrabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLGrabViewController.h; sourceTree = "<group>"; };
+		BA0B28D01E0E120000A461D9 /* JLGrabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLGrabViewController.m; sourceTree = "<group>"; };
+		BA0B28D51E0E122600A461D9 /* JLHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLHomeViewController.h; sourceTree = "<group>"; };
+		BA0B28D61E0E122600A461D9 /* JLHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLHomeViewController.m; sourceTree = "<group>"; };
+		BA0B28D81E0E122600A461D9 /* JLFarmModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLFarmModel.h; sourceTree = "<group>"; };
+		BA0B28D91E0E122600A461D9 /* JLFarmModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLFarmModel.m; sourceTree = "<group>"; };
+		BA0B28DA1E0E122600A461D9 /* JLOwnerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLOwnerModel.h; sourceTree = "<group>"; };
+		BA0B28DB1E0E122600A461D9 /* JLOwnerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLOwnerModel.m; sourceTree = "<group>"; };
+		BA0B28DC1E0E122600A461D9 /* JLTradeAlertsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTradeAlertsModel.h; sourceTree = "<group>"; };
+		BA0B28DD1E0E122600A461D9 /* JLTradeAlertsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTradeAlertsModel.m; sourceTree = "<group>"; };
+		BA0B28E41E0E124A00A461D9 /* JLNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLNavigationController.h; sourceTree = "<group>"; };
+		BA0B28E51E0E124A00A461D9 /* JLNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLNavigationController.m; sourceTree = "<group>"; };
+		BA0B28E61E0E124A00A461D9 /* JLTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTabBarController.h; sourceTree = "<group>"; };
+		BA0B28E71E0E124A00A461D9 /* JLTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTabBarController.m; sourceTree = "<group>"; };
+		BA0B28ED1E0E126E00A461D9 /* JLAccountInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLAccountInfoViewController.h; sourceTree = "<group>"; };
+		BA0B28EE1E0E126E00A461D9 /* JLAccountInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLAccountInfoViewController.m; sourceTree = "<group>"; };
+		BA0B28EF1E0E126E00A461D9 /* JLAccountInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLAccountInfoViewController.xib; sourceTree = "<group>"; };
+		BA0B28F01E0E126E00A461D9 /* JLBalancePayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLBalancePayViewController.h; sourceTree = "<group>"; };
+		BA0B28F11E0E126E00A461D9 /* JLBalancePayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLBalancePayViewController.m; sourceTree = "<group>"; };
+		BA0B28F21E0E126E00A461D9 /* JLBalancePayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLBalancePayViewController.xib; sourceTree = "<group>"; };
+		BA0B28F31E0E126E00A461D9 /* JLIdentityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLIdentityViewController.h; sourceTree = "<group>"; };
+		BA0B28F41E0E126E00A461D9 /* JLIdentityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLIdentityViewController.m; sourceTree = "<group>"; };
+		BA0B28F51E0E126E00A461D9 /* JLIdentityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLIdentityViewController.xib; sourceTree = "<group>"; };
+		BA0B28F61E0E126E00A461D9 /* JLMineMessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLMineMessagesViewController.h; sourceTree = "<group>"; };
+		BA0B28F71E0E126E00A461D9 /* JLMineMessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLMineMessagesViewController.m; sourceTree = "<group>"; };
+		BA0B28F81E0E126E00A461D9 /* JLMineReleaseTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLMineReleaseTaskViewController.h; sourceTree = "<group>"; };
+		BA0B28F91E0E126E00A461D9 /* JLMineReleaseTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLMineReleaseTaskViewController.m; sourceTree = "<group>"; };
+		BA0B28FA1E0E126E00A461D9 /* JLMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLMineViewController.h; sourceTree = "<group>"; };
+		BA0B28FB1E0E126E00A461D9 /* JLMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLMineViewController.m; sourceTree = "<group>"; };
+		BA0B28FC1E0E126E00A461D9 /* JLPersonalInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLPersonalInfoViewController.h; sourceTree = "<group>"; };
+		BA0B28FD1E0E126E00A461D9 /* JLPersonalInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLPersonalInfoViewController.m; sourceTree = "<group>"; };
+		BA0B28FE1E0E126E00A461D9 /* JLPersonalInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLPersonalInfoViewController.xib; sourceTree = "<group>"; };
+		BA0B28FF1E0E126E00A461D9 /* JLPWDManagementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLPWDManagementViewController.h; sourceTree = "<group>"; };
+		BA0B29001E0E126E00A461D9 /* JLPWDManagementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLPWDManagementViewController.m; sourceTree = "<group>"; };
+		BA0B29011E0E126E00A461D9 /* JLPWDManagementViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLPWDManagementViewController.xib; sourceTree = "<group>"; };
+		BA0B29021E0E126E00A461D9 /* JLRewardsSystemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLRewardsSystemViewController.h; sourceTree = "<group>"; };
+		BA0B29031E0E126E00A461D9 /* JLRewardsSystemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLRewardsSystemViewController.m; sourceTree = "<group>"; };
+		BA0B29041E0E126E00A461D9 /* JLUserBaseInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLUserBaseInfoViewController.h; sourceTree = "<group>"; };
+		BA0B29051E0E126E00A461D9 /* JLUserBaseInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLUserBaseInfoViewController.m; sourceTree = "<group>"; };
+		BA0B29071E0E126E00A461D9 /* JLMineItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLMineItem.h; sourceTree = "<group>"; };
+		BA0B29081E0E126E00A461D9 /* JLMineItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLMineItem.m; sourceTree = "<group>"; };
+		BA0B29091E0E126E00A461D9 /* JLMineItemViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLMineItemViewModel.h; sourceTree = "<group>"; };
+		BA0B290A1E0E126E00A461D9 /* JLMineItemViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLMineItemViewModel.m; sourceTree = "<group>"; };
+		BA0B290B1E0E126E00A461D9 /* JLMineMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLMineMessageModel.h; sourceTree = "<group>"; };
+		BA0B290C1E0E126E00A461D9 /* JLMineMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLMineMessageModel.m; sourceTree = "<group>"; };
+		BA0B290D1E0E126E00A461D9 /* JLReleaseTaskModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLReleaseTaskModel.h; sourceTree = "<group>"; };
+		BA0B290E1E0E126E00A461D9 /* JLReleaseTaskModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLReleaseTaskModel.m; sourceTree = "<group>"; };
+		BA0B29101E0E126E00A461D9 /* JLMineInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLMineInfo.xib; sourceTree = "<group>"; };
+		BA0B29111E0E126E00A461D9 /* JLUserBaseInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLUserBaseInfo.xib; sourceTree = "<group>"; };
+		BA0B29281E0E128F00A461D9 /* JLTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTaskViewController.h; sourceTree = "<group>"; };
+		BA0B29291E0E128F00A461D9 /* JLTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTaskViewController.m; sourceTree = "<group>"; };
+		BA0B292C1E0E128F00A461D9 /* JLReleaseTaskTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLReleaseTaskTagCell.h; sourceTree = "<group>"; };
+		BA0B292D1E0E128F00A461D9 /* JLReleaseTaskTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLReleaseTaskTagCell.m; sourceTree = "<group>"; };
+		BA0B292E1E0E128F00A461D9 /* JLReleaseTaskTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLReleaseTaskTagCell.xib; sourceTree = "<group>"; };
+		BA0B292F1E0E128F00A461D9 /* JLReleaseTaskTop.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLReleaseTaskTop.xib; sourceTree = "<group>"; };
 		BA2B84501DF943E10054C9B8 /* Agriculturalstation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agriculturalstation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA2B84541DF943E10054C9B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BA2B84561DF943E10054C9B8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -127,14 +254,6 @@
 		BA2B84741DF943E10054C9B8 /* AgriculturalstationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgriculturalstationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA2B84781DF943E10054C9B8 /* AgriculturalstationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AgriculturalstationUITests.m; sourceTree = "<group>"; };
 		BA2B847A1DF943E10054C9B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BA2B84A91DF966D50054C9B8 /* JLTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTabBarController.h; sourceTree = "<group>"; };
-		BA2B84AA1DF966D50054C9B8 /* JLTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTabBarController.m; sourceTree = "<group>"; };
-		BA5058981DFF8B3300E9C010 /* JLNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLNavigationController.h; sourceTree = "<group>"; };
-		BA5058991DFF8B3300E9C010 /* JLNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLNavigationController.m; sourceTree = "<group>"; };
-		BABED8D31E04DC0500B38476 /* JLMineMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLMineMessageModel.h; sourceTree = "<group>"; };
-		BABED8D41E04DC0500B38476 /* JLMineMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLMineMessageModel.m; sourceTree = "<group>"; };
-		BABED8D61E04E67C00B38476 /* JLReleaseTaskModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLReleaseTaskModel.h; sourceTree = "<group>"; };
-		BABED8D71E04E67C00B38476 /* JLReleaseTaskModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLReleaseTaskModel.m; sourceTree = "<group>"; };
 		BABED8DC1E04E7A500B38476 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BABED8DD1E04E7A500B38476 /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
 		BABED8DE1E04E7A500B38476 /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
@@ -157,53 +276,7 @@
 		BABED8EF1E04E7A500B38476 /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
 		BABED8F01E04E7A500B38476 /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
 		BABED8F11E04E7A500B38476 /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
-		BABED8FD1E05109500B38476 /* JLTradeAlertsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTradeAlertsModel.h; sourceTree = "<group>"; };
-		BABED8FE1E05109500B38476 /* JLTradeAlertsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTradeAlertsModel.m; sourceTree = "<group>"; };
-		BABED9001E05117E00B38476 /* JLUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLUserModel.h; sourceTree = "<group>"; };
-		BABED9011E05117E00B38476 /* JLUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLUserModel.m; sourceTree = "<group>"; };
-		BABED9031E05133500B38476 /* JLBBSModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLBBSModel.h; sourceTree = "<group>"; };
-		BABED9041E05133500B38476 /* JLBBSModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLBBSModel.m; sourceTree = "<group>"; };
-		BABED9061E0513F600B38476 /* JLFarmModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLFarmModel.h; sourceTree = "<group>"; };
-		BABED9071E0513F600B38476 /* JLFarmModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLFarmModel.m; sourceTree = "<group>"; };
-		BABED9091E05143600B38476 /* JLOwnerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLOwnerModel.h; sourceTree = "<group>"; };
-		BABED90A1E05143600B38476 /* JLOwnerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLOwnerModel.m; sourceTree = "<group>"; };
-		BACB09BE1DFF8F110003861B /* JLBBSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLBBSViewController.h; sourceTree = "<group>"; };
-		BACB09BF1DFF8F110003861B /* JLBBSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLBBSViewController.m; sourceTree = "<group>"; };
 		BACB09C11DFF8F770003861B /* MineItem.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MineItem.plist; sourceTree = "<group>"; };
-		BACB09C31DFF919D0003861B /* JLMineItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLMineItem.h; sourceTree = "<group>"; };
-		BACB09C41DFF919D0003861B /* JLMineItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLMineItem.m; sourceTree = "<group>"; };
-		BACB09C61DFFA76C0003861B /* JLMineInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLMineInfo.xib; sourceTree = "<group>"; };
-		BACB09CC1DFFD2E50003861B /* JLLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLLoginViewController.h; sourceTree = "<group>"; };
-		BACB09CD1DFFD2E50003861B /* JLLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLLoginViewController.m; sourceTree = "<group>"; };
-		BACB09CF1DFFD3010003861B /* JLRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLRegisterViewController.h; sourceTree = "<group>"; };
-		BACB09D01DFFD3010003861B /* JLRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLRegisterViewController.m; sourceTree = "<group>"; };
-		BACD45C71E029E40007CA568 /* JLForgetPWDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLForgetPWDViewController.xib; sourceTree = "<group>"; };
-		BAD260471E07C7C700B47886 /* JLUserBaseInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLUserBaseInfoViewController.h; sourceTree = "<group>"; };
-		BAD260481E07C7C700B47886 /* JLUserBaseInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLUserBaseInfoViewController.m; sourceTree = "<group>"; };
-		BAD2604C1E07D8E800B47886 /* JLUserBaseInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLUserBaseInfo.xib; sourceTree = "<group>"; };
-		BAD4B9821E03910D0050BCCA /* JLPersonalInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLPersonalInfoViewController.h; sourceTree = "<group>"; };
-		BAD4B9831E03910D0050BCCA /* JLPersonalInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLPersonalInfoViewController.m; sourceTree = "<group>"; };
-		BAD4B9841E03910D0050BCCA /* JLPersonalInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLPersonalInfoViewController.xib; sourceTree = "<group>"; };
-		BAD4B9871E0396F20050BCCA /* JLMineItemViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLMineItemViewModel.h; sourceTree = "<group>"; };
-		BAD4B9881E0396F20050BCCA /* JLMineItemViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLMineItemViewModel.m; sourceTree = "<group>"; };
-		BAD4B98A1E039D490050BCCA /* JLMineReleaseTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLMineReleaseTaskViewController.h; sourceTree = "<group>"; };
-		BAD4B98B1E039D490050BCCA /* JLMineReleaseTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLMineReleaseTaskViewController.m; sourceTree = "<group>"; };
-		BAD4B98D1E039DDF0050BCCA /* JLAccountInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLAccountInfoViewController.h; sourceTree = "<group>"; };
-		BAD4B98E1E039DDF0050BCCA /* JLAccountInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLAccountInfoViewController.m; sourceTree = "<group>"; };
-		BAD4B98F1E039DDF0050BCCA /* JLAccountInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLAccountInfoViewController.xib; sourceTree = "<group>"; };
-		BAD4B9921E03C0270050BCCA /* JLIdentityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLIdentityViewController.h; sourceTree = "<group>"; };
-		BAD4B9931E03C0270050BCCA /* JLIdentityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLIdentityViewController.m; sourceTree = "<group>"; };
-		BAD4B9941E03C0270050BCCA /* JLIdentityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLIdentityViewController.xib; sourceTree = "<group>"; };
-		BAD4B9971E03C0560050BCCA /* JLBalancePayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLBalancePayViewController.h; sourceTree = "<group>"; };
-		BAD4B9981E03C0560050BCCA /* JLBalancePayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLBalancePayViewController.m; sourceTree = "<group>"; };
-		BAD4B9991E03C0560050BCCA /* JLBalancePayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLBalancePayViewController.xib; sourceTree = "<group>"; };
-		BAD4B99C1E03C07E0050BCCA /* JLPWDManagementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLPWDManagementViewController.h; sourceTree = "<group>"; };
-		BAD4B99D1E03C07E0050BCCA /* JLPWDManagementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLPWDManagementViewController.m; sourceTree = "<group>"; };
-		BAD4B99E1E03C07E0050BCCA /* JLPWDManagementViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLPWDManagementViewController.xib; sourceTree = "<group>"; };
-		BAD4B9A11E03C0A40050BCCA /* JLMineMessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLMineMessagesViewController.h; sourceTree = "<group>"; };
-		BAD4B9A21E03C0A40050BCCA /* JLMineMessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLMineMessagesViewController.m; sourceTree = "<group>"; };
-		BAD4B9A41E03C0D20050BCCA /* JLRewardsSystemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLRewardsSystemViewController.h; sourceTree = "<group>"; };
-		BAD4B9A51E03C0D20050BCCA /* JLRewardsSystemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLRewardsSystemViewController.m; sourceTree = "<group>"; };
 		BAD5425D1E08DF5C00B99FC0 /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		BAD5425E1E08DF5C00B99FC0 /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		BAD5425F1E08DF5C00B99FC0 /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
@@ -244,25 +317,8 @@
 		BAD542871E08DF5C00B99FC0 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		BAD542881E08DF5C00B99FC0 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		BAD542891E08DF5C00B99FC0 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
-		BAD5429E1E09030F00B99FC0 /* JLBBSTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLBBSTagCell.h; sourceTree = "<group>"; };
-		BAD5429F1E09030F00B99FC0 /* JLBBSTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLBBSTagCell.m; sourceTree = "<group>"; };
-		BAD542A01E09030F00B99FC0 /* JLBBSTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLBBSTagCell.xib; sourceTree = "<group>"; };
 		BAD542A31E091B8300B99FC0 /* BBSModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BBSModel.plist; sourceTree = "<group>"; };
-		BAD542A51E092BBC00B99FC0 /* JLReleaseTaskTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLReleaseTaskTagCell.h; sourceTree = "<group>"; };
-		BAD542A61E092BBC00B99FC0 /* JLReleaseTaskTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLReleaseTaskTagCell.m; sourceTree = "<group>"; };
-		BAD542A71E092BBC00B99FC0 /* JLReleaseTaskTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLReleaseTaskTagCell.xib; sourceTree = "<group>"; };
 		BAE47B271E027619007F9BF1 /* Agriculturalstation.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Agriculturalstation.pch; sourceTree = "<group>"; };
-		BAF7A5CC1DFF895700D83F41 /* JLHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLHomeViewController.h; sourceTree = "<group>"; };
-		BAF7A5CD1DFF895700D83F41 /* JLHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLHomeViewController.m; sourceTree = "<group>"; };
-		BAF7A5CF1DFF899100D83F41 /* JLTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTaskViewController.h; sourceTree = "<group>"; };
-		BAF7A5D01DFF899100D83F41 /* JLTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTaskViewController.m; sourceTree = "<group>"; };
-		BAF7A5D21DFF8A1700D83F41 /* JLGrabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLGrabViewController.h; sourceTree = "<group>"; };
-		BAF7A5D31DFF8A1700D83F41 /* JLGrabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLGrabViewController.m; sourceTree = "<group>"; };
-		BAF7A5D51DFF8A8600D83F41 /* JLMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLMineViewController.h; sourceTree = "<group>"; };
-		BAF7A5D61DFF8A8600D83F41 /* JLMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLMineViewController.m; sourceTree = "<group>"; };
-		BAFF39471E00E5BF008454E7 /* JLForgetPWDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLForgetPWDViewController.h; sourceTree = "<group>"; };
-		BAFF39481E00E5BF008454E7 /* JLForgetPWDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLForgetPWDViewController.m; sourceTree = "<group>"; };
-		BAFF394A1E00EC4B008454E7 /* JLRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLRegisterViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +346,293 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA0B28711E0E107600A461D9 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				BA0B28721E0E107600A461D9 /* AFNetworking */,
+				BA0B28801E0E107600A461D9 /* UIKit+AFNetworking */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		BA0B28721E0E107600A461D9 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				BA0B28731E0E107600A461D9 /* AFHTTPSessionManager.h */,
+				BA0B28741E0E107600A461D9 /* AFHTTPSessionManager.m */,
+				BA0B28751E0E107600A461D9 /* AFNetworking.h */,
+				BA0B28761E0E107600A461D9 /* AFNetworkReachabilityManager.h */,
+				BA0B28771E0E107600A461D9 /* AFNetworkReachabilityManager.m */,
+				BA0B28781E0E107600A461D9 /* AFSecurityPolicy.h */,
+				BA0B28791E0E107600A461D9 /* AFSecurityPolicy.m */,
+				BA0B287A1E0E107600A461D9 /* AFURLRequestSerialization.h */,
+				BA0B287B1E0E107600A461D9 /* AFURLRequestSerialization.m */,
+				BA0B287C1E0E107600A461D9 /* AFURLResponseSerialization.h */,
+				BA0B287D1E0E107600A461D9 /* AFURLResponseSerialization.m */,
+				BA0B287E1E0E107600A461D9 /* AFURLSessionManager.h */,
+				BA0B287F1E0E107600A461D9 /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		BA0B28801E0E107600A461D9 /* UIKit+AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				BA0B28811E0E107600A461D9 /* AFAutoPurgingImageCache.h */,
+				BA0B28821E0E107600A461D9 /* AFAutoPurgingImageCache.m */,
+				BA0B28831E0E107600A461D9 /* AFImageDownloader.h */,
+				BA0B28841E0E107600A461D9 /* AFImageDownloader.m */,
+				BA0B28851E0E107600A461D9 /* AFNetworkActivityIndicatorManager.h */,
+				BA0B28861E0E107600A461D9 /* AFNetworkActivityIndicatorManager.m */,
+				BA0B28871E0E107600A461D9 /* UIActivityIndicatorView+AFNetworking.h */,
+				BA0B28881E0E107600A461D9 /* UIActivityIndicatorView+AFNetworking.m */,
+				BA0B28891E0E107600A461D9 /* UIButton+AFNetworking.h */,
+				BA0B288A1E0E107600A461D9 /* UIButton+AFNetworking.m */,
+				BA0B288B1E0E107600A461D9 /* UIImage+AFNetworking.h */,
+				BA0B288C1E0E107600A461D9 /* UIImageView+AFNetworking.h */,
+				BA0B288D1E0E107600A461D9 /* UIImageView+AFNetworking.m */,
+				BA0B288E1E0E107600A461D9 /* UIKit+AFNetworking.h */,
+				BA0B288F1E0E107600A461D9 /* UIProgressView+AFNetworking.h */,
+				BA0B28901E0E107600A461D9 /* UIProgressView+AFNetworking.m */,
+				BA0B28911E0E107600A461D9 /* UIRefreshControl+AFNetworking.h */,
+				BA0B28921E0E107600A461D9 /* UIRefreshControl+AFNetworking.m */,
+				BA0B28931E0E107600A461D9 /* UIWebView+AFNetworking.h */,
+				BA0B28941E0E107600A461D9 /* UIWebView+AFNetworking.m */,
+			);
+			path = "UIKit+AFNetworking";
+			sourceTree = "<group>";
+		};
+		BA0B28A41E0E109C00A461D9 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				BA0B28A51E0E109C00A461D9 /* MBProgressHUD+MJ.h */,
+				BA0B28A61E0E109C00A461D9 /* MBProgressHUD+MJ.m */,
+				BA0B28A71E0E109C00A461D9 /* MBProgressHUD.bundle */,
+				BA0B28A81E0E109C00A461D9 /* MBProgressHUD.h */,
+				BA0B28A91E0E109C00A461D9 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		BA0B28AD1E0E11A400A461D9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BA0B28AE1E0E11A400A461D9 /* JLForgetPWDViewController.h */,
+				BA0B28AF1E0E11A400A461D9 /* JLForgetPWDViewController.m */,
+				BA0B28B01E0E11A400A461D9 /* JLForgetPWDViewController.xib */,
+				BA0B28B11E0E11A400A461D9 /* JLLoginViewController.h */,
+				BA0B28B21E0E11A400A461D9 /* JLLoginViewController.m */,
+				BA0B28B31E0E11A400A461D9 /* JLRegisterViewController.h */,
+				BA0B28B41E0E11A400A461D9 /* JLRegisterViewController.m */,
+				BA0B28B51E0E11A400A461D9 /* JLRegisterViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BA0B28B61E0E11A400A461D9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA0B28B71E0E11A400A461D9 /* JLUserModel.h */,
+				BA0B28B81E0E11A400A461D9 /* JLUserModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BA0B28B91E0E11A400A461D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BA0B28C01E0E11D200A461D9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BA0B28C11E0E11D200A461D9 /* JLBBSViewController.h */,
+				BA0B28C21E0E11D200A461D9 /* JLBBSViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BA0B28C31E0E11D200A461D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BA0B28C41E0E11D200A461D9 /* JLBBSModel.h */,
+				BA0B28C51E0E11D200A461D9 /* JLBBSModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BA0B28C61E0E11D200A461D9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BA0B28C71E0E11D200A461D9 /* JLBBSTagCell.h */,
+				BA0B28C81E0E11D200A461D9 /* JLBBSTagCell.m */,
+				BA0B28C91E0E11D200A461D9 /* JLBBSTagCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BA0B28CE1E0E120000A461D9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BA0B28CF1E0E120000A461D9 /* JLGrabViewController.h */,
+				BA0B28D01E0E120000A461D9 /* JLGrabViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BA0B28D11E0E120000A461D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BA0B28D21E0E120000A461D9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BA0B28D41E0E122600A461D9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BA0B28D51E0E122600A461D9 /* JLHomeViewController.h */,
+				BA0B28D61E0E122600A461D9 /* JLHomeViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BA0B28D71E0E122600A461D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BA0B28D81E0E122600A461D9 /* JLFarmModel.h */,
+				BA0B28D91E0E122600A461D9 /* JLFarmModel.m */,
+				BA0B28DA1E0E122600A461D9 /* JLOwnerModel.h */,
+				BA0B28DB1E0E122600A461D9 /* JLOwnerModel.m */,
+				BA0B28DC1E0E122600A461D9 /* JLTradeAlertsModel.h */,
+				BA0B28DD1E0E122600A461D9 /* JLTradeAlertsModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BA0B28DE1E0E122600A461D9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BA0B28E31E0E124A00A461D9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BA0B28E41E0E124A00A461D9 /* JLNavigationController.h */,
+				BA0B28E51E0E124A00A461D9 /* JLNavigationController.m */,
+				BA0B28E61E0E124A00A461D9 /* JLTabBarController.h */,
+				BA0B28E71E0E124A00A461D9 /* JLTabBarController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BA0B28E81E0E124A00A461D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BA0B28E91E0E124A00A461D9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BA0B28EC1E0E126E00A461D9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BA0B28ED1E0E126E00A461D9 /* JLAccountInfoViewController.h */,
+				BA0B28EE1E0E126E00A461D9 /* JLAccountInfoViewController.m */,
+				BA0B28EF1E0E126E00A461D9 /* JLAccountInfoViewController.xib */,
+				BA0B28F01E0E126E00A461D9 /* JLBalancePayViewController.h */,
+				BA0B28F11E0E126E00A461D9 /* JLBalancePayViewController.m */,
+				BA0B28F21E0E126E00A461D9 /* JLBalancePayViewController.xib */,
+				BA0B28F31E0E126E00A461D9 /* JLIdentityViewController.h */,
+				BA0B28F41E0E126E00A461D9 /* JLIdentityViewController.m */,
+				BA0B28F51E0E126E00A461D9 /* JLIdentityViewController.xib */,
+				BA0B28F61E0E126E00A461D9 /* JLMineMessagesViewController.h */,
+				BA0B28F71E0E126E00A461D9 /* JLMineMessagesViewController.m */,
+				BA0B28F81E0E126E00A461D9 /* JLMineReleaseTaskViewController.h */,
+				BA0B28F91E0E126E00A461D9 /* JLMineReleaseTaskViewController.m */,
+				BA0B28FA1E0E126E00A461D9 /* JLMineViewController.h */,
+				BA0B28FB1E0E126E00A461D9 /* JLMineViewController.m */,
+				BA0B28FC1E0E126E00A461D9 /* JLPersonalInfoViewController.h */,
+				BA0B28FD1E0E126E00A461D9 /* JLPersonalInfoViewController.m */,
+				BA0B28FE1E0E126E00A461D9 /* JLPersonalInfoViewController.xib */,
+				BA0B28FF1E0E126E00A461D9 /* JLPWDManagementViewController.h */,
+				BA0B29001E0E126E00A461D9 /* JLPWDManagementViewController.m */,
+				BA0B29011E0E126E00A461D9 /* JLPWDManagementViewController.xib */,
+				BA0B29021E0E126E00A461D9 /* JLRewardsSystemViewController.h */,
+				BA0B29031E0E126E00A461D9 /* JLRewardsSystemViewController.m */,
+				BA0B29041E0E126E00A461D9 /* JLUserBaseInfoViewController.h */,
+				BA0B29051E0E126E00A461D9 /* JLUserBaseInfoViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BA0B29061E0E126E00A461D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BA0B29071E0E126E00A461D9 /* JLMineItem.h */,
+				BA0B29081E0E126E00A461D9 /* JLMineItem.m */,
+				BA0B29091E0E126E00A461D9 /* JLMineItemViewModel.h */,
+				BA0B290A1E0E126E00A461D9 /* JLMineItemViewModel.m */,
+				BA0B290B1E0E126E00A461D9 /* JLMineMessageModel.h */,
+				BA0B290C1E0E126E00A461D9 /* JLMineMessageModel.m */,
+				BA0B290D1E0E126E00A461D9 /* JLReleaseTaskModel.h */,
+				BA0B290E1E0E126E00A461D9 /* JLReleaseTaskModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BA0B290F1E0E126E00A461D9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BA0B29101E0E126E00A461D9 /* JLMineInfo.xib */,
+				BA0B29111E0E126E00A461D9 /* JLUserBaseInfo.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BA0B29271E0E128F00A461D9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BA0B29281E0E128F00A461D9 /* JLTaskViewController.h */,
+				BA0B29291E0E128F00A461D9 /* JLTaskViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BA0B292A1E0E128F00A461D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BA0B292B1E0E128F00A461D9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BA0B292C1E0E128F00A461D9 /* JLReleaseTaskTagCell.h */,
+				BA0B292D1E0E128F00A461D9 /* JLReleaseTaskTagCell.m */,
+				BA0B292E1E0E128F00A461D9 /* JLReleaseTaskTagCell.xib */,
+				BA0B292F1E0E128F00A461D9 /* JLReleaseTaskTop.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		BA2B84471DF943E10054C9B8 = {
 			isa = PBXGroup;
 			children = (
@@ -414,254 +757,68 @@
 		BA2B84911DF966700054C9B8 /* BBS */ = {
 			isa = PBXGroup;
 			children = (
-				BA2B84921DF966700054C9B8 /* Controllers */,
-				BA2B84931DF966700054C9B8 /* Models */,
-				BA2B84941DF966700054C9B8 /* Views */,
+				BA0B28C01E0E11D200A461D9 /* Controllers */,
+				BA0B28C31E0E11D200A461D9 /* Models */,
+				BA0B28C61E0E11D200A461D9 /* Views */,
 			);
 			path = BBS;
-			sourceTree = "<group>";
-		};
-		BA2B84921DF966700054C9B8 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				BACB09BE1DFF8F110003861B /* JLBBSViewController.h */,
-				BACB09BF1DFF8F110003861B /* JLBBSViewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		BA2B84931DF966700054C9B8 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				BABED9031E05133500B38476 /* JLBBSModel.h */,
-				BABED9041E05133500B38476 /* JLBBSModel.m */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		BA2B84941DF966700054C9B8 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				BAD5429E1E09030F00B99FC0 /* JLBBSTagCell.h */,
-				BAD5429F1E09030F00B99FC0 /* JLBBSTagCell.m */,
-				BAD542A01E09030F00B99FC0 /* JLBBSTagCell.xib */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		BA2B84951DF966700054C9B8 /* Grab */ = {
 			isa = PBXGroup;
 			children = (
-				BA2B84961DF966700054C9B8 /* Controllers */,
-				BA2B84971DF966700054C9B8 /* Models */,
-				BA2B84981DF966700054C9B8 /* Views */,
+				BA0B28CE1E0E120000A461D9 /* Controllers */,
+				BA0B28D11E0E120000A461D9 /* Models */,
+				BA0B28D21E0E120000A461D9 /* Views */,
 			);
 			path = Grab;
-			sourceTree = "<group>";
-		};
-		BA2B84961DF966700054C9B8 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				BAF7A5D21DFF8A1700D83F41 /* JLGrabViewController.h */,
-				BAF7A5D31DFF8A1700D83F41 /* JLGrabViewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		BA2B84971DF966700054C9B8 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		BA2B84981DF966700054C9B8 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		BA2B84991DF966700054C9B8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				BA2B849A1DF966700054C9B8 /* Controllers */,
-				BA2B849B1DF966700054C9B8 /* Models */,
-				BA2B849C1DF966700054C9B8 /* Views */,
+				BA0B28D41E0E122600A461D9 /* Controllers */,
+				BA0B28D71E0E122600A461D9 /* Models */,
+				BA0B28DE1E0E122600A461D9 /* Views */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		BA2B849A1DF966700054C9B8 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				BAF7A5CC1DFF895700D83F41 /* JLHomeViewController.h */,
-				BAF7A5CD1DFF895700D83F41 /* JLHomeViewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		BA2B849B1DF966700054C9B8 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				BABED8FD1E05109500B38476 /* JLTradeAlertsModel.h */,
-				BABED8FE1E05109500B38476 /* JLTradeAlertsModel.m */,
-				BABED9061E0513F600B38476 /* JLFarmModel.h */,
-				BABED9071E0513F600B38476 /* JLFarmModel.m */,
-				BABED9091E05143600B38476 /* JLOwnerModel.h */,
-				BABED90A1E05143600B38476 /* JLOwnerModel.m */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		BA2B849C1DF966700054C9B8 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		BA2B849D1DF966700054C9B8 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				BA2B849E1DF966700054C9B8 /* Controllers */,
-				BA2B849F1DF966700054C9B8 /* Models */,
-				BA2B84A01DF966700054C9B8 /* Views */,
+				BA0B28E31E0E124A00A461D9 /* Controllers */,
+				BA0B28E81E0E124A00A461D9 /* Models */,
+				BA0B28E91E0E124A00A461D9 /* Views */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		BA2B849E1DF966700054C9B8 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				BA5058981DFF8B3300E9C010 /* JLNavigationController.h */,
-				BA5058991DFF8B3300E9C010 /* JLNavigationController.m */,
-				BA2B84A91DF966D50054C9B8 /* JLTabBarController.h */,
-				BA2B84AA1DF966D50054C9B8 /* JLTabBarController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		BA2B849F1DF966700054C9B8 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		BA2B84A01DF966700054C9B8 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		BA2B84A11DF966700054C9B8 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
-				BA2B84A21DF966700054C9B8 /* Controllers */,
-				BA2B84A31DF966700054C9B8 /* Models */,
-				BA2B84A41DF966700054C9B8 /* Views */,
+				BA0B28EC1E0E126E00A461D9 /* Controllers */,
+				BA0B29061E0E126E00A461D9 /* Models */,
+				BA0B290F1E0E126E00A461D9 /* Views */,
 			);
 			path = Mine;
-			sourceTree = "<group>";
-		};
-		BA2B84A21DF966700054C9B8 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				BAF7A5D51DFF8A8600D83F41 /* JLMineViewController.h */,
-				BAF7A5D61DFF8A8600D83F41 /* JLMineViewController.m */,
-				BAD4B9821E03910D0050BCCA /* JLPersonalInfoViewController.h */,
-				BAD4B9831E03910D0050BCCA /* JLPersonalInfoViewController.m */,
-				BAD4B9841E03910D0050BCCA /* JLPersonalInfoViewController.xib */,
-				BAD4B98A1E039D490050BCCA /* JLMineReleaseTaskViewController.h */,
-				BAD4B98B1E039D490050BCCA /* JLMineReleaseTaskViewController.m */,
-				BAD4B98D1E039DDF0050BCCA /* JLAccountInfoViewController.h */,
-				BAD4B98E1E039DDF0050BCCA /* JLAccountInfoViewController.m */,
-				BAD4B98F1E039DDF0050BCCA /* JLAccountInfoViewController.xib */,
-				BAD4B9921E03C0270050BCCA /* JLIdentityViewController.h */,
-				BAD4B9931E03C0270050BCCA /* JLIdentityViewController.m */,
-				BAD4B9941E03C0270050BCCA /* JLIdentityViewController.xib */,
-				BAD4B9971E03C0560050BCCA /* JLBalancePayViewController.h */,
-				BAD4B9981E03C0560050BCCA /* JLBalancePayViewController.m */,
-				BAD4B9991E03C0560050BCCA /* JLBalancePayViewController.xib */,
-				BAD4B99C1E03C07E0050BCCA /* JLPWDManagementViewController.h */,
-				BAD4B99D1E03C07E0050BCCA /* JLPWDManagementViewController.m */,
-				BAD4B99E1E03C07E0050BCCA /* JLPWDManagementViewController.xib */,
-				BAD4B9A11E03C0A40050BCCA /* JLMineMessagesViewController.h */,
-				BAD4B9A21E03C0A40050BCCA /* JLMineMessagesViewController.m */,
-				BAD4B9A41E03C0D20050BCCA /* JLRewardsSystemViewController.h */,
-				BAD4B9A51E03C0D20050BCCA /* JLRewardsSystemViewController.m */,
-				BAD260471E07C7C700B47886 /* JLUserBaseInfoViewController.h */,
-				BAD260481E07C7C700B47886 /* JLUserBaseInfoViewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		BA2B84A31DF966700054C9B8 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				BACB09C31DFF919D0003861B /* JLMineItem.h */,
-				BACB09C41DFF919D0003861B /* JLMineItem.m */,
-				BAD4B9871E0396F20050BCCA /* JLMineItemViewModel.h */,
-				BAD4B9881E0396F20050BCCA /* JLMineItemViewModel.m */,
-				BABED8D31E04DC0500B38476 /* JLMineMessageModel.h */,
-				BABED8D41E04DC0500B38476 /* JLMineMessageModel.m */,
-				BABED8D61E04E67C00B38476 /* JLReleaseTaskModel.h */,
-				BABED8D71E04E67C00B38476 /* JLReleaseTaskModel.m */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		BA2B84A41DF966700054C9B8 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				BACB09C61DFFA76C0003861B /* JLMineInfo.xib */,
-				BAD2604C1E07D8E800B47886 /* JLUserBaseInfo.xib */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		BA2B84A51DF966700054C9B8 /* Task */ = {
 			isa = PBXGroup;
 			children = (
-				BA2B84A61DF966700054C9B8 /* Controllers */,
-				BA2B84A71DF966700054C9B8 /* Models */,
-				BA2B84A81DF966700054C9B8 /* Views */,
+				BA0B29271E0E128F00A461D9 /* Controllers */,
+				BA0B292A1E0E128F00A461D9 /* Models */,
+				BA0B292B1E0E128F00A461D9 /* Views */,
 			);
 			path = Task;
-			sourceTree = "<group>";
-		};
-		BA2B84A61DF966700054C9B8 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				BAF7A5CF1DFF899100D83F41 /* JLTaskViewController.h */,
-				BAF7A5D01DFF899100D83F41 /* JLTaskViewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		BA2B84A71DF966700054C9B8 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		BA2B84A81DF966700054C9B8 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				BAD542A51E092BBC00B99FC0 /* JLReleaseTaskTagCell.h */,
-				BAD542A61E092BBC00B99FC0 /* JLReleaseTaskTagCell.m */,
-				BAD542A71E092BBC00B99FC0 /* JLReleaseTaskTagCell.xib */,
-				62178B501E09844B00A2F649 /* JLReleaseTaskTop.xib */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		BABED8D91E04E76900B38476 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				BA0B28A41E0E109C00A461D9 /* MBProgressHUD */,
+				BA0B28711E0E107600A461D9 /* AFNetworking */,
 				BAD5425A1E08DF5400B99FC0 /* RefreshTools */,
 				BABED8DA1E04E79200B38476 /* JsonTools */,
 			);
@@ -708,42 +865,11 @@
 		BACB09C81DFFD29D0003861B /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				BACB09C91DFFD2BE0003861B /* Controller */,
-				BACB09CA1DFFD2BE0003861B /* Model */,
-				BACB09CB1DFFD2BE0003861B /* View */,
+				BA0B28AD1E0E11A400A461D9 /* Controller */,
+				BA0B28B61E0E11A400A461D9 /* Model */,
+				BA0B28B91E0E11A400A461D9 /* View */,
 			);
 			path = Other;
-			sourceTree = "<group>";
-		};
-		BACB09C91DFFD2BE0003861B /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				BACB09CC1DFFD2E50003861B /* JLLoginViewController.h */,
-				BACB09CD1DFFD2E50003861B /* JLLoginViewController.m */,
-				BACB09CF1DFFD3010003861B /* JLRegisterViewController.h */,
-				BACB09D01DFFD3010003861B /* JLRegisterViewController.m */,
-				BAFF394A1E00EC4B008454E7 /* JLRegisterViewController.xib */,
-				BAFF39471E00E5BF008454E7 /* JLForgetPWDViewController.h */,
-				BAFF39481E00E5BF008454E7 /* JLForgetPWDViewController.m */,
-				BACD45C71E029E40007CA568 /* JLForgetPWDViewController.xib */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		BACB09CA1DFFD2BE0003861B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				BABED9001E05117E00B38476 /* JLUserModel.h */,
-				BABED9011E05117E00B38476 /* JLUserModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		BACB09CB1DFFD2BE0003861B /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		BAD5425A1E08DF5400B99FC0 /* RefreshTools */ = {
@@ -956,23 +1082,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAD542A41E091B8300B99FC0 /* BBSModel.plist in Resources */,
-				62178B511E09844B00A2F649 /* JLReleaseTaskTop.xib in Resources */,
+				BA0B291E1E0E126E00A461D9 /* JLPWDManagementViewController.xib in Resources */,
+				BA0B29331E0E128F00A461D9 /* JLReleaseTaskTop.xib in Resources */,
+				BA0B29151E0E126E00A461D9 /* JLBalancePayViewController.xib in Resources */,
 				BACB09C21DFF8F770003861B /* MineItem.plist in Resources */,
-				BAD4B9A01E03C07E0050BCCA /* JLPWDManagementViewController.xib in Resources */,
-				BAD4B9911E039DDF0050BCCA /* JLAccountInfoViewController.xib in Resources */,
-				BAD4B9961E03C0270050BCCA /* JLIdentityViewController.xib in Resources */,
-				BAD542A91E092BBC00B99FC0 /* JLReleaseTaskTagCell.xib in Resources */,
-				BACD45C81E029E40007CA568 /* JLForgetPWDViewController.xib in Resources */,
-				BAFF394B1E00EC4B008454E7 /* JLRegisterViewController.xib in Resources */,
-				BACB09C71DFFA76C0003861B /* JLMineInfo.xib in Resources */,
-				BAD4B9861E03910D0050BCCA /* JLPersonalInfoViewController.xib in Resources */,
+				BA0B28CD1E0E11D200A461D9 /* JLBBSTagCell.xib in Resources */,
 				BAD542981E08DF5C00B99FC0 /* MJRefresh.bundle in Resources */,
-				BAD2604D1E07D8E800B47886 /* JLUserBaseInfo.xib in Resources */,
-				BAD542A21E09030F00B99FC0 /* JLBBSTagCell.xib in Resources */,
+				BA0B29321E0E128F00A461D9 /* JLReleaseTaskTagCell.xib in Resources */,
+				BA0B291C1E0E126E00A461D9 /* JLPersonalInfoViewController.xib in Resources */,
+				BA0B28BE1E0E11A400A461D9 /* JLRegisterViewController.xib in Resources */,
+				BA0B28BB1E0E11A400A461D9 /* JLForgetPWDViewController.xib in Resources */,
+				BA0B29261E0E126E00A461D9 /* JLUserBaseInfo.xib in Resources */,
+				BA0B29251E0E126E00A461D9 /* JLMineInfo.xib in Resources */,
 				BA2B84631DF943E10054C9B8 /* LaunchScreen.storyboard in Resources */,
 				BA2B84601DF943E10054C9B8 /* Assets.xcassets in Resources */,
 				BA2B845E1DF943E10054C9B8 /* Main.storyboard in Resources */,
-				BAD4B99B1E03C0560050BCCA /* JLBalancePayViewController.xib in Resources */,
+				BA0B29171E0E126E00A461D9 /* JLIdentityViewController.xib in Resources */,
+				BA0B28AB1E0E109C00A461D9 /* MBProgressHUD.bundle in Resources */,
+				BA0B29131E0E126E00A461D9 /* JLAccountInfoViewController.xib in Resources */,
 				BABED8F21E04E7A500B38476 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -999,67 +1126,84 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAD542971E08DF5C00B99FC0 /* MJRefreshStateHeader.m in Sources */,
+				BA0B28E11E0E122600A461D9 /* JLOwnerModel.m in Sources */,
+				BA0B291F1E0E126E00A461D9 /* JLRewardsSystemViewController.m in Sources */,
+				BA0B29301E0E128F00A461D9 /* JLTaskViewController.m in Sources */,
 				BAD5429A1E08DF5C00B99FC0 /* NSBundle+MJRefresh.m in Sources */,
+				BA0B291A1E0E126E00A461D9 /* JLMineViewController.m in Sources */,
+				BA0B29221E0E126E00A461D9 /* JLMineItemViewModel.m in Sources */,
 				BAD542961E08DF5C00B99FC0 /* MJRefreshNormalHeader.m in Sources */,
-				BACB09C01DFF8F110003861B /* JLBBSViewController.m in Sources */,
-				BACB09C51DFF919D0003861B /* JLMineItem.m in Sources */,
-				BAD4B9951E03C0270050BCCA /* JLIdentityViewController.m in Sources */,
+				BA0B28A11E0E107600A461D9 /* UIProgressView+AFNetworking.m in Sources */,
+				BA0B289D1E0E107600A461D9 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				BA0B289E1E0E107600A461D9 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				BA0B29231E0E126E00A461D9 /* JLMineMessageModel.m in Sources */,
+				BA0B28AC1E0E109C00A461D9 /* MBProgressHUD.m in Sources */,
+				BA0B29311E0E128F00A461D9 /* JLReleaseTaskTagCell.m in Sources */,
+				BA0B28BC1E0E11A400A461D9 /* JLLoginViewController.m in Sources */,
 				BAD542921E08DF5C00B99FC0 /* MJRefreshBackGifFooter.m in Sources */,
 				BABED8FC1E04E7A500B38476 /* NSString+MJExtension.m in Sources */,
 				BABED8F81E04E7A500B38476 /* NSObject+MJClass.m in Sources */,
 				BAD542931E08DF5C00B99FC0 /* MJRefreshBackNormalFooter.m in Sources */,
 				BABED8FA1E04E7A500B38476 /* NSObject+MJKeyValue.m in Sources */,
 				BABED8F41E04E7A500B38476 /* MJFoundation.m in Sources */,
-				BAD4B9A31E03C0A40050BCCA /* JLMineMessagesViewController.m in Sources */,
-				BABED9021E05117E00B38476 /* JLUserModel.m in Sources */,
-				BABED8D81E04E67C00B38476 /* JLReleaseTaskModel.m in Sources */,
-				BABED8D51E04DC0500B38476 /* JLMineMessageModel.m in Sources */,
+				BA0B29181E0E126E00A461D9 /* JLMineMessagesViewController.m in Sources */,
+				BA0B28951E0E107600A461D9 /* AFHTTPSessionManager.m in Sources */,
+				BA0B28CA1E0E11D200A461D9 /* JLBBSViewController.m in Sources */,
+				BA0B28AA1E0E109C00A461D9 /* MBProgressHUD+MJ.m in Sources */,
+				BA0B289A1E0E107600A461D9 /* AFURLSessionManager.m in Sources */,
 				BAD5428E1E08DF5C00B99FC0 /* MJRefreshHeader.m in Sources */,
 				BA2B845B1DF943E10054C9B8 /* ViewController.m in Sources */,
-				BA2B84AB1DF966D50054C9B8 /* JLTabBarController.m in Sources */,
-				BABED9051E05133500B38476 /* JLBBSModel.m in Sources */,
 				BAD5428D1E08DF5C00B99FC0 /* MJRefreshFooter.m in Sources */,
-				BACB09D11DFFD3010003861B /* JLRegisterViewController.m in Sources */,
-				BACB09CE1DFFD2E50003861B /* JLLoginViewController.m in Sources */,
 				BABED8FB1E04E7A500B38476 /* NSObject+MJProperty.m in Sources */,
-				BAD4B9901E039DDF0050BCCA /* JLAccountInfoViewController.m in Sources */,
+				BA0B28A21E0E107600A461D9 /* UIRefreshControl+AFNetworking.m in Sources */,
 				BAD542991E08DF5C00B99FC0 /* MJRefreshConst.m in Sources */,
-				BAF7A5CE1DFF895700D83F41 /* JLHomeViewController.m in Sources */,
-				BABED90B1E05143600B38476 /* JLOwnerModel.m in Sources */,
+				BA0B28991E0E107600A461D9 /* AFURLResponseSerialization.m in Sources */,
+				BA0B28CC1E0E11D200A461D9 /* JLBBSTagCell.m in Sources */,
+				BA0B289B1E0E107600A461D9 /* AFAutoPurgingImageCache.m in Sources */,
+				BA0B291B1E0E126E00A461D9 /* JLPersonalInfoViewController.m in Sources */,
+				BA0B291D1E0E126E00A461D9 /* JLPWDManagementViewController.m in Sources */,
 				BAD5429B1E08DF5C00B99FC0 /* UIScrollView+MJExtension.m in Sources */,
 				BABED8F61E04E7A500B38476 /* MJPropertyKey.m in Sources */,
+				BA0B28D31E0E120000A461D9 /* JLGrabViewController.m in Sources */,
+				BA0B29191E0E126E00A461D9 /* JLMineReleaseTaskViewController.m in Sources */,
+				BA0B28A31E0E107600A461D9 /* UIWebView+AFNetworking.m in Sources */,
+				BA0B289F1E0E107600A461D9 /* UIButton+AFNetworking.m in Sources */,
+				BA0B28EB1E0E124A00A461D9 /* JLTabBarController.m in Sources */,
 				BAD5428B1E08DF5C00B99FC0 /* MJRefreshBackFooter.m in Sources */,
 				BAD5429D1E08DF5C00B99FC0 /* UIView+MJExtension.m in Sources */,
-				BAD542A11E09030F00B99FC0 /* JLBBSTagCell.m in Sources */,
-				BAFF39491E00E5BF008454E7 /* JLForgetPWDViewController.m in Sources */,
 				BAD5428A1E08DF5C00B99FC0 /* MJRefreshAutoFooter.m in Sources */,
 				BAD542941E08DF5C00B99FC0 /* MJRefreshBackStateFooter.m in Sources */,
+				BA0B29201E0E126E00A461D9 /* JLUserBaseInfoViewController.m in Sources */,
 				BABED8F71E04E7A500B38476 /* MJPropertyType.m in Sources */,
+				BA0B28BA1E0E11A400A461D9 /* JLForgetPWDViewController.m in Sources */,
 				BA2B84581DF943E10054C9B8 /* AppDelegate.m in Sources */,
 				BABED8F31E04E7A500B38476 /* MJExtensionConst.m in Sources */,
-				BAD542A81E092BBC00B99FC0 /* JLReleaseTaskTagCell.m in Sources */,
+				BA0B28DF1E0E122600A461D9 /* JLHomeViewController.m in Sources */,
 				BAD542901E08DF5C00B99FC0 /* MJRefreshAutoNormalFooter.m in Sources */,
-				BAF7A5D71DFF8A8600D83F41 /* JLMineViewController.m in Sources */,
+				BA0B28E01E0E122600A461D9 /* JLFarmModel.m in Sources */,
+				BA0B28A01E0E107600A461D9 /* UIImageView+AFNetworking.m in Sources */,
 				BAD5428C1E08DF5C00B99FC0 /* MJRefreshComponent.m in Sources */,
-				BAD4B9891E0396F20050BCCA /* JLMineItemViewModel.m in Sources */,
-				BAD4B98C1E039D490050BCCA /* JLMineReleaseTaskViewController.m in Sources */,
 				BAD5428F1E08DF5C00B99FC0 /* MJRefreshAutoGifFooter.m in Sources */,
-				BAF7A5D11DFF899100D83F41 /* JLTaskViewController.m in Sources */,
-				BA50589A1DFF8B3300E9C010 /* JLNavigationController.m in Sources */,
-				BAD4B99A1E03C0560050BCCA /* JLBalancePayViewController.m in Sources */,
+				BA0B29141E0E126E00A461D9 /* JLBalancePayViewController.m in Sources */,
 				BAD542951E08DF5C00B99FC0 /* MJRefreshGifHeader.m in Sources */,
-				BAD4B9A61E03C0D20050BCCA /* JLRewardsSystemViewController.m in Sources */,
+				BA0B29161E0E126E00A461D9 /* JLIdentityViewController.m in Sources */,
+				BA0B28981E0E107600A461D9 /* AFURLRequestSerialization.m in Sources */,
 				BABED8F51E04E7A500B38476 /* MJProperty.m in Sources */,
-				BAD4B9851E03910D0050BCCA /* JLPersonalInfoViewController.m in Sources */,
+				BA0B28EA1E0E124A00A461D9 /* JLNavigationController.m in Sources */,
+				BA0B29121E0E126E00A461D9 /* JLAccountInfoViewController.m in Sources */,
+				BA0B28E21E0E122600A461D9 /* JLTradeAlertsModel.m in Sources */,
+				BA0B28961E0E107600A461D9 /* AFNetworkReachabilityManager.m in Sources */,
 				BABED8F91E04E7A500B38476 /* NSObject+MJCoding.m in Sources */,
 				BA2B84551DF943E10054C9B8 /* main.m in Sources */,
-				BABED8FF1E05109500B38476 /* JLTradeAlertsModel.m in Sources */,
+				BA0B29241E0E126E00A461D9 /* JLReleaseTaskModel.m in Sources */,
+				BA0B28BD1E0E11A400A461D9 /* JLRegisterViewController.m in Sources */,
 				BAD542911E08DF5C00B99FC0 /* MJRefreshAutoStateFooter.m in Sources */,
-				BAD4B99F1E03C07E0050BCCA /* JLPWDManagementViewController.m in Sources */,
+				BA0B28BF1E0E11A400A461D9 /* JLUserModel.m in Sources */,
 				BAD5429C1E08DF5C00B99FC0 /* UIScrollView+MJRefresh.m in Sources */,
-				BABED9081E0513F600B38476 /* JLFarmModel.m in Sources */,
-				BAF7A5D41DFF8A1700D83F41 /* JLGrabViewController.m in Sources */,
-				BAD260491E07C7C700B47886 /* JLUserBaseInfoViewController.m in Sources */,
+				BA0B28971E0E107600A461D9 /* AFSecurityPolicy.m in Sources */,
+				BA0B29211E0E126E00A461D9 /* JLMineItem.m in Sources */,
+				BA0B289C1E0E107600A461D9 /* AFImageDownloader.m in Sources */,
+				BA0B28CB1E0E11D200A461D9 /* JLBBSModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
