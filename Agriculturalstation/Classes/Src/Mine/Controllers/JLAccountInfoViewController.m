@@ -6,9 +6,24 @@
 //  Copyright © 2016年 chw. All rights reserved.
 //
 
+  //  账户信息
+
 #import "JLAccountInfoViewController.h"
 
 @interface JLAccountInfoViewController ()
+// 充值
+- (IBAction)chongZhiBtn;
+// 提现
+- (IBAction)withDrawalBtn;
+
+
+// 账户余额
+@property (strong, nonatomic) IBOutlet UILabel *_balance;
+// 我的星级
+@property (strong, nonatomic) IBOutlet UIView *_starsView;
+// 个人积分
+@property (strong, nonatomic) IBOutlet UILabel *_integral;
+
 
 @end
 
@@ -19,19 +34,47 @@
     // Do any additional setup after loading the view from its nib.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)chongZhiBtn {
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)withDrawalBtn {
 }
-*/
-
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

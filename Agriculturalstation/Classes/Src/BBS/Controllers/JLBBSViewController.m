@@ -95,7 +95,7 @@
 
 - (void)sendRequest{
     // 请求地址
-    NSString *url = @"http://rifeng.weixinbm.com/app-forum-op-list.html";
+    NSString *url = [REQUEST_URL stringByAppendingString:@"app-forum-op-list.html"];
     // 请求管理者
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];

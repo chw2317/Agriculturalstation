@@ -14,6 +14,7 @@
 #import "JLMineReleaseTaskViewController.h"
 #import "JLAccountInfoViewController.h"
 #import "JLIdentityViewController.h"
+#import "JLUserBaseInfoViewController.h"
 #import "JLBalancePayViewController.h"
 #import "JLPWDManagementViewController.h"
 #import "JLMineMessagesViewController.h"
@@ -160,6 +161,7 @@
 // 跳转到完善资料界面
 -(void)goToPerfectInfo{
     NSLog(@"完善资料");
+    [self.navigationController pushViewController:[[JLUserBaseInfoViewController alloc] init] animated:YES];
 }
 
 // 跳转到登陆界面

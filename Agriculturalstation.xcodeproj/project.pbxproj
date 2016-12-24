@@ -83,6 +83,7 @@
 		BA0B29631E0E194B00A461D9 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B29511E0E194B00A461D9 /* UIImageView+HighlightedWebCache.m */; };
 		BA0B29641E0E194B00A461D9 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B29531E0E194B00A461D9 /* UIImageView+WebCache.m */; };
 		BA0B29651E0E194B00A461D9 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B29551E0E194B00A461D9 /* UIView+WebCacheOperation.m */; };
+		BA0B29681E0E49C800A461D9 /* JLUserBaseInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B29671E0E49C800A461D9 /* JLUserBaseInfoModel.m */; };
 		BA2B84551DF943E10054C9B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2B84541DF943E10054C9B8 /* main.m */; };
 		BA2B84581DF943E10054C9B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2B84571DF943E10054C9B8 /* AppDelegate.m */; };
 		BA2B845B1DF943E10054C9B8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2B845A1DF943E10054C9B8 /* ViewController.m */; };
@@ -287,6 +288,8 @@
 		BA0B29531E0E194B00A461D9 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		BA0B29541E0E194B00A461D9 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		BA0B29551E0E194B00A461D9 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		BA0B29661E0E49C800A461D9 /* JLUserBaseInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLUserBaseInfoModel.h; sourceTree = "<group>"; };
+		BA0B29671E0E49C800A461D9 /* JLUserBaseInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLUserBaseInfoModel.m; sourceTree = "<group>"; };
 		BA2B84501DF943E10054C9B8 /* Agriculturalstation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agriculturalstation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA2B84541DF943E10054C9B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BA2B84561DF943E10054C9B8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -642,6 +645,8 @@
 				BA0B290C1E0E126E00A461D9 /* JLMineMessageModel.m */,
 				BA0B290D1E0E126E00A461D9 /* JLReleaseTaskModel.h */,
 				BA0B290E1E0E126E00A461D9 /* JLReleaseTaskModel.m */,
+				BA0B29661E0E49C800A461D9 /* JLUserBaseInfoModel.h */,
+				BA0B29671E0E49C800A461D9 /* JLUserBaseInfoModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1308,6 +1313,7 @@
 				BA0B28971E0E107600A461D9 /* AFSecurityPolicy.m in Sources */,
 				BA0B29211E0E126E00A461D9 /* JLMineItem.m in Sources */,
 				BA0B29631E0E194B00A461D9 /* UIImageView+HighlightedWebCache.m in Sources */,
+				BA0B29681E0E49C800A461D9 /* JLUserBaseInfoModel.m in Sources */,
 				BA0B289C1E0E107600A461D9 /* AFImageDownloader.m in Sources */,
 				BA0B28CB1E0E11D200A461D9 /* JLBBSModel.m in Sources */,
 			);
