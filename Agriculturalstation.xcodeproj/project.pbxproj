@@ -92,6 +92,9 @@
 		BA2B84631DF943E10054C9B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA2B84611DF943E10054C9B8 /* LaunchScreen.storyboard */; };
 		BA2B846E1DF943E10054C9B8 /* AgriculturalstationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2B846D1DF943E10054C9B8 /* AgriculturalstationTests.m */; };
 		BA2B84791DF943E10054C9B8 /* AgriculturalstationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2B84781DF943E10054C9B8 /* AgriculturalstationUITests.m */; };
+		BABE8F921E11142800C5AB73 /* RatingBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BABE8F911E11142800C5AB73 /* RatingBar.m */; };
+		BABE8F961E111EE700C5AB73 /* JLRechargeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BABE8F941E111EE700C5AB73 /* JLRechargeViewController.m */; };
+		BABE8F971E111EE700C5AB73 /* JLRechargeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BABE8F951E111EE700C5AB73 /* JLRechargeViewController.xib */; };
 		BABED8F21E04E7A500B38476 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BABED8DC1E04E7A500B38476 /* Info.plist */; };
 		BABED8F31E04E7A500B38476 /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = BABED8DF1E04E7A500B38476 /* MJExtensionConst.m */; };
 		BABED8F41E04E7A500B38476 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = BABED8E11E04E7A500B38476 /* MJFoundation.m */; };
@@ -306,6 +309,11 @@
 		BA2B84741DF943E10054C9B8 /* AgriculturalstationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgriculturalstationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA2B84781DF943E10054C9B8 /* AgriculturalstationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AgriculturalstationUITests.m; sourceTree = "<group>"; };
 		BA2B847A1DF943E10054C9B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BABE8F901E11142800C5AB73 /* RatingBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingBar.h; sourceTree = "<group>"; };
+		BABE8F911E11142800C5AB73 /* RatingBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingBar.m; sourceTree = "<group>"; };
+		BABE8F931E111EE700C5AB73 /* JLRechargeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLRechargeViewController.h; sourceTree = "<group>"; };
+		BABE8F941E111EE700C5AB73 /* JLRechargeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLRechargeViewController.m; sourceTree = "<group>"; };
+		BABE8F951E111EE700C5AB73 /* JLRechargeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLRechargeViewController.xib; sourceTree = "<group>"; };
 		BABED8DC1E04E7A500B38476 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BABED8DD1E04E7A500B38476 /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
 		BABED8DE1E04E7A500B38476 /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
@@ -630,6 +638,9 @@
 				BA0B29031E0E126E00A461D9 /* JLRewardsSystemViewController.m */,
 				BA0B29041E0E126E00A461D9 /* JLUserBaseInfoViewController.h */,
 				BA0B29051E0E126E00A461D9 /* JLUserBaseInfoViewController.m */,
+				BABE8F931E111EE700C5AB73 /* JLRechargeViewController.h */,
+				BABE8F941E111EE700C5AB73 /* JLRechargeViewController.m */,
+				BABE8F951E111EE700C5AB73 /* JLRechargeViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -654,6 +665,8 @@
 		BA0B290F1E0E126E00A461D9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BABE8F901E11142800C5AB73 /* RatingBar.h */,
+				BABE8F911E11142800C5AB73 /* RatingBar.m */,
 				BA0B29101E0E126E00A461D9 /* JLMineInfo.xib */,
 				BA0B29111E0E126E00A461D9 /* JLUserBaseInfo.xib */,
 			);
@@ -1192,6 +1205,7 @@
 				BA2B84631DF943E10054C9B8 /* LaunchScreen.storyboard in Resources */,
 				BA2B84601DF943E10054C9B8 /* Assets.xcassets in Resources */,
 				BA2B845E1DF943E10054C9B8 /* Main.storyboard in Resources */,
+				BABE8F971E111EE700C5AB73 /* JLRechargeViewController.xib in Resources */,
 				BA0B29171E0E126E00A461D9 /* JLIdentityViewController.xib in Resources */,
 				BA0B28AB1E0E109C00A461D9 /* MBProgressHUD.bundle in Resources */,
 				BA0B29131E0E126E00A461D9 /* JLAccountInfoViewController.xib in Resources */,
@@ -1257,6 +1271,7 @@
 				BAD5428E1E08DF5C00B99FC0 /* MJRefreshHeader.m in Sources */,
 				BA2B845B1DF943E10054C9B8 /* ViewController.m in Sources */,
 				BAD5428D1E08DF5C00B99FC0 /* MJRefreshFooter.m in Sources */,
+				BABE8F961E111EE700C5AB73 /* JLRechargeViewController.m in Sources */,
 				BABED8FB1E04E7A500B38476 /* NSObject+MJProperty.m in Sources */,
 				BA0B28A21E0E107600A461D9 /* UIRefreshControl+AFNetworking.m in Sources */,
 				BAD542991E08DF5C00B99FC0 /* MJRefreshConst.m in Sources */,
@@ -1315,6 +1330,7 @@
 				BA0B29631E0E194B00A461D9 /* UIImageView+HighlightedWebCache.m in Sources */,
 				BA0B29681E0E49C800A461D9 /* JLUserBaseInfoModel.m in Sources */,
 				BA0B289C1E0E107600A461D9 /* AFImageDownloader.m in Sources */,
+				BABE8F921E11142800C5AB73 /* RatingBar.m in Sources */,
 				BA0B28CB1E0E11D200A461D9 /* JLBBSModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
