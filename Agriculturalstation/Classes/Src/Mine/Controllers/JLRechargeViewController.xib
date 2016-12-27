@@ -11,6 +11,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JLRechargeViewController">
             <connections>
+                <outlet property="_alipayCB" destination="ArN-ep-6aC" id="GUW-hT-sE3"/>
+                <outlet property="_next" destination="9ic-i6-Hlr" id="Ubz-iS-e5w"/>
+                <outlet property="_rechargeAmount" destination="D0V-Us-oGE" id="9Ug-1p-bf1"/>
+                <outlet property="_tenpayCB" destination="Pdu-Pa-xEE" id="tFj-AM-SVC"/>
+                <outlet property="_unionCB" destination="NXc-rd-0iZ" id="nBU-ss-obM"/>
+                <outlet property="_weixin" destination="fEr-bH-euV" id="Gnr-t5-Nt9"/>
+                <outlet property="_weixinCB" destination="m70-NF-D3N" id="pg0-e4-aWP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -50,6 +57,9 @@
                             </constraints>
                             <state key="normal" backgroundImage="et_delete_normal"/>
                             <state key="highlighted" backgroundImage="et_delete_foucs"/>
+                            <connections>
+                                <action selector="emptyBtn" destination="-1" eventType="touchUpInside" id="1D0-qa-uPY"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -65,12 +75,143 @@
                         <constraint firstAttribute="height" constant="40" id="vv1-fm-323"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择支付方式：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbB-uo-O4Y">
+                    <rect key="frame" x="8" y="64" width="200" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="YZV-4G-sD8"/>
+                        <constraint firstAttribute="width" constant="200" id="vJF-wx-y5r"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ArN-ep-6aC">
+                    <rect key="frame" x="16" y="109" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="iZF-YB-MFG"/>
+                        <constraint firstAttribute="width" constant="25" id="qbt-RI-tL3"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="checkbox_focus"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2NH-Xw-I8p">
+                    <rect key="frame" x="49" y="100" width="100" height="43"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="XAE-PP-9u2"/>
+                        <constraint firstAttribute="height" constant="43" id="gQI-2G-Yvg"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="ic_alipay"/>
+                    <connections>
+                        <action selector="alipayBtn:" destination="-1" eventType="touchUpInside" id="9Bo-yz-wSw"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXc-rd-0iZ">
+                    <rect key="frame" x="226" y="109" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="Eqb-IQ-M66"/>
+                        <constraint firstAttribute="height" constant="25" id="etv-he-MM6"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="checkbox_normal"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnB-ph-EBC">
+                    <rect key="frame" x="259" y="100" width="100" height="43"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="Buf-51-hV8"/>
+                        <constraint firstAttribute="height" constant="43" id="LE2-74-tfq"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="ic_union"/>
+                    <connections>
+                        <action selector="unionBtn:" destination="-1" eventType="touchUpInside" id="Ahk-rw-uNP"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m70-NF-D3N">
+                    <rect key="frame" x="16" y="182" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="1wt-RF-egG"/>
+                        <constraint firstAttribute="width" constant="25" id="4Ig-tR-llk"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="checkbox_normal"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEr-bH-euV">
+                    <rect key="frame" x="49" y="173.5" width="110" height="43"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="110" id="M7V-ZN-4id"/>
+                        <constraint firstAttribute="height" constant="43" id="tpD-eU-3B7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="微信支付" image="ic_weixin">
+                        <color key="titleColor" red="0.40608031429122265" green="0.6588235294" blue="0.019782225863483889" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="weixinBtn:" destination="-1" eventType="touchUpInside" id="vW8-8g-sbN"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="std-QY-tdo">
+                    <rect key="frame" x="259" y="173" width="100" height="43"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="aUs-SR-ldD"/>
+                        <constraint firstAttribute="height" constant="43" id="kiv-lU-uYS"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="ic_tenpay"/>
+                    <connections>
+                        <action selector="tenpayBtn:" destination="-1" eventType="touchUpInside" id="ebf-84-sqg"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pdu-Pa-xEE">
+                    <rect key="frame" x="226" y="182" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="7QZ-f9-VSV"/>
+                        <constraint firstAttribute="height" constant="25" id="dvY-Wh-DXU"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="checkbox_normal"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ic-i6-Hlr">
+                    <rect key="frame" x="100" y="276" width="175" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="175" id="Ty2-2X-SZv"/>
+                        <constraint firstAttribute="height" constant="40" id="dPd-kw-EpS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="下一步" backgroundImage="reg_btn_bg_focus">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="disabled" title="下一步" backgroundImage="reg_btn_bg">
+                        <color key="titleColor" red="0.1137254902" green="0.60392156860000001" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="highlighted" title="下一步" backgroundImage="reg_btn_bg">
+                        <color key="titleColor" red="0.1137254902" green="0.60392156860000001" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="nextBtn:" destination="-1" eventType="touchUpInside" id="4uH-FB-S57"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
+                <constraint firstItem="ArN-ep-6aC" firstAttribute="top" secondItem="NbB-uo-O4Y" secondAttribute="bottom" constant="24" id="0w7-fd-ont"/>
+                <constraint firstItem="fEr-bH-euV" firstAttribute="leading" secondItem="m70-NF-D3N" secondAttribute="trailing" constant="8" id="42R-N8-YkN"/>
+                <constraint firstItem="m70-NF-D3N" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="7uN-1T-Oil"/>
+                <constraint firstItem="NbB-uo-O4Y" firstAttribute="top" secondItem="l5A-h0-7c9" secondAttribute="bottom" constant="14" id="BFt-0K-2Sp"/>
+                <constraint firstItem="9ic-i6-Hlr" firstAttribute="top" secondItem="std-QY-tdo" secondAttribute="bottom" constant="60" id="DKb-L9-zp1"/>
+                <constraint firstItem="PnB-ph-EBC" firstAttribute="leading" secondItem="NXc-rd-0iZ" secondAttribute="trailing" constant="8" id="EQH-Ep-obT"/>
+                <constraint firstItem="ArN-ep-6aC" firstAttribute="centerY" secondItem="2NH-Xw-I8p" secondAttribute="centerY" id="LuQ-DK-sU9"/>
+                <constraint firstItem="NbB-uo-O4Y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Nqx-W3-YpT"/>
+                <constraint firstItem="ArN-ep-6aC" firstAttribute="centerY" secondItem="NXc-rd-0iZ" secondAttribute="centerY" id="Ofe-WH-rMK"/>
+                <constraint firstAttribute="trailing" secondItem="NbB-uo-O4Y" secondAttribute="trailing" constant="167" id="S0o-Wr-04y"/>
+                <constraint firstAttribute="trailing" secondItem="std-QY-tdo" secondAttribute="trailing" constant="16" id="VyZ-G3-I5P"/>
+                <constraint firstItem="m70-NF-D3N" firstAttribute="top" secondItem="ArN-ep-6aC" secondAttribute="bottom" constant="48" id="WKm-sN-CKR"/>
+                <constraint firstAttribute="trailing" secondItem="9ic-i6-Hlr" secondAttribute="trailing" constant="100" id="Wn9-dm-N2q"/>
+                <constraint firstItem="m70-NF-D3N" firstAttribute="centerY" secondItem="fEr-bH-euV" secondAttribute="centerY" id="e4K-02-1cD"/>
+                <constraint firstItem="m70-NF-D3N" firstAttribute="centerY" secondItem="std-QY-tdo" secondAttribute="centerY" id="hZN-Bf-A57"/>
                 <constraint firstAttribute="trailing" secondItem="l5A-h0-7c9" secondAttribute="trailing" id="km4-0X-PdW"/>
                 <constraint firstItem="l5A-h0-7c9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mIV-4p-vcm"/>
+                <constraint firstItem="2NH-Xw-I8p" firstAttribute="leading" secondItem="ArN-ep-6aC" secondAttribute="trailing" constant="8" id="mJR-Bc-nGF"/>
+                <constraint firstItem="Pdu-Pa-xEE" firstAttribute="centerY" secondItem="std-QY-tdo" secondAttribute="centerY" id="n4y-8d-TVT"/>
+                <constraint firstItem="std-QY-tdo" firstAttribute="leading" secondItem="Pdu-Pa-xEE" secondAttribute="trailing" constant="8" id="oYY-0I-upX"/>
+                <constraint firstItem="NXc-rd-0iZ" firstAttribute="centerY" secondItem="PnB-ph-EBC" secondAttribute="centerY" id="r1e-qh-s5G"/>
+                <constraint firstItem="ArN-ep-6aC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="t3Q-o8-HEQ"/>
                 <constraint firstItem="l5A-h0-7c9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="tYA-Ot-UbZ"/>
+                <constraint firstItem="9ic-i6-Hlr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="100" id="v9d-Of-hXc"/>
+                <constraint firstAttribute="trailing" secondItem="PnB-ph-EBC" secondAttribute="trailing" constant="16" id="vuZ-4Y-NvN"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
@@ -80,7 +221,15 @@
         </view>
     </objects>
     <resources>
+        <image name="checkbox_focus" width="32" height="32"/>
+        <image name="checkbox_normal" width="32" height="32"/>
         <image name="et_delete_foucs" width="32" height="32"/>
         <image name="et_delete_normal" width="32" height="32"/>
+        <image name="ic_alipay" width="160" height="53"/>
+        <image name="ic_tenpay" width="160" height="62"/>
+        <image name="ic_union" width="100" height="66"/>
+        <image name="ic_weixin" width="43" height="43"/>
+        <image name="reg_btn_bg" width="200" height="40"/>
+        <image name="reg_btn_bg_focus" width="200" height="40"/>
     </resources>
 </document>

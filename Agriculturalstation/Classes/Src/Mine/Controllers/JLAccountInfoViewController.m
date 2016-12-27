@@ -9,6 +9,7 @@
   //  账户信息
 
 #import "JLAccountInfoViewController.h"
+#import "JLRechargeViewController.h"
 #import "RatingBar.h"
 #import "AFNetworking.h"
 #import "MBProgressHUD.h"
@@ -87,9 +88,12 @@
     [self.ratingBar setImageDeselected:@"iconfont-xing" halfSelected:@"iconfont-xing" fullSelected:@"iconfont-xing" andDelegate:self];
 }
 
+// 充值
 - (IBAction)chongZhiBtn {
+    [self.navigationController pushViewController:[[JLRechargeViewController alloc]init] animated:YES];
 }
 
+// 提现
 - (IBAction)withDrawalBtn {
 }
 
