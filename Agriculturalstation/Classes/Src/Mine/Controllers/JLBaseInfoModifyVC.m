@@ -8,6 +8,8 @@
 
 #import "JLBaseInfoModifyVC.h"
 #import "AFNetworking.h"
+#import "MBProgressHUD.h"
+#import "MBProgressHUD+MJ.h"
 
 @interface JLBaseInfoModifyVC ()
 - (IBAction)deleteBtn;
@@ -72,6 +74,8 @@
 
 // 保存
 - (void)rightSaveEvent{
+    // 显示MBProgressHUD
+    [MBProgressHUD showMessage:nil];
     // 请求地址
     NSString *url = [REQUEST_URL stringByAppendingString:@"app-personalinfo-op-change.html"];
     // 请求管理者
@@ -81,15 +85,27 @@
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"uid"] = _userUid;
     parameters[@"key"] = self.key;
-    parameters[@"value"] = self._content;
+    parameters[@"value"] = self._content.text;
     // 发起请求
     [manager POST:url parameters:parameters progress:^(NSProgress *_Nonnull uploadProgress){
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
+        // 隐藏MBProgressHUD
+        [MBProgressHUD hideHUD];
+        //弹出“保存成功”的提示；
+        [MBProgressHUD showSuccess:@"保存失败"];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
+        
+        
+        // 隐藏MBProgressHUD
+        [MBProgressHUD hideHUD];
+        //弹出“保存成功”的提示；
+        [MBProgressHUD showSuccess:@"保存成功"];
+        // 代理传值
+        [_delegate pass:self._content.text andIndex:_index];
         // 保存成功，返回上一页面
         [self.navigationController popViewControllerAnimated:YES];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
-
     }];
 }
 @end

@@ -14,10 +14,10 @@
 #import "MBProgressHUD+MJ.h"
 #import "JLBaseInfoModifyVC.h"
 
-@interface JLUserBaseInfoViewController ()<UITableViewDelegate,UITableViewDataSource>{
+@interface JLUserBaseInfoViewController ()<UITableViewDelegate,UITableViewDataSource,JLBaseInfoModifyVCDelegate>{
     UITableView *_tableView;
-    NSArray *_itemLabelArray;
-    NSArray *_itemContentArray;
+    NSMutableArray *_itemLabelArray;
+    NSMutableArray *_itemContentArray;
     NSString *userUid;
 }
 
@@ -49,8 +49,8 @@
     UIButton *certificate2 = (UIButton *)[userInfoView viewWithTag:2];
     [certificate2 addTarget:self action:@selector(certificate2BtnAction:) forControlEvents:UIControlEventTouchUpInside];
     
-    _itemContentArray = [NSArray array];
-    _itemLabelArray = [NSArray arrayWithObjects:@"用户名",@"用户类型",@"联系电话",@"真实姓名",@"身份证号",@"籍贯",@"详细地址", nil];
+//    _itemContentArray = [NSArray array];
+    _itemLabelArray = [NSMutableArray arrayWithObjects:@"用户名",@"用户类型",@"联系电话",@"真实姓名",@"身份证号",@"籍贯",@"详细地址", nil];
     // 创建一个分组样式的UITableView
     _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     UIView *headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 5)];
@@ -123,9 +123,17 @@
     // 详细地址
     NSString *address = NULLString(responseObject[@"address"])?@"未填写":responseObject[@"address"];
     
-    _itemContentArray = @[userName,userType,phoneNumber,realName,idcard,nativePlace,address];
+    _itemContentArray = [NSMutableArray arrayWithObjects:userName,userType,phoneNumber,realName,idcard,nativePlace,address, nil];
     // 刷新UITableView
     [_tableView reloadData];
+}
+
+#pragma mark - 实现代理方法，接收传过来的内容
+- (void)pass:(NSString *)value andIndex:(NSInteger)index{
+    NSLog(@"value = %@     index = %d",value,index);
+    [_itemContentArray replaceObjectAtIndex:index withObject:value];
+    NSIndexPath *indexPaths = [NSIndexPath indexPathForRow:index inSection:0];
+    [_tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPaths,nil] withRowAnimation:UITableViewRowAnimationLeft];
 }
 
 // 相关证件一
@@ -187,6 +195,8 @@
             _modifyVC.contextStr = _itemContentArray[index];
             _modifyVC.index = index;
             _modifyVC.userUid = userUid;
+            // 指定代理
+            _modifyVC.delegate = self;
             break;
     }
 }
