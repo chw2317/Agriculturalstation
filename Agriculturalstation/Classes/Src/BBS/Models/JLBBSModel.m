@@ -14,15 +14,15 @@
 -(JLBBSModel *)initWithDictionary:(NSDictionary *)dic{
     if(self = [super init]){
         // 记录的id
-        self.ID = [dic[@"id"] intValue];
+        self.id = [dic[@"id"] intValue];
         // 标题
-        self.title = dic[@"title"];
+        self.name = dic[@"name"];
         // 内容
         self.content = dic[@"content"];
         // 浏览量
-        self.views = [dic[@"views"] intValue];
+        self.viewnum = [dic[@"viewnum"] intValue];
         // 时间
-        self.time = dic[@"time"];
+        self.dateline = dic[@"dateline"];
         // 类型
         self.type = [dic[@"type"] intValue];
     }

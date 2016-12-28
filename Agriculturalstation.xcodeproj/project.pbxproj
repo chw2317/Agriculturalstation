@@ -92,6 +92,8 @@
 		BA2B84631DF943E10054C9B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA2B84611DF943E10054C9B8 /* LaunchScreen.storyboard */; };
 		BA2B846E1DF943E10054C9B8 /* AgriculturalstationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2B846D1DF943E10054C9B8 /* AgriculturalstationTests.m */; };
 		BA2B84791DF943E10054C9B8 /* AgriculturalstationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2B84781DF943E10054C9B8 /* AgriculturalstationUITests.m */; };
+		BA6B033E1E139DE800939D41 /* JLBaseInfoModifyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B033C1E139DE800939D41 /* JLBaseInfoModifyVC.m */; };
+		BA6B033F1E139DE800939D41 /* JLBaseInfoModifyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA6B033D1E139DE800939D41 /* JLBaseInfoModifyVC.xib */; };
 		BABE8F921E11142800C5AB73 /* RatingBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BABE8F911E11142800C5AB73 /* RatingBar.m */; };
 		BABE8F961E111EE700C5AB73 /* JLRechargeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BABE8F941E111EE700C5AB73 /* JLRechargeViewController.m */; };
 		BABE8F971E111EE700C5AB73 /* JLRechargeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BABE8F951E111EE700C5AB73 /* JLRechargeViewController.xib */; };
@@ -311,6 +313,9 @@
 		BA2B84741DF943E10054C9B8 /* AgriculturalstationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgriculturalstationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA2B84781DF943E10054C9B8 /* AgriculturalstationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AgriculturalstationUITests.m; sourceTree = "<group>"; };
 		BA2B847A1DF943E10054C9B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA6B033B1E139DE800939D41 /* JLBaseInfoModifyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLBaseInfoModifyVC.h; sourceTree = "<group>"; };
+		BA6B033C1E139DE800939D41 /* JLBaseInfoModifyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLBaseInfoModifyVC.m; sourceTree = "<group>"; };
+		BA6B033D1E139DE800939D41 /* JLBaseInfoModifyVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLBaseInfoModifyVC.xib; sourceTree = "<group>"; };
 		BABE8F901E11142800C5AB73 /* RatingBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingBar.h; sourceTree = "<group>"; };
 		BABE8F911E11142800C5AB73 /* RatingBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingBar.m; sourceTree = "<group>"; };
 		BABE8F931E111EE700C5AB73 /* JLRechargeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLRechargeViewController.h; sourceTree = "<group>"; };
@@ -646,6 +651,9 @@
 				BABE8F931E111EE700C5AB73 /* JLRechargeViewController.h */,
 				BABE8F941E111EE700C5AB73 /* JLRechargeViewController.m */,
 				BABE8F951E111EE700C5AB73 /* JLRechargeViewController.xib */,
+				BA6B033B1E139DE800939D41 /* JLBaseInfoModifyVC.h */,
+				BA6B033C1E139DE800939D41 /* JLBaseInfoModifyVC.m */,
+				BA6B033D1E139DE800939D41 /* JLBaseInfoModifyVC.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1210,6 +1218,7 @@
 				BA0B28BE1E0E11A400A461D9 /* JLRegisterViewController.xib in Resources */,
 				BA0B28BB1E0E11A400A461D9 /* JLForgetPWDViewController.xib in Resources */,
 				BA0B29261E0E126E00A461D9 /* JLUserBaseInfo.xib in Resources */,
+				BA6B033F1E139DE800939D41 /* JLBaseInfoModifyVC.xib in Resources */,
 				BA0B29251E0E126E00A461D9 /* JLMineInfo.xib in Resources */,
 				BA2B84631DF943E10054C9B8 /* LaunchScreen.storyboard in Resources */,
 				BA2B84601DF943E10054C9B8 /* Assets.xcassets in Resources */,
@@ -1252,6 +1261,7 @@
 				BA0B29641E0E194B00A461D9 /* UIImageView+WebCache.m in Sources */,
 				BA0B291A1E0E126E00A461D9 /* JLMineViewController.m in Sources */,
 				BA0B29221E0E126E00A461D9 /* JLMineItemViewModel.m in Sources */,
+				BA6B033E1E139DE800939D41 /* JLBaseInfoModifyVC.m in Sources */,
 				BAD542961E08DF5C00B99FC0 /* MJRefreshNormalHeader.m in Sources */,
 				BA0B28A11E0E107600A461D9 /* UIProgressView+AFNetworking.m in Sources */,
 				BA0B289D1E0E107600A461D9 /* AFNetworkActivityIndicatorManager.m in Sources */,

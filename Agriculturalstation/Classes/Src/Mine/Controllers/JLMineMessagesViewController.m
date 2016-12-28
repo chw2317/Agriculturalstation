@@ -54,8 +54,9 @@
     UIBarButtonItem *rightBarItem = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
     self.navigationItem.rightBarButtonItem = rightBarItem;
     
+    CGRect tableViewFrame = CGRectMake(0, 0, self.view.frame.size.width, SCREEN_HEIGHT - STATUS_HEIGHT - NAV_HEIGHT);
     // 创建一个分组样式的UITableView
-    _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    _tableView = [[UITableView alloc]initWithFrame:tableViewFrame style:UITableViewStyleGrouped];
     [self.view addSubview:_tableView];
     // 设置数据源
     _tableView.dataSource = self;
@@ -89,8 +90,8 @@
 //    [self json2object:@"[{\"ID\":1,\"title\":\"陈汉文\",\"time\":\"123456478\",\"content\":\"案发时发生发生法撒旦法师打发是否是飞洒发士大夫撒旦法是的范德萨发撒飞洒地方是沙发沙发士大夫撒旦师傅师傅说到底发生士大夫撒飞洒的\"},{\"ID\":2,\"title\":\"陈汉文2\",\"time\":\"1234564782\",\"content\":\"案发时发生发生法撒旦法师打发是否是飞洒发士大夫撒旦法是的范德萨发撒飞洒地方是沙发沙发士大夫撒旦师傅师傅说到底发生士大夫撒飞洒的2\"}]"];
 }
 
+
 - (void)sendRequest{
-    NSLog(@"sendRequest = %@",@"sendRequest");
     // 显示MBProgressHUD
     [MBProgressHUD showMessage:nil];
     // 请求地址
@@ -107,18 +108,9 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
         // 隐藏MBProgressHUD
         [MBProgressHUD hideHUD];
-//        NSLog(@"responseObject = %@",responseObject);
         self.mineMsgModelArray = [JLMineMessageModel mj_objectArrayWithKeyValuesArray:responseObject];
-//        NSArray *tempMineMsgArray = [JLMineMessageModel mj_objectArrayWithKeyValuesArray:responseObject];
-//        NSMutableArray *mutArray = [NSMutableArray arrayWithCapacity:tempMineMsgArray.count];
-//        for(NSDictionary *dict in tempMineMsgArray){
-//            NSLog(@"xxxxxxx=%d",[dict[@"id"]intValue]);
-//            JLMineMessageModel *mineMsgModel = [JLMineMessageModel statusWithDictionay:dict];
-//            [mutArray addObject:mineMsgModel];
-//        }
-//        self.mineMsgModelArray = [mutArray mutableCopy];
+        // 刷新UITableView
         [_tableView reloadData];
-        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
         // 隐藏MBProgressHUD
         [MBProgressHUD hideHUD];
@@ -156,7 +148,7 @@
 
 #pragma mark - 设置每行高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 90.0f;
+    return 80.0f;
 }
 
 #pragma mark - 设置头部高度
@@ -165,9 +157,14 @@
 }
 
 #pragma mark - 设置尾部高度
-//- (CGFloat) tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-//    return 10.0f;
-//}
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 0.0001f;
+}
+
+#pragma mark 重写状态栏样式方法
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
 
 // 将json数组转化为模型对象
 -(void)json2object:(NSString *)json_data{

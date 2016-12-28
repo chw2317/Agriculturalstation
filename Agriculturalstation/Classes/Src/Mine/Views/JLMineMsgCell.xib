@@ -21,10 +21,6 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="尊敬的张三会员：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gul-ZQ-ZAB">
                         <rect key="frame" x="8" y="0.0" width="200" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="21" id="ntO-Hd-bj1"/>
-                            <constraint firstAttribute="width" constant="200" id="z3y-Yd-6UO"/>
-                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -32,8 +28,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016-12-27" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7X-gc-DMw">
                         <rect key="frame" x="275" y="5" width="100" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="100" id="aye-wS-h0V"/>
-                            <constraint firstAttribute="height" constant="21" id="qYz-zs-a1H"/>
+                            <constraint firstAttribute="width" constant="100" id="QhG-sA-D1P"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -41,23 +36,22 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="农家兄弟会员积分发放成功，您于2016年7月顺利完成发布的任务，奖励300点积分，已成功发放至您的积分账户。" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPe-6Y-jBn">
                         <rect key="frame" x="16" y="26" width="359" height="42"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="42" id="PVd-CS-Udt"/>
-                            <constraint firstAttribute="width" constant="359" id="wJo-iD-gPr"/>
-                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="b7X-gc-DMw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="8ca-2C-evh"/>
-                    <constraint firstItem="Gul-ZQ-ZAB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="BM5-rZ-CMt"/>
-                    <constraint firstItem="UPe-6Y-jBn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="MHI-YJ-4L2"/>
-                    <constraint firstAttribute="trailing" secondItem="b7X-gc-DMw" secondAttribute="trailing" id="Qpq-2u-ofc"/>
-                    <constraint firstItem="UPe-6Y-jBn" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="8" id="dIV-UY-WWF"/>
-                    <constraint firstItem="UPe-6Y-jBn" firstAttribute="top" secondItem="b7X-gc-DMw" secondAttribute="bottom" id="f8v-dM-iAn"/>
-                    <constraint firstItem="Gul-ZQ-ZAB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="n8z-SL-BiE"/>
+                    <constraint firstItem="Gul-ZQ-ZAB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0Vd-FA-Fqd"/>
+                    <constraint firstAttribute="trailing" secondItem="b7X-gc-DMw" secondAttribute="trailing" id="9x8-nf-TsY"/>
+                    <constraint firstItem="Gul-ZQ-ZAB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Hdc-nq-EoX"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="UPe-6Y-jBn" secondAttribute="bottom" constant="3.5" id="Jir-YP-Dg9"/>
+                    <constraint firstItem="b7X-gc-DMw" firstAttribute="leading" secondItem="Gul-ZQ-ZAB" secondAttribute="trailing" constant="67" id="M0C-T9-GPv"/>
+                    <constraint firstItem="UPe-6Y-jBn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="UHq-FT-Vxc"/>
+                    <constraint firstItem="b7X-gc-DMw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-3" id="dT9-qt-qWb"/>
+                    <constraint firstItem="b7X-gc-DMw" firstAttribute="trailing" secondItem="UPe-6Y-jBn" secondAttribute="trailing" id="eAQ-8S-d8z"/>
+                    <constraint firstItem="UPe-6Y-jBn" firstAttribute="top" secondItem="b7X-gc-DMw" secondAttribute="bottom" id="pe6-Nr-Fwd"/>
+                    <constraint firstItem="UPe-6Y-jBn" firstAttribute="top" secondItem="Gul-ZQ-ZAB" secondAttribute="bottom" constant="5" id="wST-2Y-XQa"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

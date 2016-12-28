@@ -12,13 +12,12 @@
 
 @interface JLBBSModel : NSObject
 
-@property (nonatomic, assign) int ID;
-@property (nonatomic, assign) int type;
-@property (nonatomic, copy) NSString *title; // 标题
+@property (nonatomic, assign) int id; // 记录的id
+@property (nonatomic, assign) int type; // 帖子类型  置顶/热帖
+@property (nonatomic, copy) NSString *name; // 标题
 @property (nonatomic, copy) NSString *content; // 内容
-@property (nonatomic, assign) int views; // 浏览量
-@property (nonatomic, copy) NSString *time; // 发布时间
-@property (nonatomic, copy) NSString *name;
+@property (nonatomic, assign) int viewnum; // 浏览量
+@property (nonatomic, copy) NSString *dateline; // 发布时间
 
 - (JLBBSModel *)initWithDictionary:(NSDictionary *)dict;
 + (JLBBSModel *)statusWithDictionary:(NSDictionary *)dict;

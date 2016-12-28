@@ -12,13 +12,16 @@
 #import "AFNetworking.h"
 #import "MBProgressHUD.h"
 #import "MBProgressHUD+MJ.h"
+#import "JLBaseInfoModifyVC.h"
 
 @interface JLUserBaseInfoViewController ()<UITableViewDelegate,UITableViewDataSource>{
     UITableView *_tableView;
     NSArray *_itemLabelArray;
     NSArray *_itemContentArray;
+    NSString *userUid;
 }
 
+@property(nonatomic, strong)JLBaseInfoModifyVC *modifyVC;
 
 @end
 
@@ -28,6 +31,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    userUid = [userDefaults objectForKey:@"uid"];
     [self sendRequest];
     
     self.title = @"基础信息";
@@ -61,8 +66,7 @@
 }
 
 - (void)sendRequest{
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSString *uid = [userDefaults objectForKey:@"uid"];
+    
     // 显示MBProgressHUD
     [MBProgressHUD showMessage:nil];
     // 请求地址
@@ -72,7 +76,7 @@
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
     // 拼接请求参数
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    parameters[@"uid"] = uid;
+    parameters[@"uid"] = userUid;
     // 发起请求
     [manager POST:url parameters:parameters progress:^(NSProgress *_Nonnull uploadProgress){
         
@@ -140,12 +144,12 @@
     return 1;
 }
 
-// 返回每组行数
+#pragma mark - 返回每组行数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return _itemLabelArray.count;
 }
 
-// 返回每行单元格Cell
+#pragma mark - 返回每行单元格Cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellIdentifier = @"UITableViewIdentifierKey1";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
@@ -159,24 +163,46 @@
     if(_itemContentArray.count > 0){
         cell.detailTextLabel.text = _itemContentArray[indexPath.row];
     }
-//    cell.detailTextLabel.text = @"墨明棋妙";
     cell.detailTextLabel.font = [UIFont systemFontOfSize:14];
     
     return cell;
 }
 
-// 设置行高
+#pragma mark - 行的点击事件
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    int index = indexPath.row;
+    switch (index) {
+        case 1: // 用户类型
+            
+            break;
+            
+        case 5: // 籍贯
+            
+            break;
+            
+        default:
+            self.modifyVC = [JLBaseInfoModifyVC new];
+            [self.navigationController pushViewController:_modifyVC animated:YES];
+            _modifyVC.titleStr = _itemLabelArray[index];
+            _modifyVC.contextStr = _itemContentArray[index];
+            _modifyVC.index = index;
+            _modifyVC.userUid = userUid;
+            break;
+    }
+}
+
+#pragma mark - 设置行高
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 40.0;
 }
 
 // 如果设置header（或者footer）高度是0的话，系统会认为你没设置，然后将其设置为40.0f
-// 设置头部的高度
+#pragma mark - 设置头部的高度
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 0.00001f;
 }
 
-// 设置尾部高度
+#pragma mark - 设置尾部高度
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 10.0f;
 }

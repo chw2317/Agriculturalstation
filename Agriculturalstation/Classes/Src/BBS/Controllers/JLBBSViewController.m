@@ -7,40 +7,48 @@
 //
 
 #import "JLBBSViewController.h"
-#import "MJRefresh.h"
 #import "JLBBSModel.h"
 #import "JLBBSTagCell.h"
+
+#import "MJRefresh.h"
 #import "MJExtension.h"
 #import "AFNetworking.h"
 
 @interface JLBBSViewController ()<UITableViewDelegate,UITableViewDataSource>{
     UITableView *_tableView;
+    NSString *userUid;
 }
- @property(strong,nonatomic)NSArray *bbsModelArray;
+
+@property(strong,nonatomic)NSArray *bbsModelArray;
+
 @end
 
 @implementation JLBBSViewController
 
 #pragma mark - 懒加载
-- (NSArray *)bbsModelArray{
-    if(_bbsModelArray == nil){
-        NSString *path = [[NSBundle mainBundle]pathForResource:@"BBSModel.plist" ofType:nil];
-        NSArray *tempArray = [NSArray arrayWithContentsOfFile:path];
-        
-        NSMutableArray *mutArray = [NSMutableArray arrayWithCapacity:tempArray.count];
-        for(NSDictionary *dict in tempArray){
-            JLBBSModel *bbsModel = [JLBBSModel statusWithDictionary:dict];
-            [mutArray addObject:bbsModel];
-        }
-        _bbsModelArray = [mutArray mutableCopy];
-    }
-    return _bbsModelArray;
-}
+//- (NSArray *)bbsModelArray{
+//    if(_bbsModelArray == nil){
+//        NSString *path = [[NSBundle mainBundle]pathForResource:@"BBSModel.plist" ofType:nil];
+//        NSArray *tempArray = [NSArray arrayWithContentsOfFile:path];
+//        
+//        NSMutableArray *mutArray = [NSMutableArray arrayWithCapacity:tempArray.count];
+//        for(NSDictionary *dict in tempArray){
+//            JLBBSModel *bbsModel = [JLBBSModel statusWithDictionary:dict];
+//            [mutArray addObject:bbsModel];
+//        }
+//        _bbsModelArray = [mutArray mutableCopy];
+//    }
+//    return _bbsModelArray;
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
+    // 获取用户uid
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    userUid = [userDefaults objectForKey:@"uid"];
+    
     // 不能改变字体大小
 //    UIBarButtonItem *rightBarItem = [[UIBarButtonItem alloc]initWithTitle:@"编辑" style:UIBarButtonItemStyleDone target:nil action:nil];
 //    self.navigationItem.rightBarButtonItem = rightBarItem;
@@ -57,9 +65,9 @@
     UIBarButtonItem *rightBarItem = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
     self.navigationItem.rightBarButtonItem = rightBarItem;
     
+    CGRect tableViewFrame = CGRectMake(0, 0, self.view.frame.size.width, SCREEN_HEIGHT - STATUS_HEIGHT - NAV_HEIGHT);
     // 创建一个分组样式的UITableView
-    _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
-    
+    _tableView = [[UITableView alloc]initWithFrame:tableViewFrame style:UITableViewStyleGrouped];
     [self.view addSubview:_tableView];
     // 设置数据源
     _tableView.dataSource = self;
@@ -87,6 +95,9 @@
             [_tableView.mj_footer endRefreshing];
         });
     }];
+    
+    // 加载数据
+    [self sendRequest];
 }
 
 -(void)rightEditorEvent{
@@ -101,17 +112,15 @@
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
     // 拼接请求参数
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    parameters[@"uid"] = @"1";
+    parameters[@"uid"] = userUid;
     // 发起请求
     [manager POST:url parameters:parameters progress:^(NSProgress *_Nonnull uploadProgress){
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
-        NSLog(@"请求成功：%@",responseObject);
-        NSArray *bbsArray = [JLBBSModel mj_objectArrayWithKeyValuesArray:responseObject];
-        for(JLBBSModel *bbsModel in bbsArray){
-            NSLog(@"name=%@",bbsModel.name);
-        }
-        
+//        NSLog(@"responseObject = %@",responseObject);
+        self.bbsModelArray = [JLBBSModel mj_objectArrayWithKeyValuesArray:responseObject];
+        // 刷新UITableView
+        [_tableView reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
         NSLog(@"请求失败:%@", error.description);
     }];
@@ -149,10 +158,11 @@
     return 0.0001f;
 }
 
-#pragma mark - 隐藏状态栏
-- (BOOL)prefersStatusBarHidden{
-    return YES;
+// 设置尾部高度
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 0.0001f;
 }
+
 @end
 
 

@@ -35,6 +35,8 @@
     self.timeLabel.text = mineMsgModel.dateline;
     // 内容
     self.contentLabel.text = mineMsgModel.content;
+    
+    _height = CGRectGetMaxY(_contentLabel.frame) + 10;
 }
 
 

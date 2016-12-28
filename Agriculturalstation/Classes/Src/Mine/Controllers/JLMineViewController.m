@@ -70,7 +70,6 @@
         phoneStr = [userDefaults objectForKey:@"phone"];
         avatarStr = [userDefaults objectForKey:@"avatar"];
     }
-    NSLog(@"我的......");
     
     // 拿出xib视图
     NSArray *mineInfoXib = [[NSBundle mainBundle]loadNibNamed:@"JLMineInfo" owner:nil options:nil];
@@ -78,32 +77,23 @@
     
     // 头像
     avatarImg = (UIImageView *)[mineInfoView viewWithTag:1];
-//    avatarImg.image = [UIImage imageNamed:@"user_avatar.png"];
     
     // 用户名
     userNameLabel = (UILabel *)[mineInfoView viewWithTag:2];
-//    userNameLabel.text = [@"用户名：" stringByAppendingString:NULLString(userNameStr)?@"":userNameStr];
-//    userNameLabel.text = @"用户名：hanwen";
-//    userNameLabel.hidden = !_isLogin;
     
     // 手机号码
     phoneNumberLabel = (UILabel *)[mineInfoView viewWithTag:3];
-//    phoneNumberLabel.text = phoneStr;
-//    phoneNumberLabel.text = @"130****8823";
-//    phoneNumberLabel.hidden = !_isLogin;
     
     // 完善资料
     fillInfoBtn = (UIButton *)[mineInfoView viewWithTag:4];
-//    [fillInfoBtn addTarget:self action:@selector(goToPerfectInfo) forControlEvents:UIControlEventTouchUpInside];
-//    fillInfoBtn.hidden = !_isLogin;
     
     // 去登陆
     goLoginBtn = (UIButton *)[mineInfoView viewWithTag:5];
-//    [goLoginBtn addTarget:self action:@selector(goToLogin) forControlEvents:UIControlEventTouchUpInside];
-//    goLoginBtn.hidden = _isLogin;
     
+    
+    CGRect tableViewFrame = CGRectMake(0, 0, self.view.frame.size.width, SCREEN_HEIGHT - STATUS_HEIGHT - NAV_HEIGHT);
     // 创建一个分组样式的UITableView
-    _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    _tableView = [[UITableView alloc]initWithFrame:tableViewFrame style:UITableViewStyleGrouped];
     _tableView.tableHeaderView = mineInfoView;
     
     [self.view addSubview:_tableView];
@@ -140,9 +130,8 @@
         phoneStr = [userDefaults objectForKey:@"phone"];
         avatarStr = [userDefaults objectForKey:@"avatar"];
     }
-//    NSLog(@"REQUEST_URL=%s",REQUEST_URL);
     // 头像，给一张默认图片，先使用默认图片，当图片加载完成后再替换
-    [avatarImg sd_setImageWithURL:[NSURL URLWithString:[@"http://rifeng.weixinbm.com/" stringByAppendingString:avatarStr]] placeholderImage:[UIImage imageNamed:@"user_avatar.png"]];
+    [avatarImg sd_setImageWithURL:[NSURL URLWithString:[REQUEST_URL stringByAppendingString:avatarStr]] placeholderImage:[UIImage imageNamed:@"user_avatar.png"]];
 //    avatarImg.image = [UIImage imageNamed:@"user_avatar.png"];
     // 用户名
     userNameLabel.text = [@"用户名：" stringByAppendingString:NULLString(userNameStr)?@"":userNameStr];
