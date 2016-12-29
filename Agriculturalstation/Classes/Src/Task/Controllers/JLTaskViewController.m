@@ -30,10 +30,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    NSArray *taskTopXib = [[NSBundle mainBundle]loadNibNamed:@"JLReleaseTaskTop" owner:nil options:nil];
+    UIView *taskTopView = [taskTopXib firstObject];
+    
     // 创建一个分组样式的UITableView
     CGRect tableViewFrame = CGRectMake(0, 0, self.view.frame.size.width, SCREEN_HEIGHT - STATUS_HEIGHT - NAV_HEIGHT);
     _tableView= [[UITableView alloc]initWithFrame:tableViewFrame style:UITableViewStyleGrouped];
-    
+    _tableView.tableHeaderView = taskTopView;
     [self.view addSubview:_tableView];
     // 设置委托
     _tableView.delegate = self;

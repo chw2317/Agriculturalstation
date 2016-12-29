@@ -21,6 +21,7 @@
 @interface JLMineMessagesViewController ()<UITableViewDelegate,UITableViewDataSource>{
     UITableView *_tableView;
     NSString *userUid;
+    NSMutableArray *_selectedArray; // 选中的数组
 }
 
 @property(strong,nonatomic)NSArray *mineMsgModelArray;
@@ -85,6 +86,8 @@
     
     // 加载数据
     [self sendRequest];
+    // 初始化选中数组
+    _selectedArray = [NSMutableArray array];
 }
 
 
@@ -119,6 +122,31 @@
 // “编辑”按钮事件
 - (void)rightEditorEvent{
     NSLog(@"编辑...");
+    BOOL flag = _tableView.editing;
+    if(flag){
+        // 删除的操作
+        // 得到删除的item索引
+        NSMutableArray *indexArray = [NSMutableArray array];
+        for(JLMineMessageModel *mineMsgModel in _selectedArray){
+            NSInteger num = [_mineMsgModelArray indexOfObject:mineMsgModel];
+            
+            NSIndexPath *path = [NSIndexPath indexPathForRow:num inSection:0];
+            [indexArray addObject:path];
+        }
+        // 修改数据模型
+//        [_mineMsgModelArray removeObjectsInArray:_selectArray];
+        [_selectedArray removeAllObjects];
+        
+        // 刷新
+        [_tableView deleteRowsAtIndexPaths:indexArray withRowAnimation:UITableViewRowAnimationFade];
+        
+        _tableView.editing = NO;
+        
+    }else{
+        // 开始选择行
+        [_selectedArray removeAllObjects];
+        _tableView.editing = YES;
+    }
 }
 
 #pragma mark - UITableView数据源方法
