@@ -68,6 +68,7 @@
     CGRect tableViewFrame = CGRectMake(0, 0, self.view.frame.size.width, SCREEN_HEIGHT - STATUS_HEIGHT - NAV_HEIGHT);
     // 创建一个分组样式的UITableView
     _tableView = [[UITableView alloc]initWithFrame:tableViewFrame style:UITableViewStyleGrouped];
+    
     [self.view addSubview:_tableView];
     // 设置数据源
     _tableView.dataSource = self;

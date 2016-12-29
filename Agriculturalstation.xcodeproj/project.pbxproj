@@ -94,6 +94,7 @@
 		BA2B84791DF943E10054C9B8 /* AgriculturalstationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2B84781DF943E10054C9B8 /* AgriculturalstationUITests.m */; };
 		BA6B033E1E139DE800939D41 /* JLBaseInfoModifyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B033C1E139DE800939D41 /* JLBaseInfoModifyVC.m */; };
 		BA6B033F1E139DE800939D41 /* JLBaseInfoModifyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA6B033D1E139DE800939D41 /* JLBaseInfoModifyVC.xib */; };
+		BAB88D121E14BBF700DB315A /* cityData.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAB88D111E14BBF700DB315A /* cityData.plist */; };
 		BABE8F921E11142800C5AB73 /* RatingBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BABE8F911E11142800C5AB73 /* RatingBar.m */; };
 		BABE8F961E111EE700C5AB73 /* JLRechargeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BABE8F941E111EE700C5AB73 /* JLRechargeViewController.m */; };
 		BABE8F971E111EE700C5AB73 /* JLRechargeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BABE8F951E111EE700C5AB73 /* JLRechargeViewController.xib */; };
@@ -316,6 +317,7 @@
 		BA6B033B1E139DE800939D41 /* JLBaseInfoModifyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLBaseInfoModifyVC.h; sourceTree = "<group>"; };
 		BA6B033C1E139DE800939D41 /* JLBaseInfoModifyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLBaseInfoModifyVC.m; sourceTree = "<group>"; };
 		BA6B033D1E139DE800939D41 /* JLBaseInfoModifyVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLBaseInfoModifyVC.xib; sourceTree = "<group>"; };
+		BAB88D111E14BBF700DB315A /* cityData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cityData.plist; sourceTree = "<group>"; };
 		BABE8F901E11142800C5AB73 /* RatingBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingBar.h; sourceTree = "<group>"; };
 		BABE8F911E11142800C5AB73 /* RatingBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingBar.m; sourceTree = "<group>"; };
 		BABE8F931E111EE700C5AB73 /* JLRechargeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLRechargeViewController.h; sourceTree = "<group>"; };
@@ -794,6 +796,7 @@
 		BA2B84531DF943E10054C9B8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BAB88D111E14BBF700DB315A /* cityData.plist */,
 				BA2B845C1DF943E10054C9B8 /* Main.storyboard */,
 				BA2B84611DF943E10054C9B8 /* LaunchScreen.storyboard */,
 				BA2B84641DF943E10054C9B8 /* Info.plist */,
@@ -1224,6 +1227,7 @@
 				BA2B84601DF943E10054C9B8 /* Assets.xcassets in Resources */,
 				BA2B845E1DF943E10054C9B8 /* Main.storyboard in Resources */,
 				BABE8F971E111EE700C5AB73 /* JLRechargeViewController.xib in Resources */,
+				BAB88D121E14BBF700DB315A /* cityData.plist in Resources */,
 				BA0B29171E0E126E00A461D9 /* JLIdentityViewController.xib in Resources */,
 				BA0B28AB1E0E109C00A461D9 /* MBProgressHUD.bundle in Resources */,
 				BA0B29131E0E126E00A461D9 /* JLAccountInfoViewController.xib in Resources */,

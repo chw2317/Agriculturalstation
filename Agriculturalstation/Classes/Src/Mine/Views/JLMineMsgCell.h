@@ -12,7 +12,6 @@
 @interface JLMineMsgCell : UITableViewCell
 
 @property(nonatomic, strong)JLMineMessageModel *mineMsgModel;
-@property(assign, nonatomic) CGFloat height;
 
 // 把加载数据（使用xib创建Cell的内容细节进行封装）
 +(instancetype)mineMsgCellWithTableView:(UITableView *)tableView;

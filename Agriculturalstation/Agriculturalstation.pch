@@ -16,6 +16,8 @@
 
 // URL
 #define REQUEST_URL @"http://rifeng.weixinbm.com/"
+// ImageURL
+#define IMAGE_URL @"http://rifeng.weixinbm.com/attachment/image/"
 
 // 屏幕宽度
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)

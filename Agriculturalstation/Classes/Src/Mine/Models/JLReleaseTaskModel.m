@@ -10,13 +10,5 @@
 
 @implementation JLReleaseTaskModel
 
-- (JLReleaseTaskModel *)initWithDictionary:(NSDictionary *)dic{
-    if(self = [super init]){
-        // 记录id
-        self.ID = [dic[@"id"] intValue];
-        // 标题
-        self.title = dic[@"title"];
-    }
-    return self;
-}
+
 @end
