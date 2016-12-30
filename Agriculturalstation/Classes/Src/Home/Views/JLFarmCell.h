@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JLFarmModel.h"
 
 @interface JLFarmCell : UITableViewCell
+
+@property(nonatomic, strong)JLFarmModel *farmModel;
+
++ (instancetype)farmCellWithTableView:(UITableView *)tableView;
 
 @end

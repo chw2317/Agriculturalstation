@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JLOwnerModel.h"
 
 @interface JLOwnerCell : UITableViewCell
+
+@property(nonatomic,strong)JLOwnerModel *ownerModel;
+
++(instancetype)ownerCellWithTableView:(UITableView *)tableView;
 
 @end
