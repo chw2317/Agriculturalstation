@@ -103,6 +103,8 @@
 		BAAE6FDC1E16140800A78053 /* JLFarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAE6FDB1E16140800A78053 /* JLFarmViewController.m */; };
 		BAAE6FDF1E16142F00A78053 /* JLOwnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAE6FDE1E16142F00A78053 /* JLOwnerViewController.m */; };
 		BAAE6FE21E16145100A78053 /* JLTradeAlertsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAE6FE11E16145100A78053 /* JLTradeAlertsViewController.m */; };
+		BAAE6FE61E164BB200A78053 /* JLMineReleaseTaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAE6FE41E164BB200A78053 /* JLMineReleaseTaskCell.m */; };
+		BAAE6FE71E164BB200A78053 /* JLMineReleaseTaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAAE6FE51E164BB200A78053 /* JLMineReleaseTaskCell.xib */; };
 		BAB88D121E14BBF700DB315A /* cityData.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAB88D111E14BBF700DB315A /* cityData.plist */; };
 		BABE8F921E11142800C5AB73 /* RatingBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BABE8F911E11142800C5AB73 /* RatingBar.m */; };
 		BABE8F961E111EE700C5AB73 /* JLRechargeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BABE8F941E111EE700C5AB73 /* JLRechargeViewController.m */; };
@@ -341,6 +343,9 @@
 		BAAE6FDE1E16142F00A78053 /* JLOwnerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLOwnerViewController.m; sourceTree = "<group>"; };
 		BAAE6FE01E16145100A78053 /* JLTradeAlertsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTradeAlertsViewController.h; sourceTree = "<group>"; };
 		BAAE6FE11E16145100A78053 /* JLTradeAlertsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTradeAlertsViewController.m; sourceTree = "<group>"; };
+		BAAE6FE31E164BB200A78053 /* JLMineReleaseTaskCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLMineReleaseTaskCell.h; sourceTree = "<group>"; };
+		BAAE6FE41E164BB200A78053 /* JLMineReleaseTaskCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLMineReleaseTaskCell.m; sourceTree = "<group>"; };
+		BAAE6FE51E164BB200A78053 /* JLMineReleaseTaskCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLMineReleaseTaskCell.xib; sourceTree = "<group>"; };
 		BAB88D111E14BBF700DB315A /* cityData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cityData.plist; sourceTree = "<group>"; };
 		BABE8F901E11142800C5AB73 /* RatingBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingBar.h; sourceTree = "<group>"; };
 		BABE8F911E11142800C5AB73 /* RatingBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingBar.m; sourceTree = "<group>"; };
@@ -726,6 +731,9 @@
 				BACDACA21E121BC4007F387F /* JLMineMsgCell.h */,
 				BACDACA31E121BC4007F387F /* JLMineMsgCell.m */,
 				BACDACA41E121BC4007F387F /* JLMineMsgCell.xib */,
+				BAAE6FE31E164BB200A78053 /* JLMineReleaseTaskCell.h */,
+				BAAE6FE41E164BB200A78053 /* JLMineReleaseTaskCell.m */,
+				BAAE6FE51E164BB200A78053 /* JLMineReleaseTaskCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1264,6 +1272,7 @@
 				BA0B29251E0E126E00A461D9 /* JLMineInfo.xib in Resources */,
 				BA2B84631DF943E10054C9B8 /* LaunchScreen.storyboard in Resources */,
 				BA2B84601DF943E10054C9B8 /* Assets.xcassets in Resources */,
+				BAAE6FE71E164BB200A78053 /* JLMineReleaseTaskCell.xib in Resources */,
 				BA2B845E1DF943E10054C9B8 /* Main.storyboard in Resources */,
 				BABE8F971E111EE700C5AB73 /* JLRechargeViewController.xib in Resources */,
 				BAB88D121E14BBF700DB315A /* cityData.plist in Resources */,
@@ -1335,6 +1344,7 @@
 				BA0B289A1E0E107600A461D9 /* AFURLSessionManager.m in Sources */,
 				BA0B295A1E0E194B00A461D9 /* SDWebImageDecoder.m in Sources */,
 				BA0B295B1E0E194B00A461D9 /* SDWebImageDownloader.m in Sources */,
+				BAAE6FE61E164BB200A78053 /* JLMineReleaseTaskCell.m in Sources */,
 				BAD5428E1E08DF5C00B99FC0 /* MJRefreshHeader.m in Sources */,
 				BA2B845B1DF943E10054C9B8 /* ViewController.m in Sources */,
 				BAD5428D1E08DF5C00B99FC0 /* MJRefreshFooter.m in Sources */,
