@@ -22,9 +22,11 @@
     UITableView *_tableView;
     NSString *userUid;
     NSMutableArray *_selectedArray; // 选中的数组
+    UIButton *rightBtn;
 }
 
-@property(strong,nonatomic)NSArray *mineMsgModelArray;
+//@property(strong,nonatomic)NSArray *mineMsgModelArray;
+@property(strong ,nonatomic)NSMutableArray *mineMsgModelArray;
 
 @end
 
@@ -40,7 +42,7 @@
     
     
     // 设置“编辑”按钮
-    UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     rightBtn.frame = CGRectMake(0, 0, 50, 50);
     [rightBtn addTarget:self action:@selector(rightEditorEvent) forControlEvents:UIControlEventTouchUpInside];
     // 普通状态
@@ -49,6 +51,10 @@
     // 高亮状态
     [rightBtn setTitle:@"编辑" forState:UIControlStateHighlighted];
     [rightBtn setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+    // 选中状态
+    [rightBtn setTitle:@"删除" forState:UIControlStateSelected];
+    [rightBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
+    
     rightBtn.titleLabel.font = [UIFont systemFontOfSize:14];
     // 添加
     UIBarButtonItem *rightBarItem = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
@@ -134,18 +140,23 @@
             [indexArray addObject:path];
         }
         // 修改数据模型
-//        [_mineMsgModelArray removeObjectsInArray:_selectArray];
+        [_mineMsgModelArray removeObjectsInArray:_selectedArray];
         [_selectedArray removeAllObjects];
         
         // 刷新
         [_tableView deleteRowsAtIndexPaths:indexArray withRowAnimation:UITableViewRowAnimationFade];
-        
+        // tableView的编辑状态
         _tableView.editing = NO;
+        // 编辑按钮的选中状态
+        rightBtn.selected = NO;
         
     }else{
         // 开始选择行
         [_selectedArray removeAllObjects];
+        // tableView的编辑状态
         _tableView.editing = YES;
+        // 编辑按钮的选中状态
+        rightBtn.selected = YES;
     }
 }
 
@@ -169,6 +180,33 @@
     cell.mineMsgModel = mineMsgModel;
     // 3.返回cell
     return cell;
+}
+
+#pragma mark - 返回编辑模式，默认为删除模式
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return UITableViewCellEditingStyleDelete | UITableViewCellEditingStyleInsert;
+}
+
+#pragma mark - 选中行
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(!_tableView.editing){
+        return;
+    }
+    JLMineMessageModel *mineMsgModel = [_mineMsgModelArray objectAtIndex:indexPath.row];
+    if(![_selectedArray containsObject:mineMsgModel]){
+        [_selectedArray addObject:mineMsgModel];
+    }
+}
+
+#pragma mnark - 取消选中行
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(!_tableView.editing){
+        return;
+    }
+    JLMineMessageModel *mineMsgModel = [_mineMsgModelArray objectAtIndex:indexPath.row];
+    if([_selectedArray containsObject:mineMsgModel]){
+        [_selectedArray removeObject:mineMsgModel];
+    }
 }
 
 #pragma mark - 设置每行高度

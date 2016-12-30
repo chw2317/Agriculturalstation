@@ -94,6 +94,15 @@
 		BA2B84791DF943E10054C9B8 /* AgriculturalstationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2B84781DF943E10054C9B8 /* AgriculturalstationUITests.m */; };
 		BA6B033E1E139DE800939D41 /* JLBaseInfoModifyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B033C1E139DE800939D41 /* JLBaseInfoModifyVC.m */; };
 		BA6B033F1E139DE800939D41 /* JLBaseInfoModifyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA6B033D1E139DE800939D41 /* JLBaseInfoModifyVC.xib */; };
+		BAAE6FCE1E1602DD00A78053 /* JLFarmCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAE6FCC1E1602DD00A78053 /* JLFarmCell.m */; };
+		BAAE6FCF1E1602DD00A78053 /* JLFarmCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAAE6FCD1E1602DD00A78053 /* JLFarmCell.xib */; };
+		BAAE6FD31E1608FE00A78053 /* JLOwnerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAE6FD11E1608FE00A78053 /* JLOwnerCell.m */; };
+		BAAE6FD41E1608FE00A78053 /* JLOwnerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAAE6FD21E1608FE00A78053 /* JLOwnerCell.xib */; };
+		BAAE6FD81E160BA900A78053 /* JLTradeAlertsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAE6FD61E160BA900A78053 /* JLTradeAlertsCell.m */; };
+		BAAE6FD91E160BA900A78053 /* JLTradeAlertsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAAE6FD71E160BA900A78053 /* JLTradeAlertsCell.xib */; };
+		BAAE6FDC1E16140800A78053 /* JLFarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAE6FDB1E16140800A78053 /* JLFarmViewController.m */; };
+		BAAE6FDF1E16142F00A78053 /* JLOwnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAE6FDE1E16142F00A78053 /* JLOwnerViewController.m */; };
+		BAAE6FE21E16145100A78053 /* JLTradeAlertsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAE6FE11E16145100A78053 /* JLTradeAlertsViewController.m */; };
 		BAB88D121E14BBF700DB315A /* cityData.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAB88D111E14BBF700DB315A /* cityData.plist */; };
 		BABE8F921E11142800C5AB73 /* RatingBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BABE8F911E11142800C5AB73 /* RatingBar.m */; };
 		BABE8F961E111EE700C5AB73 /* JLRechargeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BABE8F941E111EE700C5AB73 /* JLRechargeViewController.m */; };
@@ -317,6 +326,21 @@
 		BA6B033B1E139DE800939D41 /* JLBaseInfoModifyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLBaseInfoModifyVC.h; sourceTree = "<group>"; };
 		BA6B033C1E139DE800939D41 /* JLBaseInfoModifyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLBaseInfoModifyVC.m; sourceTree = "<group>"; };
 		BA6B033D1E139DE800939D41 /* JLBaseInfoModifyVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLBaseInfoModifyVC.xib; sourceTree = "<group>"; };
+		BAAE6FCB1E1602DD00A78053 /* JLFarmCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLFarmCell.h; sourceTree = "<group>"; };
+		BAAE6FCC1E1602DD00A78053 /* JLFarmCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLFarmCell.m; sourceTree = "<group>"; };
+		BAAE6FCD1E1602DD00A78053 /* JLFarmCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLFarmCell.xib; sourceTree = "<group>"; };
+		BAAE6FD01E1608FE00A78053 /* JLOwnerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLOwnerCell.h; sourceTree = "<group>"; };
+		BAAE6FD11E1608FE00A78053 /* JLOwnerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLOwnerCell.m; sourceTree = "<group>"; };
+		BAAE6FD21E1608FE00A78053 /* JLOwnerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLOwnerCell.xib; sourceTree = "<group>"; };
+		BAAE6FD51E160BA900A78053 /* JLTradeAlertsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTradeAlertsCell.h; sourceTree = "<group>"; };
+		BAAE6FD61E160BA900A78053 /* JLTradeAlertsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTradeAlertsCell.m; sourceTree = "<group>"; };
+		BAAE6FD71E160BA900A78053 /* JLTradeAlertsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLTradeAlertsCell.xib; sourceTree = "<group>"; };
+		BAAE6FDA1E16140800A78053 /* JLFarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLFarmViewController.h; sourceTree = "<group>"; };
+		BAAE6FDB1E16140800A78053 /* JLFarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLFarmViewController.m; sourceTree = "<group>"; };
+		BAAE6FDD1E16142F00A78053 /* JLOwnerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLOwnerViewController.h; sourceTree = "<group>"; };
+		BAAE6FDE1E16142F00A78053 /* JLOwnerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLOwnerViewController.m; sourceTree = "<group>"; };
+		BAAE6FE01E16145100A78053 /* JLTradeAlertsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTradeAlertsViewController.h; sourceTree = "<group>"; };
+		BAAE6FE11E16145100A78053 /* JLTradeAlertsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTradeAlertsViewController.m; sourceTree = "<group>"; };
 		BAB88D111E14BBF700DB315A /* cityData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cityData.plist; sourceTree = "<group>"; };
 		BABE8F901E11142800C5AB73 /* RatingBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingBar.h; sourceTree = "<group>"; };
 		BABE8F911E11142800C5AB73 /* RatingBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingBar.m; sourceTree = "<group>"; };
@@ -573,6 +597,12 @@
 			children = (
 				BA0B28D51E0E122600A461D9 /* JLHomeViewController.h */,
 				BA0B28D61E0E122600A461D9 /* JLHomeViewController.m */,
+				BAAE6FDA1E16140800A78053 /* JLFarmViewController.h */,
+				BAAE6FDB1E16140800A78053 /* JLFarmViewController.m */,
+				BAAE6FDD1E16142F00A78053 /* JLOwnerViewController.h */,
+				BAAE6FDE1E16142F00A78053 /* JLOwnerViewController.m */,
+				BAAE6FE01E16145100A78053 /* JLTradeAlertsViewController.h */,
+				BAAE6FE11E16145100A78053 /* JLTradeAlertsViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -593,6 +623,15 @@
 		BA0B28DE1E0E122600A461D9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BAAE6FCB1E1602DD00A78053 /* JLFarmCell.h */,
+				BAAE6FCC1E1602DD00A78053 /* JLFarmCell.m */,
+				BAAE6FCD1E1602DD00A78053 /* JLFarmCell.xib */,
+				BAAE6FD01E1608FE00A78053 /* JLOwnerCell.h */,
+				BAAE6FD11E1608FE00A78053 /* JLOwnerCell.m */,
+				BAAE6FD21E1608FE00A78053 /* JLOwnerCell.xib */,
+				BAAE6FD51E160BA900A78053 /* JLTradeAlertsCell.h */,
+				BAAE6FD61E160BA900A78053 /* JLTradeAlertsCell.m */,
+				BAAE6FD71E160BA900A78053 /* JLTradeAlertsCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1230,8 +1269,11 @@
 				BAB88D121E14BBF700DB315A /* cityData.plist in Resources */,
 				BA0B29171E0E126E00A461D9 /* JLIdentityViewController.xib in Resources */,
 				BA0B28AB1E0E109C00A461D9 /* MBProgressHUD.bundle in Resources */,
+				BAAE6FD91E160BA900A78053 /* JLTradeAlertsCell.xib in Resources */,
 				BA0B29131E0E126E00A461D9 /* JLAccountInfoViewController.xib in Resources */,
 				BABED8F21E04E7A500B38476 /* Info.plist in Resources */,
+				BAAE6FCF1E1602DD00A78053 /* JLFarmCell.xib in Resources */,
+				BAAE6FD41E1608FE00A78053 /* JLOwnerCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1256,6 +1298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAAE6FDF1E16142F00A78053 /* JLOwnerViewController.m in Sources */,
 				BAD542971E08DF5C00B99FC0 /* MJRefreshStateHeader.m in Sources */,
 				BA0B28E11E0E122600A461D9 /* JLOwnerModel.m in Sources */,
 				BA0B291F1E0E126E00A461D9 /* JLRewardsSystemViewController.m in Sources */,
@@ -1277,6 +1320,7 @@
 				BA0B28BC1E0E11A400A461D9 /* JLLoginViewController.m in Sources */,
 				BAD542921E08DF5C00B99FC0 /* MJRefreshBackGifFooter.m in Sources */,
 				BABED8FC1E04E7A500B38476 /* NSString+MJExtension.m in Sources */,
+				BAAE6FD31E1608FE00A78053 /* JLOwnerCell.m in Sources */,
 				BA0B29601E0E194B00A461D9 /* UIImage+GIF.m in Sources */,
 				BABED8F81E04E7A500B38476 /* NSObject+MJClass.m in Sources */,
 				BAD542931E08DF5C00B99FC0 /* MJRefreshBackNormalFooter.m in Sources */,
@@ -1326,12 +1370,15 @@
 				BACDACA51E121BC4007F387F /* JLMineMsgCell.m in Sources */,
 				BABED8F31E04E7A500B38476 /* MJExtensionConst.m in Sources */,
 				BA0B28DF1E0E122600A461D9 /* JLHomeViewController.m in Sources */,
+				BAAE6FD81E160BA900A78053 /* JLTradeAlertsCell.m in Sources */,
 				BAD542901E08DF5C00B99FC0 /* MJRefreshAutoNormalFooter.m in Sources */,
 				BA0B28E01E0E122600A461D9 /* JLFarmModel.m in Sources */,
 				BA0B28A01E0E107600A461D9 /* UIImageView+AFNetworking.m in Sources */,
 				BAD5428C1E08DF5C00B99FC0 /* MJRefreshComponent.m in Sources */,
 				BAD5428F1E08DF5C00B99FC0 /* MJRefreshAutoGifFooter.m in Sources */,
+				BAAE6FCE1E1602DD00A78053 /* JLFarmCell.m in Sources */,
 				BA0B29141E0E126E00A461D9 /* JLBalancePayViewController.m in Sources */,
+				BAAE6FE21E16145100A78053 /* JLTradeAlertsViewController.m in Sources */,
 				BAD542951E08DF5C00B99FC0 /* MJRefreshGifHeader.m in Sources */,
 				BA0B295C1E0E194B00A461D9 /* SDWebImageDownloaderOperation.m in Sources */,
 				BA0B29161E0E126E00A461D9 /* JLIdentityViewController.m in Sources */,
@@ -1345,6 +1392,7 @@
 				BABED8F91E04E7A500B38476 /* NSObject+MJCoding.m in Sources */,
 				BA2B84551DF943E10054C9B8 /* main.m in Sources */,
 				BA0B29241E0E126E00A461D9 /* JLReleaseTaskModel.m in Sources */,
+				BAAE6FDC1E16140800A78053 /* JLFarmViewController.m in Sources */,
 				BA0B28BD1E0E11A400A461D9 /* JLRegisterViewController.m in Sources */,
 				BAD542911E08DF5C00B99FC0 /* MJRefreshAutoStateFooter.m in Sources */,
 				BA0B28BF1E0E11A400A461D9 /* JLUserModel.m in Sources */,

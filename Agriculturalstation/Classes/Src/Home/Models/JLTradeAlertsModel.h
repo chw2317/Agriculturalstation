@@ -12,11 +12,11 @@
 
 @interface JLTradeAlertsModel : NSObject
 
-@property (nonatomic, assign) int ID;
-@property (nonatomic, copy) NSString *title; // 标题
+@property (nonatomic, assign) int id;
+@property (nonatomic, copy) NSString *name; // 标题
 @property (nonatomic, copy) NSString *content; // 内容
-@property (nonatomic, assign) int views; // 浏览量
-@property (nonatomic, copy) NSString *time; // 发布时间
+@property (nonatomic, assign) int viewnum; // 浏览量
+@property (nonatomic, copy) NSString *dateline; // 发布时间
 @property (nonatomic, copy) NSString *author; // 发布者
 
 
