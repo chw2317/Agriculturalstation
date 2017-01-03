@@ -8,12 +8,19 @@
 
 #import "JLPersonalInfoViewController.h"
 #import "JLUserBaseInfoViewController.h"
+#import "JLFarmViewController.h"
+#import "JLOwnerViewController.h"
 
 @interface JLPersonalInfoViewController ()
 // 基础信息
 - (IBAction)baseInfo;
 // 农场 or 农机信息
 - (IBAction)farmOrOwnerInfo;
+
+
+// 农场 or 农机信息
+@property (strong, nonatomic) IBOutlet UIButton *farmOrOwner;
+@property (assign, nonatomic) int regtype;
 
 @end
 
@@ -23,7 +30,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-//    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont systemFontOfSize:16]};
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    self.regtype = [[userDefaults objectForKey:@"regtype"] intValue];
+    if(self.regtype == 1){ // 农场主
+        [self.farmOrOwner setTitle:@"农场主" forState:UIControlStateNormal];
+        [self.farmOrOwner setTitle:@"农场主" forState:UIControlStateHighlighted];
+//        self.farmOrOwner.titleLabel.text = @"农场主";
+    }else if (self.regtype == 2){ // 农机主
+        [self.farmOrOwner setTitle:@"农机主" forState:UIControlStateNormal];
+        [self.farmOrOwner setTitle:@"农机主" forState:UIControlStateHighlighted];
+//        self.farmOrOwner.titleLabel.text = @"农机主";
+    }
 }
 
 // 基础信息
@@ -32,6 +49,21 @@
 }
 
 // 农场 or 农机信息
-- (IBAction)farmOrOwnerInfo {
+- (IBAction)farmOrOwnerInfo { // 农场主
+    if(self.regtype == 1){
+//        NSLog(@"农场主。。。。。");
+        [self.navigationController pushViewController:[[JLFarmViewController alloc] init] animated:YES];
+    }else if (self.regtype == 2){ // 农机主
+//        NSLog(@"农机主........");
+        [self.navigationController pushViewController:[[JLOwnerViewController alloc] init] animated:YES];
+    }
 }
 @end
+
+
+
+
+
+
+
+

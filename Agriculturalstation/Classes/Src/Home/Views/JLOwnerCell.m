@@ -49,15 +49,15 @@
     // 工作性质
     switch (ownerModel.naturework) {
         case 1:
-            self.nature.text = @"收割";
+            self.nature.text = @"工作性质：收割";
             break;
             
         case 2:
-            self.nature.text = @"灌溉";
+            self.nature.text = @"工作性质：灌溉";
             break;
             
         case 3:
-            self.nature.text = @"运输";
+            self.nature.text = @"工作性质：运输";
             break;
             
         default:
