@@ -8,7 +8,9 @@
 
 #import "JLHomeViewController.h"
 
-@interface JLHomeViewController ()
+@interface JLHomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+
+@property (nonatomic, strong) UICollectionView *collectionView;
 
 @end
 
@@ -19,19 +21,61 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)loadView{
+    [super loadView];
+    
+    // 添加collectionView
+    [self.view addSubview:self.collectionView];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+// 懒加载collectionView
+- (UICollectionView *)collectionView{
+    if(!_collectionView){
+//        _collectionView = [UICollectionView alloc] initWithFrame:[UIScreen mainScreen].bounds collectionViewLayout:[]
+    }
+    return _collectionView;
 }
-*/
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -9,6 +9,7 @@
 #import "JLTaskViewController.h"
 #import "JLReleaseTaskModel.h"
 #import "JLReleaseTaskTagCell.h"
+#import "JXButton.h"
 
 #import "MJExtension.h"
 #import "MJRefresh.h"
@@ -32,6 +33,17 @@
     
     NSArray *taskTopXib = [[NSBundle mainBundle]loadNibNamed:@"JLReleaseTaskTop" owner:nil options:nil];
     UIView *taskTopView = [taskTopXib firstObject];
+    // 位置
+    UILabel *positionLabel = (UILabel *)[taskTopView viewWithTag:1];
+    // 论坛
+    JXButton *bbsBtn = (JXButton *)[taskTopView viewWithTag:2];
+//    [self initButton:bbsBtn];
+    // 搜索框
+    UISearchBar *searchBar = (UISearchBar *)[taskTopView viewWithTag:3];
+    // 发需求
+    JXButton *releaseTaskBtn = (JXButton *)[taskTopView viewWithTag:4];
+//    [self initButton:releaseTaskBtn];
+    
     
     // 创建一个分组样式的UITableView
     CGRect tableViewFrame = CGRectMake(0, 0, self.view.frame.size.width, SCREEN_HEIGHT - STATUS_HEIGHT - NAV_HEIGHT);
@@ -96,7 +108,14 @@
     }];
 }
 
-
+- (void)initButton:(UIButton *)btn{
+    // 使图片和文字水平居中显示
+    btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+    // 文字距离上边框的距离增加imageView的高度，距离左边框减少imageView的宽度，距离下边框和右边框距离不变
+    [btn setTitleEdgeInsets:UIEdgeInsetsMake(btn.imageView.frame.size.height, -btn.imageView.frame.size.width, 0.0, 0.0)];
+    // 图片距离右边框距离减少图片的宽度，其他不变
+    [btn setImageEdgeInsets:UIEdgeInsetsMake(0.0, 0.0, 0.0, -btn.titleLabel.bounds.size.width)];
+}
 
 
 #pragma mark - UITableView代理方法

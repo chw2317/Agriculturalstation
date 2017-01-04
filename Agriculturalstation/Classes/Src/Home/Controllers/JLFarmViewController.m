@@ -11,6 +11,7 @@
 #import "JLFarmViewController.h"
 #import "JLFarmModel.h"
 #import "JLFarmCell.h"
+#import "AddFarmViewController.h"
 
 #import "MJExtension.h"
 #import "MJRefresh.h"
@@ -31,6 +32,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    // 设置“添加”按钮
+    UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightBtn.frame = CGRectMake(0, 0, 25, 25);
+    [rightBtn addTarget:self action:@selector(rightAddFarmEvent) forControlEvents:UIControlEventTouchUpInside];
+    // 普通状态
+    [rightBtn setImage:[UIImage imageNamed:@"add_farm_right.png"] forState:UIControlStateNormal];
+    // 添加
+    UIBarButtonItem *rightBarItem = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
+    self.navigationItem.rightBarButtonItem = rightBarItem;
+    
     
     CGRect tableViewFrame = CGRectMake(0, 0, self.view.frame.size.width, SCREEN_HEIGHT - STATUS_HEIGHT - NAV_HEIGHT);
     // 创建一个分组样式的UITableView
@@ -96,6 +107,11 @@
         //同时弹出“加载失败”的提示；
         [MBProgressHUD showError:@"加载失败"];
     }];
+}
+
+// 添加农场
+- (void)rightAddFarmEvent{
+    [self.navigationController pushViewController:[[AddFarmViewController alloc]init] animated:YES];
 }
 
 #pragma mark - UITableView数据源方法
