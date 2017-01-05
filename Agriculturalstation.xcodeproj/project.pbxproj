@@ -92,6 +92,12 @@
 		BA2B84631DF943E10054C9B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA2B84611DF943E10054C9B8 /* LaunchScreen.storyboard */; };
 		BA2B846E1DF943E10054C9B8 /* AgriculturalstationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2B846D1DF943E10054C9B8 /* AgriculturalstationTests.m */; };
 		BA2B84791DF943E10054C9B8 /* AgriculturalstationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2B84781DF943E10054C9B8 /* AgriculturalstationUITests.m */; };
+		BA4727131E1E1C3100ECAEAA /* JLHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4727111E1E1C3100ECAEAA /* JLHomeCell.m */; };
+		BA4727141E1E1C3100ECAEAA /* JLHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA4727121E1E1C3100ECAEAA /* JLHomeCell.xib */; };
+		BA47271C1E1E2C6A00ECAEAA /* JLHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA47271B1E1E2C6A00ECAEAA /* JLHomeHeaderView.m */; };
+		BA4727201E1E2CB300ECAEAA /* JLHomeHeaderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA47271E1E1E2CB300ECAEAA /* JLHomeHeaderCollectionViewCell.m */; };
+		BA4727211E1E2CB300ECAEAA /* JLHomeHeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA47271F1E1E2CB300ECAEAA /* JLHomeHeaderCollectionViewCell.xib */; };
+		BA4727241E1E310100ECAEAA /* ReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4727231E1E310100ECAEAA /* ReusableView.m */; };
 		BA6B033E1E139DE800939D41 /* JLBaseInfoModifyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B033C1E139DE800939D41 /* JLBaseInfoModifyVC.m */; };
 		BA6B033F1E139DE800939D41 /* JLBaseInfoModifyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA6B033D1E139DE800939D41 /* JLBaseInfoModifyVC.xib */; };
 		BAAE6FCE1E1602DD00A78053 /* JLFarmCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAE6FCC1E1602DD00A78053 /* JLFarmCell.m */; };
@@ -123,8 +129,6 @@
 		BABF1E4F1E1C9B8600055862 /* JLReleaseTaskVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BABF1E4D1E1C9B8600055862 /* JLReleaseTaskVC.m */; };
 		BABF1E501E1C9B8600055862 /* JLReleaseTaskVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BABF1E4E1E1C9B8600055862 /* JLReleaseTaskVC.xib */; };
 		BABF1E551E1CE64E00055862 /* JLHomeLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BABF1E541E1CE64E00055862 /* JLHomeLayout.m */; };
-		BABF1E591E1CE81800055862 /* JLHomeHeaderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BABF1E571E1CE81800055862 /* JLHomeHeaderVC.m */; };
-		BABF1E5A1E1CE81800055862 /* JLHomeHeaderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BABF1E581E1CE81800055862 /* JLHomeHeaderVC.xib */; };
 		BABF1E5D1E1CF76F00055862 /* JXButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BABF1E5C1E1CF76F00055862 /* JXButton.m */; };
 		BACB09C21DFF8F770003861B /* MineItem.plist in Resources */ = {isa = PBXBuildFile; fileRef = BACB09C11DFF8F770003861B /* MineItem.plist */; };
 		BACDACA51E121BC4007F387F /* JLMineMsgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BACDACA31E121BC4007F387F /* JLMineMsgCell.m */; };
@@ -336,6 +340,16 @@
 		BA2B84741DF943E10054C9B8 /* AgriculturalstationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgriculturalstationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA2B84781DF943E10054C9B8 /* AgriculturalstationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AgriculturalstationUITests.m; sourceTree = "<group>"; };
 		BA2B847A1DF943E10054C9B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA4727101E1E1C3100ECAEAA /* JLHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLHomeCell.h; sourceTree = "<group>"; };
+		BA4727111E1E1C3100ECAEAA /* JLHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLHomeCell.m; sourceTree = "<group>"; };
+		BA4727121E1E1C3100ECAEAA /* JLHomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLHomeCell.xib; sourceTree = "<group>"; };
+		BA47271A1E1E2C6A00ECAEAA /* JLHomeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLHomeHeaderView.h; sourceTree = "<group>"; };
+		BA47271B1E1E2C6A00ECAEAA /* JLHomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLHomeHeaderView.m; sourceTree = "<group>"; };
+		BA47271D1E1E2CB300ECAEAA /* JLHomeHeaderCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLHomeHeaderCollectionViewCell.h; sourceTree = "<group>"; };
+		BA47271E1E1E2CB300ECAEAA /* JLHomeHeaderCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLHomeHeaderCollectionViewCell.m; sourceTree = "<group>"; };
+		BA47271F1E1E2CB300ECAEAA /* JLHomeHeaderCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLHomeHeaderCollectionViewCell.xib; sourceTree = "<group>"; };
+		BA4727221E1E310100ECAEAA /* ReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReusableView.h; sourceTree = "<group>"; };
+		BA4727231E1E310100ECAEAA /* ReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReusableView.m; sourceTree = "<group>"; };
 		BA6B033B1E139DE800939D41 /* JLBaseInfoModifyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLBaseInfoModifyVC.h; sourceTree = "<group>"; };
 		BA6B033C1E139DE800939D41 /* JLBaseInfoModifyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLBaseInfoModifyVC.m; sourceTree = "<group>"; };
 		BA6B033D1E139DE800939D41 /* JLBaseInfoModifyVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLBaseInfoModifyVC.xib; sourceTree = "<group>"; };
@@ -390,9 +404,6 @@
 		BABF1E4E1E1C9B8600055862 /* JLReleaseTaskVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLReleaseTaskVC.xib; sourceTree = "<group>"; };
 		BABF1E531E1CE64E00055862 /* JLHomeLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLHomeLayout.h; sourceTree = "<group>"; };
 		BABF1E541E1CE64E00055862 /* JLHomeLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLHomeLayout.m; sourceTree = "<group>"; };
-		BABF1E561E1CE81800055862 /* JLHomeHeaderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLHomeHeaderVC.h; sourceTree = "<group>"; };
-		BABF1E571E1CE81800055862 /* JLHomeHeaderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLHomeHeaderVC.m; sourceTree = "<group>"; };
-		BABF1E581E1CE81800055862 /* JLHomeHeaderVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLHomeHeaderVC.xib; sourceTree = "<group>"; };
 		BABF1E5B1E1CF76F00055862 /* JXButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXButton.h; sourceTree = "<group>"; };
 		BABF1E5C1E1CF76F00055862 /* JXButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXButton.m; sourceTree = "<group>"; };
 		BACB09C11DFF8F770003861B /* MineItem.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MineItem.plist; sourceTree = "<group>"; };
@@ -1074,6 +1085,9 @@
 			children = (
 				BABF1E531E1CE64E00055862 /* JLHomeLayout.h */,
 				BABF1E541E1CE64E00055862 /* JLHomeLayout.m */,
+				BA4727101E1E1C3100ECAEAA /* JLHomeCell.h */,
+				BA4727111E1E1C3100ECAEAA /* JLHomeCell.m */,
+				BA4727121E1E1C3100ECAEAA /* JLHomeCell.xib */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -1081,9 +1095,13 @@
 		BABF1E521E1CE4E700055862 /* HearderView */ = {
 			isa = PBXGroup;
 			children = (
-				BABF1E561E1CE81800055862 /* JLHomeHeaderVC.h */,
-				BABF1E571E1CE81800055862 /* JLHomeHeaderVC.m */,
-				BABF1E581E1CE81800055862 /* JLHomeHeaderVC.xib */,
+				BA4727221E1E310100ECAEAA /* ReusableView.h */,
+				BA4727231E1E310100ECAEAA /* ReusableView.m */,
+				BA47271A1E1E2C6A00ECAEAA /* JLHomeHeaderView.h */,
+				BA47271B1E1E2C6A00ECAEAA /* JLHomeHeaderView.m */,
+				BA47271D1E1E2CB300ECAEAA /* JLHomeHeaderCollectionViewCell.h */,
+				BA47271E1E1E2CB300ECAEAA /* JLHomeHeaderCollectionViewCell.m */,
+				BA47271F1E1E2CB300ECAEAA /* JLHomeHeaderCollectionViewCell.xib */,
 			);
 			path = HearderView;
 			sourceTree = "<group>";
@@ -1318,11 +1336,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA4727211E1E2CB300ECAEAA /* JLHomeHeaderCollectionViewCell.xib in Resources */,
 				BAF6AFD81E1BA8780008EBF1 /* AddOwnerViewController.xib in Resources */,
 				BAD542A41E091B8300B99FC0 /* BBSModel.plist in Resources */,
 				BAF6AFD31E1BA8520008EBF1 /* AddFarmViewController.xib in Resources */,
 				BA0B291E1E0E126E00A461D9 /* JLPWDManagementViewController.xib in Resources */,
-				BABF1E5A1E1CE81800055862 /* JLHomeHeaderVC.xib in Resources */,
 				BA0B29331E0E128F00A461D9 /* JLReleaseTaskTop.xib in Resources */,
 				BA0B29151E0E126E00A461D9 /* JLBalancePayViewController.xib in Resources */,
 				BABF1E501E1C9B8600055862 /* JLReleaseTaskVC.xib in Resources */,
@@ -1342,6 +1360,7 @@
 				BAAE6FE71E164BB200A78053 /* JLMineReleaseTaskCell.xib in Resources */,
 				BA2B845E1DF943E10054C9B8 /* Main.storyboard in Resources */,
 				BABE8F971E111EE700C5AB73 /* JLRechargeViewController.xib in Resources */,
+				BA4727141E1E1C3100ECAEAA /* JLHomeCell.xib in Resources */,
 				BAB88D121E14BBF700DB315A /* cityData.plist in Resources */,
 				BA0B29171E0E126E00A461D9 /* JLIdentityViewController.xib in Resources */,
 				BA0B28AB1E0E109C00A461D9 /* MBProgressHUD.bundle in Resources */,
@@ -1376,11 +1395,11 @@
 			files = (
 				BAAE6FDF1E16142F00A78053 /* JLOwnerViewController.m in Sources */,
 				BAD542971E08DF5C00B99FC0 /* MJRefreshStateHeader.m in Sources */,
-				BABF1E591E1CE81800055862 /* JLHomeHeaderVC.m in Sources */,
 				BABF1E4F1E1C9B8600055862 /* JLReleaseTaskVC.m in Sources */,
 				BA0B28E11E0E122600A461D9 /* JLOwnerModel.m in Sources */,
 				BA0B291F1E0E126E00A461D9 /* JLRewardsSystemViewController.m in Sources */,
 				BA0B29301E0E128F00A461D9 /* JLTaskViewController.m in Sources */,
+				BA4727131E1E1C3100ECAEAA /* JLHomeCell.m in Sources */,
 				BA0B29571E0E194B00A461D9 /* NSData+ImageContentType.m in Sources */,
 				BAD5429A1E08DF5C00B99FC0 /* NSBundle+MJRefresh.m in Sources */,
 				BA0B29641E0E194B00A461D9 /* UIImageView+WebCache.m in Sources */,
@@ -1440,6 +1459,7 @@
 				BA0B29611E0E194B00A461D9 /* UIImage+MultiFormat.m in Sources */,
 				BA0B28EB1E0E124A00A461D9 /* JLTabBarController.m in Sources */,
 				BAD5428B1E08DF5C00B99FC0 /* MJRefreshBackFooter.m in Sources */,
+				BA4727241E1E310100ECAEAA /* ReusableView.m in Sources */,
 				BAD5429D1E08DF5C00B99FC0 /* UIView+MJExtension.m in Sources */,
 				BAD5428A1E08DF5C00B99FC0 /* MJRefreshAutoFooter.m in Sources */,
 				BAD542941E08DF5C00B99FC0 /* MJRefreshBackStateFooter.m in Sources */,
@@ -1481,10 +1501,12 @@
 				BAD542911E08DF5C00B99FC0 /* MJRefreshAutoStateFooter.m in Sources */,
 				BA0B28BF1E0E11A400A461D9 /* JLUserModel.m in Sources */,
 				BAD5429C1E08DF5C00B99FC0 /* UIScrollView+MJRefresh.m in Sources */,
+				BA47271C1E1E2C6A00ECAEAA /* JLHomeHeaderView.m in Sources */,
 				BA0B28971E0E107600A461D9 /* AFSecurityPolicy.m in Sources */,
 				BA0B29211E0E126E00A461D9 /* JLMineItem.m in Sources */,
 				BA0B29631E0E194B00A461D9 /* UIImageView+HighlightedWebCache.m in Sources */,
 				BA0B29681E0E49C800A461D9 /* JLUserBaseInfoModel.m in Sources */,
+				BA4727201E1E2CB300ECAEAA /* JLHomeHeaderCollectionViewCell.m in Sources */,
 				BA0B289C1E0E107600A461D9 /* AFImageDownloader.m in Sources */,
 				BABE8F921E11142800C5AB73 /* RatingBar.m in Sources */,
 				BA0B28CB1E0E11D200A461D9 /* JLBBSModel.m in Sources */,

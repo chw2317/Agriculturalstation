@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="JLHomeHeaderCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_bg" translatesAutoresizingMaskIntoConstraints="NO" id="HoS-ZR-1Gy">
+                        <rect key="frame" x="5" y="5" width="130" height="115"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="130" id="7uU-Dt-M9o"/>
+                            <constraint firstAttribute="height" constant="115" id="FRY-ef-eFY"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="宏兴农场打药、灌溉" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJg-fc-BBA">
+                        <rect key="frame" x="140" y="5" width="235" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="WxB-W0-PZv"/>
+                            <constraint firstAttribute="width" constant="235" id="kWF-my-U02"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="农场作物包括棉花、水稻面积大概与10亩农场作物包括棉花。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7h-Uq-b5s">
+                        <rect key="frame" x="140" y="22" width="235" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="Qtz-hT-Pxk"/>
+                            <constraint firstAttribute="width" constant="235" id="xk1-bk-GlD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="作业面积：123456.00亩" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGv-xN-RXd">
+                        <rect key="frame" x="140" y="54" width="235" height="10"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="235" id="4bU-fU-kbd"/>
+                            <constraint firstAttribute="height" constant="10" id="n1N-LH-OVn"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="项目款：￥12000.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gmn-nj-Xuc">
+                        <rect key="frame" x="140" y="69" width="235" height="10"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="235" id="RWk-kL-Inc"/>
+                            <constraint firstAttribute="height" constant="10" id="zGP-BO-3rv"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.99323053009999995" green="0.090984540510000003" blue="0.3391677716" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本地用户和6星用户可接" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azB-Um-fZK">
+                        <rect key="frame" x="140" y="84" width="235" height="10"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="A9h-iA-qyh"/>
+                            <constraint firstAttribute="width" constant="235" id="cZj-Vf-hh9"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.1137254902" green="0.60392156860000001" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="竞标截止日期：2016-12-30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3Y-Vy-JdK">
+                        <rect key="frame" x="140" y="99" width="235" height="10"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="235" id="hBk-RL-QZV"/>
+                            <constraint firstAttribute="height" constant="10" id="vNV-la-CwF"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.99323053009999995" green="0.090984540510000003" blue="0.3391677716" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="fJg-fc-BBA" firstAttribute="leading" secondItem="HoS-ZR-1Gy" secondAttribute="trailing" constant="5" id="1eR-fd-EHl"/>
+                <constraint firstItem="HoS-ZR-1Gy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="3zb-hS-a7m"/>
+                <constraint firstAttribute="trailing" secondItem="i7h-Uq-b5s" secondAttribute="trailing" id="4J8-5w-k7B"/>
+                <constraint firstItem="azB-Um-fZK" firstAttribute="top" secondItem="Gmn-nj-Xuc" secondAttribute="bottom" constant="5" id="7eq-L1-CdC"/>
+                <constraint firstItem="Gmn-nj-Xuc" firstAttribute="top" secondItem="UGv-xN-RXd" secondAttribute="bottom" constant="5" id="BOc-a7-7yK"/>
+                <constraint firstItem="UGv-xN-RXd" firstAttribute="top" secondItem="i7h-Uq-b5s" secondAttribute="bottom" constant="2" id="BxA-gJ-n1j"/>
+                <constraint firstAttribute="trailing" secondItem="azB-Um-fZK" secondAttribute="trailing" id="Fm5-Pr-NsU"/>
+                <constraint firstAttribute="trailing" secondItem="Gmn-nj-Xuc" secondAttribute="trailing" id="Lup-KJ-LU5"/>
+                <constraint firstItem="i7h-Uq-b5s" firstAttribute="top" secondItem="fJg-fc-BBA" secondAttribute="bottom" constant="2" id="M2E-PN-hwM"/>
+                <constraint firstAttribute="trailing" secondItem="fJg-fc-BBA" secondAttribute="trailing" id="MQn-3L-5qY"/>
+                <constraint firstItem="a3Y-Vy-JdK" firstAttribute="top" secondItem="azB-Um-fZK" secondAttribute="bottom" constant="5" id="QSf-78-UW7"/>
+                <constraint firstItem="fJg-fc-BBA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="bgx-7p-O0k"/>
+                <constraint firstItem="i7h-Uq-b5s" firstAttribute="leading" secondItem="HoS-ZR-1Gy" secondAttribute="trailing" constant="5" id="c2u-yv-g3W"/>
+                <constraint firstAttribute="trailing" secondItem="UGv-xN-RXd" secondAttribute="trailing" id="cQZ-h7-8or"/>
+                <constraint firstItem="azB-Um-fZK" firstAttribute="leading" secondItem="HoS-ZR-1Gy" secondAttribute="trailing" constant="5" id="erC-z0-a57"/>
+                <constraint firstAttribute="trailing" secondItem="a3Y-Vy-JdK" secondAttribute="trailing" id="gUu-3x-57K"/>
+                <constraint firstItem="a3Y-Vy-JdK" firstAttribute="leading" secondItem="HoS-ZR-1Gy" secondAttribute="trailing" constant="5" id="ge0-eX-PnZ"/>
+                <constraint firstAttribute="bottom" secondItem="HoS-ZR-1Gy" secondAttribute="bottom" constant="5" id="mF1-cM-q6X"/>
+                <constraint firstItem="UGv-xN-RXd" firstAttribute="leading" secondItem="HoS-ZR-1Gy" secondAttribute="trailing" constant="5" id="q6I-Er-2cc"/>
+                <constraint firstItem="Gmn-nj-Xuc" firstAttribute="leading" secondItem="HoS-ZR-1Gy" secondAttribute="trailing" constant="5" id="ufg-mB-WSK"/>
+                <constraint firstItem="HoS-ZR-1Gy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="xoJ-Ul-WdO"/>
+            </constraints>
+            <size key="customSize" width="168" height="95"/>
+            <connections>
+                <outlet property="content" destination="i7h-Uq-b5s" id="wLZ-wI-gfb"/>
+                <outlet property="endtime" destination="a3Y-Vy-JdK" id="Rbo-Eg-YD6"/>
+                <outlet property="meetuser" destination="azB-Um-fZK" id="VDg-WV-X0a"/>
+                <outlet property="name" destination="fJg-fc-BBA" id="BAF-Jc-mjA"/>
+                <outlet property="operatingarea" destination="UGv-xN-RXd" id="48g-7c-Rpf"/>
+                <outlet property="picfilepath" destination="HoS-ZR-1Gy" id="c6d-H0-ZGB"/>
+                <outlet property="totalprice" destination="Gmn-nj-Xuc" id="vfl-IN-rfY"/>
+            </connections>
+            <point key="canvasLocation" x="84.5" y="73.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="login_bg" width="640" height="1136"/>
+    </resources>
+</document>

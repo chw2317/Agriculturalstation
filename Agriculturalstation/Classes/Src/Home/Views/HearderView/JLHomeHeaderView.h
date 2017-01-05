@@ -1,13 +1,13 @@
 //
-//  JLHomeHeaderVC.h
+//  JLHomeHeaderView.h
 //  Agriculturalstation
 //
-//  Created by chw on 17/1/4.
+//  Created by chw on 17/1/5.
 //  Copyright © 2017年 chw. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface JLHomeHeaderVC : UIViewController
+@interface JLHomeHeaderView : UICollectionReusableView
 
 @end
