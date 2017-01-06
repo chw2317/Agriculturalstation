@@ -112,6 +112,9 @@
 		BAAE6FE61E164BB200A78053 /* JLMineReleaseTaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAE6FE41E164BB200A78053 /* JLMineReleaseTaskCell.m */; };
 		BAAE6FE71E164BB200A78053 /* JLMineReleaseTaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAAE6FE51E164BB200A78053 /* JLMineReleaseTaskCell.xib */; };
 		BAB88D121E14BBF700DB315A /* cityData.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAB88D111E14BBF700DB315A /* cityData.plist */; };
+		BAB8D9AD1E1F3D5F00DB23B9 /* JLFarmDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB8D9AC1E1F3D5F00DB23B9 /* JLFarmDetailsViewController.m */; };
+		BAB8D9B61E1F886400DB23B9 /* JLOwnerDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB8D9B41E1F886400DB23B9 /* JLOwnerDetailsVC.m */; };
+		BAB8D9B71E1F886400DB23B9 /* JLOwnerDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAB8D9B51E1F886400DB23B9 /* JLOwnerDetailsVC.xib */; };
 		BABE8F921E11142800C5AB73 /* RatingBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BABE8F911E11142800C5AB73 /* RatingBar.m */; };
 		BABE8F961E111EE700C5AB73 /* JLRechargeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BABE8F941E111EE700C5AB73 /* JLRechargeViewController.m */; };
 		BABE8F971E111EE700C5AB73 /* JLRechargeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BABE8F951E111EE700C5AB73 /* JLRechargeViewController.xib */; };
@@ -372,6 +375,11 @@
 		BAAE6FE41E164BB200A78053 /* JLMineReleaseTaskCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLMineReleaseTaskCell.m; sourceTree = "<group>"; };
 		BAAE6FE51E164BB200A78053 /* JLMineReleaseTaskCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLMineReleaseTaskCell.xib; sourceTree = "<group>"; };
 		BAB88D111E14BBF700DB315A /* cityData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cityData.plist; sourceTree = "<group>"; };
+		BAB8D9AB1E1F3D5F00DB23B9 /* JLFarmDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLFarmDetailsViewController.h; sourceTree = "<group>"; };
+		BAB8D9AC1E1F3D5F00DB23B9 /* JLFarmDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLFarmDetailsViewController.m; sourceTree = "<group>"; };
+		BAB8D9B31E1F886400DB23B9 /* JLOwnerDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLOwnerDetailsVC.h; sourceTree = "<group>"; };
+		BAB8D9B41E1F886400DB23B9 /* JLOwnerDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLOwnerDetailsVC.m; sourceTree = "<group>"; };
+		BAB8D9B51E1F886400DB23B9 /* JLOwnerDetailsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLOwnerDetailsVC.xib; sourceTree = "<group>"; };
 		BABE8F901E11142800C5AB73 /* RatingBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingBar.h; sourceTree = "<group>"; };
 		BABE8F911E11142800C5AB73 /* RatingBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingBar.m; sourceTree = "<group>"; };
 		BABE8F931E111EE700C5AB73 /* JLRechargeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLRechargeViewController.h; sourceTree = "<group>"; };
@@ -657,6 +665,11 @@
 				BABF1E4C1E1C9B8600055862 /* JLReleaseTaskVC.h */,
 				BABF1E4D1E1C9B8600055862 /* JLReleaseTaskVC.m */,
 				BABF1E4E1E1C9B8600055862 /* JLReleaseTaskVC.xib */,
+				BAB8D9AB1E1F3D5F00DB23B9 /* JLFarmDetailsViewController.h */,
+				BAB8D9AC1E1F3D5F00DB23B9 /* JLFarmDetailsViewController.m */,
+				BAB8D9B31E1F886400DB23B9 /* JLOwnerDetailsVC.h */,
+				BAB8D9B41E1F886400DB23B9 /* JLOwnerDetailsVC.m */,
+				BAB8D9B51E1F886400DB23B9 /* JLOwnerDetailsVC.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1351,6 +1364,7 @@
 				BACDACA61E121BC4007F387F /* JLMineMsgCell.xib in Resources */,
 				BA0B291C1E0E126E00A461D9 /* JLPersonalInfoViewController.xib in Resources */,
 				BA0B28BE1E0E11A400A461D9 /* JLRegisterViewController.xib in Resources */,
+				BAB8D9B71E1F886400DB23B9 /* JLOwnerDetailsVC.xib in Resources */,
 				BA0B28BB1E0E11A400A461D9 /* JLForgetPWDViewController.xib in Resources */,
 				BA0B29261E0E126E00A461D9 /* JLUserBaseInfo.xib in Resources */,
 				BA6B033F1E139DE800939D41 /* JLBaseInfoModifyVC.xib in Resources */,
@@ -1408,6 +1422,7 @@
 				BAF6AFD21E1BA8520008EBF1 /* AddFarmViewController.m in Sources */,
 				BA6B033E1E139DE800939D41 /* JLBaseInfoModifyVC.m in Sources */,
 				BAD542961E08DF5C00B99FC0 /* MJRefreshNormalHeader.m in Sources */,
+				BAB8D9AD1E1F3D5F00DB23B9 /* JLFarmDetailsViewController.m in Sources */,
 				BA0B28A11E0E107600A461D9 /* UIProgressView+AFNetworking.m in Sources */,
 				BA0B289D1E0E107600A461D9 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				BA0B29621E0E194B00A461D9 /* UIImage+WebP.m in Sources */,
@@ -1466,6 +1481,7 @@
 				BAF6AFCE1E1B52790008EBF1 /* DOPDropDownMenu.m in Sources */,
 				BA0B29201E0E126E00A461D9 /* JLUserBaseInfoViewController.m in Sources */,
 				BABED8F71E04E7A500B38476 /* MJPropertyType.m in Sources */,
+				BAB8D9B61E1F886400DB23B9 /* JLOwnerDetailsVC.m in Sources */,
 				BA0B29651E0E194B00A461D9 /* UIView+WebCacheOperation.m in Sources */,
 				BA0B28BA1E0E11A400A461D9 /* JLForgetPWDViewController.m in Sources */,
 				BA2B84581DF943E10054C9B8 /* AppDelegate.m in Sources */,

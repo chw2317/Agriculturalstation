@@ -12,6 +12,7 @@
 #import "JLFarmModel.h"
 #import "JLFarmCell.h"
 #import "AddFarmViewController.h"
+#import "JLFarmDetailsViewController.h"
 
 #import "MJExtension.h"
 #import "MJRefresh.h"
@@ -134,6 +135,12 @@
     cell.farmModel = farmModel;
     // 3. 返回cell
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    JLFarmDetailsViewController *farmDetails = [JLFarmDetailsViewController new];
+    farmDetails.farmModel = self.farmModelArray[indexPath.row];
+    [self.navigationController pushViewController:farmDetails animated:YES];
 }
 
 #pragma mark - 设置每行高度

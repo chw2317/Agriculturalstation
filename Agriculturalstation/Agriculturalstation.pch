@@ -31,6 +31,8 @@
 // 导航栏
 #define NAV_WIDTH (self.navigationController.navigationBar.frame.size.width) // 宽度
 #define NAV_HEIGHT (self.navigationController.navigationBar.frame.size.height) // 高度
+// RGB
+#define RGB(r,g,b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0]
 
 
 
