@@ -26,13 +26,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.title = @"农场详情";
+    
     [self initView];
 }
 
 - (void)initView{
-    NSString *str1 = @"方是否撒发生发生大发大发沙发沙发上暗示法萨芬士大夫撒飞洒的范德萨发撒飞洒地方的萨芬撒的范德萨范德萨发生撒飞洒地方撒发生大法师的萨芬撒飞洒地方撒发生的飞洒发阿萨德飞洒地方萨芬撒飞洒的";
-    
-    NSString *str2 = @"发送飞洒发三个地方规定规范的风格的风格的鬼地方个";
     
     CGFloat distanceX = 8.0;
     CGFloat distanceY = 16.0;
