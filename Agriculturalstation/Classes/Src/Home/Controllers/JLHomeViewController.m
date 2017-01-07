@@ -42,7 +42,7 @@ static NSString *footerID = @"footerID";
     if(!_collectionView){
         CGRect collectionViewFrame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - NAV_HEIGHT - STATUS_HEIGHT);
         _collectionView = [[UICollectionView alloc] initWithFrame:collectionViewFrame collectionViewLayout:[[JLHomeLayout alloc] init]];
-        _collectionView.backgroundColor = [UIColor grayColor];
+        _collectionView.backgroundColor = RGB(246.0, 246.0, 246.0);;
         
         // 注册cell
         [_collectionView registerClass:[JLHomeCell class] forCellWithReuseIdentifier:ID];
@@ -60,7 +60,7 @@ static NSString *footerID = @"footerID";
 
 #pragma mark - UIConllectionView数据源方法
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return 2;
+    return 3;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -68,6 +68,16 @@ static NSString *footerID = @"footerID";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath{
+    
+    if(indexPath.section == 0){
+        UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
+        cell.backgroundColor = [UIColor orangeColor];
+        return cell;
+    }else if (indexPath.section == 1){
+        UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
+        cell.backgroundColor = [UIColor blueColor];
+        return cell;
+    }
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
     cell.backgroundColor = indexPath.section%2?[UIColor redColor]:[UIColor cyanColor];
     return cell;
@@ -118,7 +128,7 @@ static NSString *footerID = @"footerID";
 // 设置headerView的宽高
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(nonnull UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
     if(section == 0){
-        return CGSizeMake(self.view.bounds.size.width, 600);
+        return CGSizeMake(self.view.bounds.size.width, 700);
     }
     return CGSizeMake(self.view.bounds.size.width, 100);;
 }

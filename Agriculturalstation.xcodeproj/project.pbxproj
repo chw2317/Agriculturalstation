@@ -136,6 +136,8 @@
 		BACB09C21DFF8F770003861B /* MineItem.plist in Resources */ = {isa = PBXBuildFile; fileRef = BACB09C11DFF8F770003861B /* MineItem.plist */; };
 		BACDACA51E121BC4007F387F /* JLMineMsgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BACDACA31E121BC4007F387F /* JLMineMsgCell.m */; };
 		BACDACA61E121BC4007F387F /* JLMineMsgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BACDACA41E121BC4007F387F /* JLMineMsgCell.xib */; };
+		BAD3824F1E20C51E00AB5CA8 /* JLHomeHeaderViewTop.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD3824D1E20C51E00AB5CA8 /* JLHomeHeaderViewTop.m */; };
+		BAD382501E20C51E00AB5CA8 /* JLHomeHeaderViewTop.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAD3824E1E20C51E00AB5CA8 /* JLHomeHeaderViewTop.xib */; };
 		BAD5428A1E08DF5C00B99FC0 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD5425E1E08DF5C00B99FC0 /* MJRefreshAutoFooter.m */; };
 		BAD5428B1E08DF5C00B99FC0 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD542601E08DF5C00B99FC0 /* MJRefreshBackFooter.m */; };
 		BAD5428C1E08DF5C00B99FC0 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD542621E08DF5C00B99FC0 /* MJRefreshComponent.m */; };
@@ -418,6 +420,9 @@
 		BACDACA21E121BC4007F387F /* JLMineMsgCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLMineMsgCell.h; sourceTree = "<group>"; };
 		BACDACA31E121BC4007F387F /* JLMineMsgCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLMineMsgCell.m; sourceTree = "<group>"; };
 		BACDACA41E121BC4007F387F /* JLMineMsgCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLMineMsgCell.xib; sourceTree = "<group>"; };
+		BAD3824C1E20C51E00AB5CA8 /* JLHomeHeaderViewTop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLHomeHeaderViewTop.h; sourceTree = "<group>"; };
+		BAD3824D1E20C51E00AB5CA8 /* JLHomeHeaderViewTop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLHomeHeaderViewTop.m; sourceTree = "<group>"; };
+		BAD3824E1E20C51E00AB5CA8 /* JLHomeHeaderViewTop.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLHomeHeaderViewTop.xib; sourceTree = "<group>"; };
 		BAD5425D1E08DF5C00B99FC0 /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		BAD5425E1E08DF5C00B99FC0 /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		BAD5425F1E08DF5C00B99FC0 /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
@@ -1115,6 +1120,9 @@
 				BA47271D1E1E2CB300ECAEAA /* JLHomeHeaderCollectionViewCell.h */,
 				BA47271E1E1E2CB300ECAEAA /* JLHomeHeaderCollectionViewCell.m */,
 				BA47271F1E1E2CB300ECAEAA /* JLHomeHeaderCollectionViewCell.xib */,
+				BAD3824C1E20C51E00AB5CA8 /* JLHomeHeaderViewTop.h */,
+				BAD3824D1E20C51E00AB5CA8 /* JLHomeHeaderViewTop.m */,
+				BAD3824E1E20C51E00AB5CA8 /* JLHomeHeaderViewTop.xib */,
 			);
 			path = HearderView;
 			sourceTree = "<group>";
@@ -1364,6 +1372,7 @@
 				BACDACA61E121BC4007F387F /* JLMineMsgCell.xib in Resources */,
 				BA0B291C1E0E126E00A461D9 /* JLPersonalInfoViewController.xib in Resources */,
 				BA0B28BE1E0E11A400A461D9 /* JLRegisterViewController.xib in Resources */,
+				BAD382501E20C51E00AB5CA8 /* JLHomeHeaderViewTop.xib in Resources */,
 				BAB8D9B71E1F886400DB23B9 /* JLOwnerDetailsVC.xib in Resources */,
 				BA0B28BB1E0E11A400A461D9 /* JLForgetPWDViewController.xib in Resources */,
 				BA0B29261E0E126E00A461D9 /* JLUserBaseInfo.xib in Resources */,
@@ -1485,6 +1494,7 @@
 				BA0B29651E0E194B00A461D9 /* UIView+WebCacheOperation.m in Sources */,
 				BA0B28BA1E0E11A400A461D9 /* JLForgetPWDViewController.m in Sources */,
 				BA2B84581DF943E10054C9B8 /* AppDelegate.m in Sources */,
+				BAD3824F1E20C51E00AB5CA8 /* JLHomeHeaderViewTop.m in Sources */,
 				BACDACA51E121BC4007F387F /* JLMineMsgCell.m in Sources */,
 				BABED8F31E04E7A500B38476 /* MJExtensionConst.m in Sources */,
 				BA0B28DF1E0E122600A461D9 /* JLHomeViewController.m in Sources */,
