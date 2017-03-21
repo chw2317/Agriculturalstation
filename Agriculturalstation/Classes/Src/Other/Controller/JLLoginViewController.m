@@ -13,6 +13,9 @@
 #import "MBProgressHUD.h"
 #import "MBProgressHUD+MJ.h"
 
+#import "ServerResult.h"
+#import "MJExtension.h"
+
 @interface JLLoginViewController (){
     UIImageView *_loginLogoLeft; // 左侧Logo
     UIImageView *_loginLogoRight; // 右侧Logo
@@ -84,6 +87,8 @@
     CGRect userNameRect = CGRectMake(20, 0, (inputW - 20), 40);
     _userName = [[UITextField alloc]initWithFrame:userNameRect];
     _userName.placeholder = @"用户名";
+    // 当编辑的时候显示清除按钮
+    _userName.clearButtonMode = UITextFieldViewModeWhileEditing;
     // 左侧小图标
     UIImageView *userNameImg = [[UIImageView alloc]initWithFrame:CGRectMake(10, 0, 20, 20)];
     userNameImg.image = [UIImage imageNamed:@"login_username.png"];
@@ -96,6 +101,10 @@
     CGRect pwdRect = CGRectMake(20, 41, (inputW - 20), 39);
     _passWord = [[UITextField alloc]initWithFrame:pwdRect];
     _passWord.placeholder = @"请输入密码";
+    // 设置密码显示为小圆点
+    _passWord.secureTextEntry = YES;
+    // 当编辑的时候显示清除按钮
+    _passWord.clearButtonMode = UITextFieldViewModeWhileEditing;
     // 左侧小图标
     UIImageView *pwdImg = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 20, 20)];
     pwdImg.image = [UIImage imageNamed:@"login_password.png"];
@@ -143,7 +152,7 @@
     // 显示MBProgressHUD
     [MBProgressHUD showMessage:@"正在登录..."];
     // 请求地址
-    NSString *url = @"http://rifeng.weixinbm.com/app-login-op-login.html";
+    NSString *url = [REQUEST_URL stringByAppendingString:@"app-login-op-login.html"];
     // 请求管理者
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
@@ -155,28 +164,33 @@
     [manager POST:url parameters:parameters progress:^(NSProgress *_Nonnull uploadProgress){
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
-        NSDictionary *resultArray = responseObject;
+        ServerResult *result = [ServerResult mj_objectWithKeyValues:responseObject];
         // 隐藏MBProgressHUD
         [MBProgressHUD hideHUD];
-        if([resultArray[@"result"] intValue] == 1){ // 登录成功
-            //弹出“登录成功”的提示；
-            [MBProgressHUD showSuccess:@"登录成功"];
+        
+//        int code = result.code;
+//        NSString *msg = result.msg;
+//        NSString *username = result.data[@"username"];
+//        JLLog(@"%d---%@---%@",code, msg, username);
+        if(result.code == 200){
+            // 弹出“登录成功”的提示
+            [MBProgressHUD showSuccess:result.msg];
             // 记录用户登录状态
             // 获取NSUserDefault单例
             NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
             // 登录成功后把用户相关信息存储到userDefault
-            [userDefaults setObject:resultArray[@"uid"] forKey:@"uid"]; // uid
-            [userDefaults setObject:resultArray[@"username"] forKey:@"username"]; // 用户名
-            [userDefaults setObject:resultArray[@"phone"] forKey:@"phone"]; // 手机号
-            [userDefaults setObject:resultArray[@"avatar"] forKey:@"avatar"]; // 头像
-            [userDefaults setObject:resultArray[@"regtype"] forKey:@"regtype"]; // 注册类型，农场主 1/农机主 2
+            [userDefaults setObject:result.data[@"uid"] forKey:@"uid"]; // uid
+            [userDefaults setObject:result.data[@"username"] forKey:@"username"]; // 用户名
+            [userDefaults setObject:result.data[@"phone"] forKey:@"phone"]; // 手机号
+            [userDefaults setObject:result.data[@"avatar"] forKey:@"avatar"]; // 头像
+            [userDefaults setObject:result.data[@"regtype"] forKey:@"regtype"]; // 注册类型，农场主 1/农机主 2
             [userDefaults synchronize];
             
             // 登录成功，返回上一页面
             [self.navigationController popViewControllerAnimated:YES];
         }else{ // 登录失败
             //弹出“登录失败”的提示；
-            [MBProgressHUD showError:resultArray[@"msg"]];
+            [MBProgressHUD showError:result.msg];
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
         // 隐藏MBProgressHUD

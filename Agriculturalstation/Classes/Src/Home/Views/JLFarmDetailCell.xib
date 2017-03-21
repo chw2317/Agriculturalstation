@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="JLFarmDetailCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="299"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="农场名称：新的宏兴农场" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Apj-Cg-wK5">
+                        <rect key="frame" x="16" y="8" width="351" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="351" id="AV4-Jt-a3v"/>
+                            <constraint firstAttribute="height" constant="21" id="lph-le-Jpi"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.17726945939213479" green="0.68642619565323815" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="农场面积：23456.00亩" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Skr-k6-00X">
+                        <rect key="frame" x="16" y="37" width="351" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="351" id="Sbd-ZW-eQc"/>
+                            <constraint firstAttribute="height" constant="21" id="UK5-jF-H7E"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主要农作物：番薯、香蕉、玉米、小麦、甘蔗、黄豆" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8o-xR-QBm">
+                        <rect key="frame" x="16" y="66" width="351" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Uxd-zw-BkM"/>
+                            <constraint firstAttribute="width" constant="351" id="rKP-ZI-okE"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="农场所在地：湖南省邵阳市" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Esd-ec-BN2">
+                        <rect key="frame" x="16" y="95" width="351" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="8rH-gx-FUn"/>
+                            <constraint firstAttribute="width" constant="351" id="gQg-pE-AwI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="相关图片：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaU-4t-Est">
+                        <rect key="frame" x="16" y="124" width="351" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="351" id="NlT-n7-d2o"/>
+                            <constraint firstAttribute="height" constant="21" id="OXj-s6-tuj"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ylj-22-7DS" customClass="SDCycleScrollView">
+                        <rect key="frame" x="0.0" y="153" width="375" height="147"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="375" id="0Cy-cn-Px6"/>
+                            <constraint firstAttribute="height" constant="147" id="Abk-EQ-HRO"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Ylj-22-7DS" secondAttribute="bottom" id="0OW-U3-jXd"/>
+                    <constraint firstItem="EaU-4t-Est" firstAttribute="top" secondItem="Esd-ec-BN2" secondAttribute="bottom" constant="8" id="1Qk-9Z-YQe"/>
+                    <constraint firstItem="l8o-xR-QBm" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="2jd-VQ-XlV"/>
+                    <constraint firstItem="Esd-ec-BN2" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="7Zo-Wc-ib4"/>
+                    <constraint firstItem="Skr-k6-00X" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="BRT-Bz-lU9"/>
+                    <constraint firstItem="Esd-ec-BN2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="DdV-IY-qeF"/>
+                    <constraint firstItem="Apj-Cg-wK5" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="GXg-iH-x4j"/>
+                    <constraint firstItem="l8o-xR-QBm" firstAttribute="top" secondItem="Skr-k6-00X" secondAttribute="bottom" constant="8" id="J4e-3S-iOb"/>
+                    <constraint firstItem="EaU-4t-Est" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="MCR-BC-Vz1"/>
+                    <constraint firstItem="Ylj-22-7DS" firstAttribute="top" secondItem="EaU-4t-Est" secondAttribute="bottom" constant="8" id="P13-Oq-HRj"/>
+                    <constraint firstItem="Ylj-22-7DS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="RP7-jz-rKI"/>
+                    <constraint firstItem="Apj-Cg-wK5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="SAZ-6h-Xfy"/>
+                    <constraint firstAttribute="trailing" secondItem="Ylj-22-7DS" secondAttribute="trailing" id="Vkj-F3-Tmo"/>
+                    <constraint firstItem="Skr-k6-00X" firstAttribute="top" secondItem="Apj-Cg-wK5" secondAttribute="bottom" constant="8" id="XDq-df-y0N"/>
+                    <constraint firstItem="Skr-k6-00X" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="Yhm-BP-iaK"/>
+                    <constraint firstItem="Esd-ec-BN2" firstAttribute="top" secondItem="l8o-xR-QBm" secondAttribute="bottom" constant="8" id="ix9-ob-m9c"/>
+                    <constraint firstItem="l8o-xR-QBm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="n0Z-6E-LTO"/>
+                    <constraint firstItem="Apj-Cg-wK5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="qFL-Id-bqV"/>
+                    <constraint firstItem="EaU-4t-Est" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="u6H-jE-p7t"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="area" destination="Skr-k6-00X" id="jF1-3f-4qt"/>
+                <outlet property="bannerView" destination="Ylj-22-7DS" id="0KY-CA-9Ou"/>
+                <outlet property="farmaddress" destination="Esd-ec-BN2" id="wwq-UO-utY"/>
+                <outlet property="mainproduct" destination="l8o-xR-QBm" id="XTl-3v-bta"/>
+                <outlet property="name" destination="Apj-Cg-wK5" id="PX9-wQ-NC2"/>
+            </connections>
+            <point key="canvasLocation" x="25.5" y="52"/>
+        </tableViewCell>
+    </objects>
+</document>

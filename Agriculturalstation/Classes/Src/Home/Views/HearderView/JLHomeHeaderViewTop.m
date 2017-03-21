@@ -8,6 +8,14 @@
 
 #import "JLHomeHeaderViewTop.h"
 
+@interface JLHomeHeaderViewTop()
+// 当前位置
+@property (strong, nonatomic) IBOutlet UILabel *currentPosition;
+
+
+
+@end
+
 @implementation JLHomeHeaderViewTop
 
 - (void)awakeFromNib {

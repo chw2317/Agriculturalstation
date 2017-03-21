@@ -21,6 +21,8 @@
 #import "JLRewardsSystemViewController.h"
 #import "UIImageView+WebCache.h"
 
+#import "TestViewController.h"
+
 @interface JLMineViewController ()<UITableViewDelegate,UITableViewDataSource>{
     UITableView *_tableView;
     BOOL _isLogin; // 记录用户是否登陆了 true 登录了 false 未登录
@@ -55,6 +57,7 @@
     }
     return _mineArray;
 }
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -151,6 +154,7 @@
 -(void)goToPerfectInfo{
     NSLog(@"完善资料");
     [self.navigationController pushViewController:[[JLUserBaseInfoViewController alloc] init] animated:YES];
+//    [self.navigationController pushViewController:[[TestViewController alloc] init] animated:YES];
 }
 
 // 跳转到登陆界面
@@ -166,6 +170,7 @@
 
     return 1;
 }
+
 
 #pragma mark - 返回每组行数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

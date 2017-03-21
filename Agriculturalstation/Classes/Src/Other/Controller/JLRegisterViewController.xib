@@ -73,7 +73,7 @@
                         <constraint firstAttribute="height" constant="30" id="1cf-f5-k4L"/>
                         <constraint firstAttribute="width" constant="270" id="p7s-QB-wh7"/>
                     </constraints>
-                    <state key="normal" title="合作社"/>
+                    <state key="normal" title="个人"/>
                     <connections>
                         <action selector="selectedUserType" destination="-1" eventType="touchUpInside" id="BWd-M5-6ow"/>
                     </connections>
@@ -93,7 +93,7 @@
                         <constraint firstAttribute="height" constant="10" id="xok-j7-gUF"/>
                     </constraints>
                 </imageView>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入您的用户名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aC8-Tt-gjJ">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入您的用户名" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aC8-Tt-gjJ">
                     <rect key="frame" x="33" y="214" width="300" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="300" id="cwb-Ns-9ed"/>
@@ -111,7 +111,7 @@
                         <constraint firstAttribute="width" constant="300" id="fZg-39-Mot"/>
                     </constraints>
                 </view>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mQI-k7-QhS">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mQI-k7-QhS">
                     <rect key="frame" x="33" y="250" width="300" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="300" id="In5-IT-EXR"/>
@@ -119,7 +119,7 @@
                     </constraints>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nmd-fc-2va">
                     <rect key="frame" x="33" y="280" width="300" height="1"/>
@@ -129,7 +129,7 @@
                         <constraint firstAttribute="width" constant="300" id="aah-IH-FwJ"/>
                     </constraints>
                 </view>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="确认密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NwI-L3-Ox4">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="确认密码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="NwI-L3-Ox4">
                     <rect key="frame" x="33" y="286" width="300" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="DvP-xc-Wul"/>
@@ -137,7 +137,7 @@
                     </constraints>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LHk-hv-xg5">
                     <rect key="frame" x="33" y="316" width="300" height="1"/>
@@ -147,7 +147,7 @@
                         <constraint firstAttribute="width" constant="300" id="yCb-Jy-KcI"/>
                     </constraints>
                 </view>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="手机号码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pzh-aC-Mh4">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="手机号码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pzh-aC-Mh4">
                     <rect key="frame" x="33" y="322" width="300" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="BaV-Yu-G9B"/>

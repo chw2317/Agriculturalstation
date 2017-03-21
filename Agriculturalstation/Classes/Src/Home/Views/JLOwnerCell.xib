@@ -35,7 +35,7 @@
                         <color key="textColor" red="0.3921568627" green="0.74509803919999995" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="机车名称：耕田机" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEE-B3-MGb">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="机车名称：耕田机" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEE-B3-MGb">
                         <rect key="frame" x="130" y="34" width="237" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="MKM-MQ-65X"/>

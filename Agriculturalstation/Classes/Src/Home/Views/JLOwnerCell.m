@@ -41,7 +41,7 @@
 - (void)setOwnerModel:(JLOwnerModel *)ownerModel{
     _ownerModel = ownerModel;
     // 主图片，给一张默认图片，先使用默认图片，当图片加载完成后再替换
-    [self.mainImg sd_setImageWithURL:[NSURL URLWithString:[REQUEST_URL stringByAppendingString:ownerModel.locopic]] placeholderImage:[UIImage imageNamed:@"no_pictures.png"]];
+    [self.mainImg sd_setImageWithURL:[NSURL URLWithString:[IMAGE_URL stringByAppendingString:ownerModel.avatar]] placeholderImage:[UIImage imageNamed:@"no_pictures.png"]];
     // 农机手
     self.owner.text = [@"农机手：" stringByAppendingString:ownerModel.locomaster];
     // 机车名称

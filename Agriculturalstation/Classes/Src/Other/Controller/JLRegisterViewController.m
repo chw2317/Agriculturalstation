@@ -10,6 +10,9 @@
 #import "AFNetworking.h"
 #import "MBProgressHUD.h"
 #import "MBProgressHUD+MJ.h"
+#import "MJExtension.h"
+
+#import "ServerResult.h"
 
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width) // 屏幕宽度
 #define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height) // 屏幕高度
@@ -155,7 +158,7 @@
         // 显示MBProgressHUD
         [MBProgressHUD showMessage:@"正在注册..."];
         // 请求地址
-        url = @"http://rifeng.weixinbm.com/app-register-op-register.html";
+        url = [REQUEST_URL stringByAppendingString:@"app-register-op-register.html"];
         // 拼接请求参数
         parameters[@"regtype"] = @([_guildStr intValue]+1);
         parameters[@"usertype"] = @([_guildStr intValue]+1);
@@ -164,7 +167,7 @@
         parameters[@"phone"] = self._phoneNumber.text;
     }else if ([type isEqualToString:@"code"]){ // 获取验证码
         // 请求地址
-        url = @"http://rifeng.weixinbm.com/app-register-op-code.html";
+        url = [REQUEST_URL stringByAppendingString:@"app-register-op-code.html"];
         // 拼接请求参数
         parameters[@"phone"] = self._phoneNumber.text;
     }
@@ -172,22 +175,26 @@
     [manager POST:url parameters:parameters progress:^(NSProgress *_Nonnull uploadProgress){
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
+        ServerResult *result = [ServerResult mj_objectWithKeyValues:responseObject];
+        // 隐藏MBProgressHUD
+        [MBProgressHUD hideHUD];
         if([type isEqualToString:@"register"]){ // 注册
-            NSLog(@"注册成功：%@",responseObject);
-            // 隐藏MBProgressHUD
-            [MBProgressHUD hideHUD];
-            //弹出“注册成功”的提示；
-            [MBProgressHUD showSuccess:@"注册成功"];
-            // 注册成功，返回上一页面
-            [self.navigationController popViewControllerAnimated:YES];
+            if(result.code == 200){
+                // 弹出“注册成功”的提示；
+                [MBProgressHUD showSuccess:result.msg];
+                // 注册成功，返回上一页面
+                [self.navigationController popViewControllerAnimated:YES];
+            }else{
+                // 弹出“注册失败”的提示；
+                [MBProgressHUD showError:result.msg];
+            }
         }else if([type isEqualToString:@"code"]){ // 获取验证码
             
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
-        NSLog(@"注册失败:%@", error.description);
         // 隐藏MBProgressHUD
         [MBProgressHUD hideHUD];
-        //同时弹出“注册失败”的提示；
+        // 同时弹出“注册失败”的提示；
         [MBProgressHUD showError:@"注册失败"];
     }];
 }

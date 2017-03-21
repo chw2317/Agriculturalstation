@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="JLOwnerDetailsCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="299"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="机车名称：橡胶履带农用运输自卸1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SS-kv-C1Y">
+                        <rect key="frame" x="16" y="8" width="351" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="351" id="4do-YA-SBy"/>
+                            <constraint firstAttribute="height" constant="21" id="6Vi-fe-8kI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.040633941519670924" green="0.53673451070134215" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="工作性质：收割" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Yf-hS-cGG">
+                        <rect key="frame" x="16" y="37" width="351" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="WwB-S3-1wD"/>
+                            <constraint firstAttribute="width" constant="351" id="iwf-H6-jvE"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="运营时间：全天候" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCB-Bz-dfb">
+                        <rect key="frame" x="16" y="66" width="351" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Jre-2t-Cmb"/>
+                            <constraint firstAttribute="width" constant="351" id="dpu-f4-suc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目前状态：待接单" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43F-9f-ClL">
+                        <rect key="frame" x="16" y="95" width="351" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="351" id="pjI-Oc-4E0"/>
+                            <constraint firstAttribute="height" constant="21" id="vA7-mJ-Dcg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YVl-Tq-zWn" customClass="SDCycleScrollView">
+                        <rect key="frame" x="0.0" y="124" width="375" height="175"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="375" id="JES-yh-ad0"/>
+                            <constraint firstAttribute="height" constant="175" id="yLI-2a-ZYt"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="YVl-Tq-zWn" firstAttribute="top" secondItem="43F-9f-ClL" secondAttribute="bottom" constant="8" id="4Fl-Eb-W3b"/>
+                    <constraint firstItem="fCB-Bz-dfb" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="79R-77-NDf"/>
+                    <constraint firstItem="7SS-kv-C1Y" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="7cw-7d-Znp"/>
+                    <constraint firstItem="43F-9f-ClL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="7wD-Hc-wAM"/>
+                    <constraint firstAttribute="trailing" secondItem="YVl-Tq-zWn" secondAttribute="trailing" id="HxI-EJ-HvB"/>
+                    <constraint firstItem="5Yf-hS-cGG" firstAttribute="top" secondItem="7SS-kv-C1Y" secondAttribute="bottom" constant="8" id="Iw7-x1-SYo"/>
+                    <constraint firstItem="5Yf-hS-cGG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="Jos-Ql-ZaD"/>
+                    <constraint firstItem="YVl-Tq-zWn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="JpH-AD-z3B"/>
+                    <constraint firstItem="43F-9f-ClL" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Uou-uq-Mve"/>
+                    <constraint firstItem="43F-9f-ClL" firstAttribute="top" secondItem="fCB-Bz-dfb" secondAttribute="bottom" constant="8" id="frX-LT-T5d"/>
+                    <constraint firstItem="fCB-Bz-dfb" firstAttribute="top" secondItem="5Yf-hS-cGG" secondAttribute="bottom" constant="8" id="iXr-2O-wbO"/>
+                    <constraint firstItem="5Yf-hS-cGG" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="lHY-DF-bYI"/>
+                    <constraint firstItem="7SS-kv-C1Y" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="lha-sl-xqQ"/>
+                    <constraint firstAttribute="bottom" secondItem="YVl-Tq-zWn" secondAttribute="bottom" id="unv-eb-SUn"/>
+                    <constraint firstItem="fCB-Bz-dfb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="xRj-Oj-AVE"/>
+                    <constraint firstItem="7SS-kv-C1Y" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="yWQ-Rw-Txu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bannerView" destination="YVl-Tq-zWn" id="XPm-Tf-tcN"/>
+                <outlet property="locomotive" destination="7SS-kv-C1Y" id="bzB-ty-9ft"/>
+                <outlet property="naturework" destination="5Yf-hS-cGG" id="uKm-Pl-IUw"/>
+                <outlet property="operatingtime" destination="fCB-Bz-dfb" id="ZfZ-Qt-XvX"/>
+                <outlet property="status" destination="43F-9f-ClL" id="8iS-iD-zpE"/>
+            </connections>
+            <point key="canvasLocation" x="24.5" y="52"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -12,15 +12,12 @@
 
 @interface JLOwnerModel : NSObject
 
-@property (nonatomic, assign) int id; // 农机id
+@property (nonatomic, assign) int uid; // 用户id
+@property (nonatomic, copy) NSString *username; // 用户名
+@property (nonatomic, copy) NSString *avatar; // 用户头像
 @property (nonatomic, copy) NSString *locomaster; // 农机手
 @property (nonatomic, copy) NSString *locomotive; // 机车名称
 @property (nonatomic, assign) int naturework; // 工作性质
 @property (nonatomic, copy) NSString *operatingtime; // 运营时间
-@property (nonatomic, assign) int status; // 目前状态
-@property (nonatomic, copy) NSString *provinces; // 省份
-@property (nonatomic, copy) NSString *city; // 城市
-@property (nonatomic, copy) NSString *locopic; // 主图
-
 
 @end

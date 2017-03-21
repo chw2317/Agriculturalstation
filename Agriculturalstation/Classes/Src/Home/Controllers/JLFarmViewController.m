@@ -22,6 +22,8 @@
 
 @interface JLFarmViewController ()<UITableViewDelegate,UITableViewDataSource>{
     UITableView *_tableView;
+    int start;
+    NSString *perpage;
 }
 
 @property(strong, nonatomic)NSMutableArray *farmModelArray;
@@ -34,9 +36,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    start = 0;
+    perpage = @"10";
+    self.farmModelArray = [[NSMutableArray alloc] init];
+    
     self.title = @"我的农场";
-    // 设置self.title的字体大小以及颜色
-    // self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont boldSystemFontOfSize:16]};
     // 设置“添加”按钮
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     rightBtn.frame = CGRectMake(0, 0, 25, 25);
@@ -61,11 +65,14 @@
     // 下拉刷新
     _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(20 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            // 结束刷新
-            [_tableView.mj_header endRefreshing];
-        });
-        [self sendRequest];
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(20 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            // 结束刷新
+//            [_tableView.mj_header endRefreshing];
+//        });
+        // 清空数组
+        [self.farmModelArray removeAllObjects];
+        start = 0;
+        [self sendRequest:start];
     }];
     
     // 设置自动切换透明度（在导航栏下面自动隐藏）
@@ -74,18 +81,18 @@
     // 上拉刷新
     _tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
         // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            // 结束刷新
-            [_tableView.mj_footer endRefreshing];
-        });
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            // 结束刷新
+//            [_tableView.mj_footer endRefreshing];
+//        });
+        [self sendRequest:start];
     }];
     
     // 加载数据
-    [self sendRequest];
-
+    [self sendRequest:start];
 }
 
-- (void)sendRequest{
+- (void)sendRequest:(int)startNum{
     // 显示MBProgressHUD
     [MBProgressHUD showMessage:nil];
     // 请求地址
@@ -96,22 +103,50 @@
     // 拼接请求参数
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
 //    parameters[@"uid"] = userUid;
+    parameters[@"start"] = [NSString stringWithFormat:@"%d",startNum];
+    parameters[@"perpage"] = perpage;
     // 发起请求
     [manager POST:url parameters:parameters progress:^(NSProgress *_Nonnull uploadProgress){
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
-        //        NSLog(@"responseObject = %@",responseObject);
+        // 结束刷新
+        [self endRefreshing];
         // 隐藏MBProgressHUD
         [MBProgressHUD hideHUD];
-        self.farmModelArray = [JLFarmModel mj_objectArrayWithKeyValuesArray:responseObject];
+        int count = [JLFarmModel mj_objectArrayWithKeyValuesArray:responseObject].count;
+        [self.farmModelArray addObjectsFromArray:[JLFarmModel mj_objectArrayWithKeyValuesArray:responseObject]];
+
+        JLLog(@"count=%d",self.farmModelArray.count);
+        start += count;
+        
+        if(count < [perpage intValue]){
+            [MBProgressHUD showSuccess:@"没有更多数据啦"];
+        }
+        
+//        for(JLFarmModel *farmer in self.farmModelArray){
+//            JLLog(@"username=%@",farmer.username);
+//        }
         // 刷新UITableView
         [_tableView reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
+        // 结束刷新
+        [self endRefreshing];
         // 隐藏MBProgressHUD
         [MBProgressHUD hideHUD];
         //同时弹出“加载失败”的提示；
         [MBProgressHUD showError:@"加载失败"];
     }];
+}
+
+- (void)endRefreshing{
+    if([_tableView.mj_header isRefreshing]){
+        // 结束刷新
+        [_tableView.mj_header endRefreshing];
+    }
+    if([_tableView.mj_footer isRefreshing]){
+        // 结束刷新
+        [_tableView.mj_footer endRefreshing];
+    }
 }
 
 // 添加农场
@@ -143,7 +178,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     JLFarmDetailsViewController *farmDetails = [JLFarmDetailsViewController new];
-    farmDetails.farmModel = self.farmModelArray[indexPath.row];
+    farmDetails.farmerUid = [self.farmModelArray[indexPath.row] uid];
+    farmDetails.username = [self.farmModelArray[indexPath.row] username];
     [self.navigationController pushViewController:farmDetails animated:YES];
 }
 

@@ -10,6 +10,9 @@
 #import "AFNetworking.h"
 #import "MBProgressHUD.h"
 #import "MBProgressHUD+MJ.h"
+#import "MJExtension.h"
+
+#import "ServerResult.h"
 
 @interface JLForgetPWDViewController ()
 // 获取验证码
@@ -104,13 +107,13 @@
         // 显示MBProgressHUD
         [MBProgressHUD showMessage:@"正在找回..."];
         // 请求地址
-        url = @"http://rifeng.weixinbm.com/app-register-op-change.html";
+        url = [REQUEST_URL stringByAppendingString:@"app-register-op-change.html"];
         // 拼接请求参数
         parameters[@"phone"] = self._phoneNumber.text;
         parameters[@"newpassword"] = self._passWord.text;
     }else if ([type isEqualToString:@"code"]){ // 获取验证码
         // 请求地址
-        url = @"http://rifeng.weixinbm.com/app-register-op-code.html";
+        url = [REQUEST_URL stringByAppendingString:@"app-register-op-code.html"];
         // 拼接请求参数
         parameters[@"phone"] = self._phoneNumber.text;
     }
@@ -118,13 +121,21 @@
     [manager POST:url parameters:parameters progress:^(NSProgress *_Nonnull uploadProgress){
         
     } success:^(NSURLSessionDataTask *_Nonnull task, id _Nonnull responseObject){
-        if([type isEqualToString:@"modify"]){
-            // 隐藏MBProgressHUD
-            [MBProgressHUD hideHUD];
-            // 弹出“找回成功”的提示；
-            [MBProgressHUD showSuccess:@"找回成功"];
-            // 找回成功，返回上一页面
-            [self.navigationController popViewControllerAnimated:YES];
+        ServerResult *result = [ServerResult mj_objectWithKeyValues:responseObject];
+        // 隐藏MBProgressHUD
+        [MBProgressHUD hideHUD];
+        if([type isEqualToString:@"modify"]){ // 找回密码
+            if(result.code == 200){
+                // 弹出“成功”的提示；
+                [MBProgressHUD showSuccess:result.msg];
+                // 找回成功，返回上一页面
+                [self.navigationController popViewControllerAnimated:YES];
+            }else{
+                // 弹出“失败”的提示；
+                [MBProgressHUD showError:result.msg];
+            }
+        }else if ([type isEqualToString:@"code"]){ // 获取验证码
+            
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
         // 隐藏MBProgressHUD

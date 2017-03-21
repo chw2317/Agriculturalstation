@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JLFarmModel.h"
+#import "JLFarmListModel.h"
 
 @interface JLFarmDetailsViewController : UIViewController
 
-@property (nonatomic, strong) JLFarmModel *farmModel;
+@property (nonatomic, strong) JLFarmListModel *farmList;
+@property (nonatomic, assign) int farmerUid;
+@property (nonatomic, copy) NSString *username;
 
 @end

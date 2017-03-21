@@ -2,16 +2,15 @@
 //  JLOwnerDetailsVC.h
 //  Agriculturalstation
 //
-//  Created by chw on 17/1/6.
+//  Created by chw on 17/3/21.
 //  Copyright © 2017年 chw. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "JLOwnerModel.h"
 
 @interface JLOwnerDetailsVC : UIViewController
 
-// 属性传值
-@property (nonatomic, strong) JLOwnerModel *ownerModel;
+@property (nonatomic, assign) int ownerUid;
+@property (nonatomic, copy) NSString *ownerUsername;
 
 @end

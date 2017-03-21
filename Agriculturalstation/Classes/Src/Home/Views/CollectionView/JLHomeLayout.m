@@ -14,18 +14,50 @@
 - (void)prepareLayout{
     [super prepareLayout];
     
+    
     // 设置item尺寸
-    CGFloat itemWH = (self.collectionView.frame.size.width - 1) / 2;
+    CGFloat itemWH = self.collectionView.frame.size.width / 2 - 10;
 //    self.itemSize = CGSizeMake(itemWH, itemWH + 20);
-    self.itemSize = CGSizeMake(100, 100);
+    self.itemSize = CGSizeMake(SCREEN_WIDTH / 2 - 10, 160);
     // 设置滚动方向
     self.scrollDirection = UICollectionViewScrollDirectionVertical;
     
     // 设置最小间距
     self.minimumLineSpacing = 1;
-    self.minimumInteritemSpacing = 1;
     
     // 隐藏水平滚动条
 //    self.collectionView.showsHorizontalScrollIndicator = NO;
+//    self.collectionView.showsVerticalScrollIndicator = NO;
 }
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

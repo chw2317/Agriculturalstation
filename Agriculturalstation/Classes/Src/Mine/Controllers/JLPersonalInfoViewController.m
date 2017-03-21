@@ -51,10 +51,8 @@
 // 农场 or 农机信息
 - (IBAction)farmOrOwnerInfo { // 农场主
     if(self.regtype == 1){
-//        NSLog(@"农场主。。。。。");
         [self.navigationController pushViewController:[[JLFarmViewController alloc] init] animated:YES];
     }else if (self.regtype == 2){ // 农机主
-//        NSLog(@"农机主........");
         [self.navigationController pushViewController:[[JLOwnerViewController alloc] init] animated:YES];
     }
 }

@@ -6,17 +6,28 @@
 //  Copyright © 2017年 chw. All rights reserved.
 //
 
-    // 农场详情
+    // 农场信息
 
 #import "JLFarmDetailsViewController.h"
+#import "JLFarmListModel.h"
+#import "JLFarmDetailCell.h"
+#import "ServerResult.h"
 
-@interface JLFarmDetailsViewController ()
+#import "MJExtension.h"
+#import "MJRefresh.h"
+#import "AFNetworking.h"
+#import "MBProgressHUD.h"
+#import "MBProgressHUD+MJ.h"
 
-@property (strong, nonatomic) UILabel *name; // 农场名称
-@property (strong, nonatomic) UILabel *farmer; // 农场主
-@property (strong, nonatomic) UILabel *floorspace; // 农场面积
-@property (strong, nonatomic) UILabel *mainproduct; // 主要农作物
-@property (strong, nonatomic) UILabel *farmaddress; // 农场所在地
+@interface JLFarmDetailsViewController ()<UITableViewDelegate,UITableViewDataSource>{
+    UITableView *_tableView;
+    int start;
+    NSString *perpage;
+    UILabel *commentLabel; // 最新评论
+    UIView *headerView;
+}
+
+@property(strong, nonatomic) NSMutableArray *farmDetailArray;
 
 @end
 
@@ -26,101 +37,204 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = @"农场详情";
+    self.title = @"农场信息";
+    start = 0;
+    perpage = @"5";
+    self.farmDetailArray = [[NSMutableArray alloc] init];
     
-    [self initView];
+    // HeaderView
+    headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 60)];
+    headerView.backgroundColor = [UIColor whiteColor];
+    // 最新评论
+    commentLabel = [[UILabel alloc] initWithFrame:(CGRect){16, 40, SCREEN_WIDTH, 20}];
+    commentLabel.text = @"最新评论：";
+    commentLabel.textColor = [UIColor redColor];
+    [headerView addSubview:commentLabel];
+    // 用户名
+    UILabel *userNameLabel = [[UILabel alloc] initWithFrame:(CGRect){16, 16, SCREEN_WIDTH, 20}];
+    userNameLabel.text = self.username;
+    userNameLabel.textColor = [UIColor redColor];
+    [headerView addSubview:userNameLabel];
+    
+    CGRect tableViewFrame = CGRectMake(0, 0, self.view.frame.size.width, SCREEN_HEIGHT - STATUS_HEIGHT - NAV_HEIGHT);
+    // 创建一个分组样式的UITableView
+    _tableView = [[UITableView alloc]initWithFrame:tableViewFrame style:UITableViewStyleGrouped];
+    _tableView.tableHeaderView = headerView;
+    
+    [self.view addSubview:_tableView];
+    // 设置数据源
+    _tableView.dataSource = self;
+    // 设置代理
+    _tableView.delegate = self;
+    
+    // 下拉刷新
+    _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
+        //        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(20 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        //            // 结束刷新
+        //            [_tableView.mj_header endRefreshing];
+        //        });
+        // 清空数组
+        [self.farmDetailArray removeAllObjects];
+        start = 0;
+        [self sendRequest:start];
+    }];
+    
+    // 设置自动切换透明度（在导航栏下面自动隐藏）
+    _tableView.mj_header.automaticallyChangeAlpha = YES;
+    
+    // 上拉刷新
+    _tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
+        //        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        //            // 结束刷新
+        //            [_tableView.mj_footer endRefreshing];
+        //        });
+        [self sendRequest:start];
+    }];
+//    JLLog(@"线程一：%@",[NSThread currentThread]);
+    // 获取最新评论
+    [self getLatestComment];
+    
+    // 加载数据
+    [self sendRequest:start];
 }
 
-- (void)initView{
-    
-    CGFloat distanceX = 8.0;
-    CGFloat distanceY = 16.0;
-    CGFloat commonH = 20.0;
-    
-    // 农场主
-    self.farmer = [[UILabel alloc]initWithFrame:CGRectMake(distanceX, distanceY, SCREEN_WIDTH - distanceX, commonH)];
-    self.farmer.textColor = [UIColor orangeColor];
-//    self.farmer.text = @"农场主：墨明棋妙";
-    self.farmer.text = [@"农场主：" stringByAppendingString:[_farmModel farmer]]; // 赋值
-    [self.view addSubview:self.farmer];
-    
-    // 农场名称
-    self.name = [[UILabel alloc]initWithFrame:CGRectMake(distanceX, distanceY + commonH + 8, SCREEN_WIDTH - distanceX, commonH)];
-//    self.name.textColor = [UIColor colorWithRed:59.0/255.0 green:135.0/255.0 blue:146.0/255.0 alpha:0.0];
-    self.name.textColor = RGB(59.0, 135.0, 146.0);
-    self.name.font = [UIFont systemFontOfSize:16.0];
-//    self.name.text = @"农场名称：西林农厂";
-    self.name.text = [@"农场名称：" stringByAppendingString:[_farmModel name]]; // 赋值
-    [self.view addSubview:self.name];
-    
-    // 农场面积
-    self.floorspace = [[UILabel alloc]initWithFrame:CGRectMake(distanceX, distanceY + 2 * commonH + 2 * 8, SCREEN_WIDTH - distanceX, commonH)];
-    self.floorspace.textColor = [UIColor lightGrayColor];
-    self.floorspace.font = [UIFont systemFontOfSize:15.0];
-//    self.floorspace.text = @"农场面积：123456.00亩";
-    self.floorspace.text = [@"农场面积：" stringByAppendingString:[_farmModel floorspace]]; // 赋值
-    [self.view addSubview:self.floorspace];
-    
-    // 主要农作物
-    CGFloat farmaddressW = 100.0;
-    self.mainproduct = [[UILabel alloc]initWithFrame:CGRectMake(distanceX, distanceY + 3 * commonH + 3 * 8, farmaddressW, commonH)];
-    self.mainproduct.textColor = [UIColor lightGrayColor];
-    self.mainproduct.font = [UIFont systemFontOfSize:15.0];
-    self.mainproduct.text = @"主要农作物：";
-    [self.view addSubview:self.mainproduct];
-    
-    
-    // 动态计算主要农作物的高度
-//    UILabel *farmaddressContent = [[UILabel alloc]initWithFrame:CGRectMake(farmaddressW, distanceY + 3 * commonH + 3 * 8, SCREEN_WIDTH - farmaddressW, commonH)];
-    UILabel *farmaddressContent = [[UILabel alloc]init];
-    [self.view addSubview:farmaddressContent];
-    farmaddressContent.textColor = [UIColor lightGrayColor];
-//    farmaddressContent.font = [UIFont systemFontOfSize:15.0];
-//    farmaddressContent.text = str1;
-    farmaddressContent.text = [_farmModel mainproduct]; // 赋值
-    
-    farmaddressContent.font = [UIFont systemFontOfSize:15.0];
-    NSDictionary *attrilbute = @{NSFontAttributeName:[UIFont systemFontOfSize:15.0]};
-    CGSize contentSize = [farmaddressContent.text boundingRectWithSize:CGSizeMake(SCREEN_WIDTH - farmaddressW, 0) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attrilbute context:nil].size;
-    // 设置无限换行
-    farmaddressContent.numberOfLines = 0;
-    // 设置label的frame
-    farmaddressContent.frame = CGRectMake(farmaddressW, distanceY + 3 * commonH + 3 * 8, contentSize.width, contentSize.height);
-    
-
-    // 农场所在地
-    self.farmaddress = [[UILabel alloc]initWithFrame:CGRectMake(distanceX, contentSize.height + 4 * commonH + 4 * 8, farmaddressW, commonH)];
-    self.farmaddress.textColor = [UIColor lightGrayColor];
-    self.farmaddress.font = [UIFont systemFontOfSize:15.0];
-    self.farmaddress.text = @"农场所在地：";
-    [self.view addSubview:self.farmaddress];
-    
-    
-    // 动态计算农场所在地的高度
-//    UILabel *mainproductContent = [[UILabel alloc]initWithFrame:CGRectMake(farmaddressW, contentSize.height + 4 * commonH + 4 * 8, SCREEN_WIDTH - farmaddressW, commonH)];
-    UILabel *mainproductContent = [[UILabel alloc]init];
-    [self.view addSubview:mainproductContent];
-    mainproductContent.textColor = [UIColor lightGrayColor];
-//    mainproductContent.font = [UIFont systemFontOfSize:15.0];
-//    mainproductContent.text = str2;
-    mainproductContent.text = [_farmModel farmaddress]; // 赋值
-    
-    mainproductContent.font = [UIFont systemFontOfSize:15.0];
-    CGSize contentSize1 = [mainproductContent.text boundingRectWithSize:CGSizeMake(SCREEN_WIDTH - farmaddressW, 0) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attrilbute context:nil].size;
-    // 设置无限换行
-    mainproductContent.numberOfLines = 0;
-    // 设置label的frame
-    mainproductContent.frame = CGRectMake(farmaddressW, contentSize.height + 4 * commonH + 4 * 8, contentSize1.width, contentSize1.height);
-
-    
-    UILabel *aboutImg = [[UILabel alloc]initWithFrame:CGRectMake(distanceX, contentSize.height + contentSize1.height + 5 * commonH + 3 * 8, SCREEN_WIDTH - distanceX, commonH)];
-    aboutImg.textColor = [UIColor lightGrayColor];
-    aboutImg.font = [UIFont systemFontOfSize:15.0];
-    aboutImg.text = @"相关图片：";
-    [self.view addSubview:aboutImg];
-    
-    
+// 获取最新评论
+- (void)getLatestComment{
+    // 请求地址
+    NSString *url = [REQUEST_URL stringByAppendingString:@"app-myfarm-op-ownercomment.html"];
+    // 请求管理者
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
+    // 拼接请求参数
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"uid"] = [NSString stringWithFormat:@"%d",self.farmerUid];
+    parameters[@"type"] = @"farmer";
+    // 发起请求
+    [manager POST:url parameters:parameters progress:^(NSProgress *_Nonnull uploadProgress){
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
+        ServerResult *result = [ServerResult mj_objectWithKeyValues:responseObject];
+//        JLLog(@"线程二：%@",[NSThread currentThread]);
+        if(!NULLString(result.msg)){
+            commentLabel.text = [@"最新评论：" stringByAppendingString:result.msg];
+        }
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
+        
+    }];
 }
+
+- (void)sendRequest:(int)startNum{
+    // 显示MBProgressHUD
+    [MBProgressHUD showMessage:nil];
+    // 请求地址
+    NSString *url = [REQUEST_URL stringByAppendingString:@"app-myfarm-op-farmdetails.html"];
+    // 请求管理者
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
+    // 拼接请求参数
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"uid"] = [NSString stringWithFormat:@"%d",self.farmerUid];
+//    parameters[@"source"] = @"ios";
+    parameters[@"start"] = [NSString stringWithFormat:@"%d",startNum];
+    parameters[@"perpage"] = perpage;
+    // 发起请求
+    [manager POST:url parameters:parameters progress:^(NSProgress *_Nonnull uploadProgress){
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
+        // 结束刷新
+        [self endRefreshing];
+        // 隐藏MBProgressHUD
+        [MBProgressHUD hideHUD];
+        int count = [JLFarmListModel mj_objectArrayWithKeyValuesArray:responseObject].count;
+        [self.farmDetailArray addObjectsFromArray:[JLFarmListModel mj_objectArrayWithKeyValuesArray:responseObject]];
+        
+        // 将图片路径拼接到图片名中
+        NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+        for(JLFarmListModel *farmListModel in self.farmDetailArray){
+            for(NSString *picPath in farmListModel.picarr){
+                if(![picPath hasPrefix:@"http://"]){
+                    NSString *tempPath = [IMAGE_URL stringByAppendingString:picPath];
+                    [tempArray addObject:tempPath];
+                }else{
+                    [tempArray addObject:picPath];
+                }
+            }
+            farmListModel.picarr = tempArray;
+            [tempArray removeAllObjects];
+        }
+        JLLog(@"img == %@", [self.farmDetailArray[0] picarr][0]);
+        
+        
+        JLLog(@"count=%d",self.farmDetailArray.count);
+        start += count;
+        
+        if(count < [perpage intValue]){
+            [MBProgressHUD showSuccess:@"没有更多数据啦"];
+        }
+        
+        // 刷新UITableView
+        [_tableView reloadData];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
+        // 结束刷新
+        [self endRefreshing];
+        // 隐藏MBProgressHUD
+        [MBProgressHUD hideHUD];
+        //同时弹出“加载失败”的提示；
+        [MBProgressHUD showError:@"加载失败"];
+    }];
+}
+
+- (void)endRefreshing{
+    if([_tableView.mj_header isRefreshing]){
+        // 结束刷新
+        [_tableView.mj_header endRefreshing];
+    }
+    if([_tableView.mj_footer isRefreshing]){
+        // 结束刷新
+        [_tableView.mj_footer endRefreshing];
+    }
+}
+
+#pragma mark - UITableView数据源方法
+// 返回分组数
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+#pragma mark - 返回每组行数
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.farmDetailArray.count;
+}
+
+#pragma mark - 返回每行单元格Cell
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    // 1. 创建Cell
+    JLFarmDetailCell *cell = [JLFarmDetailCell farmCellWithTableView:tableView];
+    // 2. 获取当前行的模型，设置cell数据
+    JLFarmListModel *farmList = self.farmDetailArray[indexPath.row];
+    cell.farmList = farmList;
+    // 3. 返回cell
+    return cell;
+}
+
+#pragma mark - 设置每行高度
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 300.0f;
+}
+
+#pragma mark - 设置头部高度
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 0.0001f;
+}
+
+#pragma mark - 设置尾部高度
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 0.0001f;
+}
+
 
 @end
 

@@ -14,9 +14,9 @@
 
 @property (nonatomic, assign) int uid; // 用户id
 @property (nonatomic, assign) NSString *avatar; // 头像
-@property (nonatomic, assign) int userType; // 用户类型
+@property (nonatomic, assign) int usertype; // 用户类型
 @property (nonatomic, copy) NSString *realName; // 真实名字
-@property (nonatomic, copy) NSString *userName; // 用户名
+@property (nonatomic, copy) NSString *username; // 用户名
 @property (nonatomic, copy) NSString *phone; // 联系号码
 @property (nonatomic, copy) NSString *idcard; // 身份证号
 @property (nonatomic, copy) NSString *province; // 省份

@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR">
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="JLHomeHeaderViewTop">
             <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
@@ -190,6 +190,9 @@
                 <constraint firstAttribute="trailing" secondItem="aTG-Gh-SnT" secondAttribute="trailing" id="txJ-QV-QTA"/>
                 <constraint firstItem="qTl-kr-bEi" firstAttribute="centerY" secondItem="QI3-We-gDR" secondAttribute="centerY" id="vKZ-Uq-eDk"/>
             </constraints>
+            <connections>
+                <outlet property="currentPosition" destination="FnG-9R-v5e" id="4j7-is-6MO"/>
+            </connections>
             <point key="canvasLocation" x="24.5" y="52"/>
         </collectionReusableView>
     </objects>

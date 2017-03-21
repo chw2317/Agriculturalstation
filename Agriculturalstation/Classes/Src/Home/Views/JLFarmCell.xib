@@ -26,7 +26,7 @@
                             <constraint firstAttribute="height" constant="110" id="n6u-0j-zTH"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新的宏兴农场" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXe-kn-ZWy">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="admin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXe-kn-ZWy">
                         <rect key="frame" x="130" y="8" width="234" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="234" id="1rd-xk-Ab5"/>
@@ -88,6 +88,7 @@
                     <constraint firstItem="eqS-FN-XtD" firstAttribute="top" secondItem="Cmb-6X-pmw" secondAttribute="bottom" id="V65-Pu-X62"/>
                     <constraint firstItem="WiE-wZ-TVh" firstAttribute="top" secondItem="qca-62-hjC" secondAttribute="bottom" id="XIB-EG-Z5q"/>
                     <constraint firstItem="eXe-kn-ZWy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="ZCn-3g-sAe"/>
+                    <constraint firstItem="WiE-wZ-TVh" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="aE2-yg-v17"/>
                     <constraint firstAttribute="bottom" secondItem="smS-z5-2wE" secondAttribute="bottom" constant="5" id="uAz-Zi-59q"/>
                     <constraint firstItem="smS-z5-2wE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="vGp-fP-UFX"/>
                     <constraint firstItem="eqS-FN-XtD" firstAttribute="leading" secondItem="smS-z5-2wE" secondAttribute="trailing" constant="5" id="zxn-b3-jy8"/>
