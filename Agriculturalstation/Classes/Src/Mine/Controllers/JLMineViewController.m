@@ -30,7 +30,7 @@
     UIImageView *avatarImg; // 头像
     UILabel *userNameLabel; // 用户名
     UILabel *phoneNumberLabel; // 手机号码
-    UIButton *fillInfoBtn; // 完善资料
+    UIButton *avatarBtn; // 头像
     UIButton *goLoginBtn; // 去登录
     NSUserDefaults *userDefaults;
     
@@ -87,10 +87,11 @@
     // 手机号码
     phoneNumberLabel = (UILabel *)[mineInfoView viewWithTag:3];
     
-    // 完善资料
-    fillInfoBtn = (UIButton *)[mineInfoView viewWithTag:4];
+    // 头像
+    avatarBtn = (UIButton *)[mineInfoView viewWithTag:4];
+    [avatarBtn addTarget:self action:@selector(personalInfo) forControlEvents:UIControlEventTouchUpInside];
     
-    // 去登陆
+    // 去登陆 / 注册
     goLoginBtn = (UIButton *)[mineInfoView viewWithTag:5];
     
     
@@ -139,22 +140,22 @@
     // 用户名
     userNameLabel.text = [@"用户名：" stringByAppendingString:NULLString(userNameStr)?@"":userNameStr];
     userNameLabel.hidden = !_isLogin;
+    
     // 手机号码
     phoneNumberLabel.text = phoneStr;
     phoneNumberLabel.hidden = !_isLogin;
-    // 完善资料
-    fillInfoBtn.hidden = !_isLogin;
-    [fillInfoBtn addTarget:self action:@selector(goToPerfectInfo) forControlEvents:UIControlEventTouchUpInside];
+    
     // 去登录
     goLoginBtn.hidden = _isLogin;
     [goLoginBtn addTarget:self action:@selector(goToLogin) forControlEvents:UIControlEventTouchUpInside];
 }
 
-// 跳转到完善资料界面
--(void)goToPerfectInfo{
-    NSLog(@"完善资料");
-    [self.navigationController pushViewController:[[JLUserBaseInfoViewController alloc] init] animated:YES];
-//    [self.navigationController pushViewController:[[TestViewController alloc] init] animated:YES];
+// 前往个人信息页面
+- (void)personalInfo{
+    if(_isLogin){
+        // 跳转到个人信息页面
+        [self.navigationController pushViewController:[[JLUserBaseInfoViewController alloc] init] animated:YES];
+    }
 }
 
 // 跳转到登陆界面

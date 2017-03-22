@@ -25,13 +25,12 @@
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yO2-WT-zWn">
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yO2-WT-zWn">
                     <rect key="frame" x="50" y="37" width="275" height="150"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="275" id="s3c-lu-cD4"/>
                         <constraint firstAttribute="height" constant="150" id="xd0-ex-LcQ"/>
                     </constraints>
-                    <state key="normal" backgroundImage="login_bg"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="相关证件二：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBP-uB-oBx">
                     <rect key="frame" x="10" y="207" width="200" height="21"/>
@@ -43,13 +42,12 @@
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVI-3K-BoV">
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVI-3K-BoV">
                     <rect key="frame" x="50" y="236" width="275" height="150"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="275" id="8cJ-bV-cOZ"/>
                         <constraint firstAttribute="height" constant="150" id="zJT-0b-iOq"/>
                     </constraints>
-                    <state key="normal" backgroundImage="login_bg"/>
                 </button>
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -73,7 +71,4 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
-    <resources>
-        <image name="login_bg" width="640" height="1136"/>
-    </resources>
 </document>

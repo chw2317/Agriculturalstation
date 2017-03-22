@@ -56,13 +56,23 @@
                     </constraints>
                     <state key="normal" title="去登录/注册"/>
                 </button>
+                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3l-PQ-Zr1">
+                    <rect key="frame" x="15" y="15" width="70" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="FD8-bo-sPC"/>
+                        <constraint firstAttribute="height" constant="70" id="lSk-1v-p9w"/>
+                    </constraints>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="rd1-bD-IJE" firstAttribute="leading" secondItem="dWL-ku-ul7" secondAttribute="trailing" constant="10" id="1b7-hx-hbL"/>
+                <constraint firstItem="z3l-PQ-Zr1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="25p-lo-knZ"/>
                 <constraint firstItem="3BF-Ca-9Ne" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="35" id="A6n-07-mfz"/>
                 <constraint firstAttribute="bottom" secondItem="dWL-ku-ul7" secondAttribute="bottom" constant="15" id="GHN-wR-KSO"/>
+                <constraint firstItem="z3l-PQ-Zr1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="LlA-7N-PPi"/>
                 <constraint firstItem="dWL-ku-ul7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="PM9-NI-nr3"/>
+                <constraint firstAttribute="bottom" secondItem="z3l-PQ-Zr1" secondAttribute="bottom" constant="15" id="Pkw-d6-bMc"/>
                 <constraint firstItem="3BF-Ca-9Ne" firstAttribute="leading" secondItem="dWL-ku-ul7" secondAttribute="trailing" constant="45" id="SRK-m1-0SE"/>
                 <constraint firstItem="dWL-ku-ul7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="tsu-wZ-IOt"/>
                 <constraint firstItem="PUk-lp-L7b" firstAttribute="leading" secondItem="dWL-ku-ul7" secondAttribute="trailing" constant="10" id="x3H-sh-3mD"/>

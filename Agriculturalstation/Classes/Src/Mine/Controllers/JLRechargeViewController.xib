@@ -14,8 +14,6 @@
                 <outlet property="_alipayCB" destination="ArN-ep-6aC" id="GUW-hT-sE3"/>
                 <outlet property="_next" destination="9ic-i6-Hlr" id="Ubz-iS-e5w"/>
                 <outlet property="_rechargeAmount" destination="D0V-Us-oGE" id="9Ug-1p-bf1"/>
-                <outlet property="_tenpayCB" destination="Pdu-Pa-xEE" id="tFj-AM-SVC"/>
-                <outlet property="_unionCB" destination="NXc-rd-0iZ" id="nBU-ss-obM"/>
                 <outlet property="_weixin" destination="fEr-bH-euV" id="Gnr-t5-Nt9"/>
                 <outlet property="_weixinCB" destination="m70-NF-D3N" id="pg0-e4-aWP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -39,39 +37,25 @@
                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入充值金额" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D0V-Us-oGE">
-                            <rect key="frame" x="95" y="5" width="230" height="30"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入充值金额" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="D0V-Us-oGE">
+                            <rect key="frame" x="95" y="5" width="272" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="QBL-8M-nhN"/>
-                                <constraint firstAttribute="width" constant="230" id="mA8-jc-pXN"/>
+                                <constraint firstAttribute="width" constant="272" id="mA8-jc-pXN"/>
                             </constraints>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fco-RN-J7e">
-                            <rect key="frame" x="340" y="10" width="20" height="20"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="20" id="YNG-Yr-Rqo"/>
-                                <constraint firstAttribute="width" constant="20" id="mE4-vb-zv8"/>
-                            </constraints>
-                            <state key="normal" backgroundImage="et_delete_normal"/>
-                            <state key="highlighted" backgroundImage="et_delete_foucs"/>
-                            <connections>
-                                <action selector="emptyBtn" destination="-1" eventType="touchUpInside" id="1D0-qa-uPY"/>
-                            </connections>
-                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="b1w-zM-7pw" firstAttribute="leading" secondItem="l5A-h0-7c9" secondAttribute="leading" id="1sy-9Z-glZ"/>
-                        <constraint firstAttribute="trailing" secondItem="Fco-RN-J7e" secondAttribute="trailing" constant="15" id="4vw-4u-0cX"/>
                         <constraint firstItem="D0V-Us-oGE" firstAttribute="leading" secondItem="b1w-zM-7pw" secondAttribute="trailing" constant="5" id="6Qg-qv-0wI"/>
                         <constraint firstAttribute="width" constant="375" id="8p8-bL-Mtf"/>
                         <constraint firstItem="b1w-zM-7pw" firstAttribute="top" secondItem="l5A-h0-7c9" secondAttribute="top" constant="10" id="GU5-eq-feY"/>
                         <constraint firstItem="D0V-Us-oGE" firstAttribute="top" secondItem="l5A-h0-7c9" secondAttribute="top" constant="5" id="I9h-Cd-vhd"/>
-                        <constraint firstItem="Fco-RN-J7e" firstAttribute="top" secondItem="l5A-h0-7c9" secondAttribute="top" constant="10" id="Imr-Q4-s36"/>
-                        <constraint firstAttribute="bottom" secondItem="Fco-RN-J7e" secondAttribute="bottom" constant="10" id="h0K-kl-EDx"/>
+                        <constraint firstAttribute="trailing" secondItem="D0V-Us-oGE" secondAttribute="trailing" constant="8" id="nbe-uk-3cE"/>
                         <constraint firstAttribute="height" constant="40" id="vv1-fm-323"/>
                     </constraints>
                 </view>
@@ -104,38 +88,19 @@
                         <action selector="alipayBtn:" destination="-1" eventType="touchUpInside" id="9Bo-yz-wSw"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXc-rd-0iZ">
-                    <rect key="frame" x="226" y="109" width="25" height="25"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="25" id="Eqb-IQ-M66"/>
-                        <constraint firstAttribute="height" constant="25" id="etv-he-MM6"/>
-                    </constraints>
-                    <state key="normal" backgroundImage="checkbox_normal"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnB-ph-EBC">
-                    <rect key="frame" x="259" y="100" width="100" height="43"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="100" id="Buf-51-hV8"/>
-                        <constraint firstAttribute="height" constant="43" id="LE2-74-tfq"/>
-                    </constraints>
-                    <state key="normal" backgroundImage="ic_union"/>
-                    <connections>
-                        <action selector="unionBtn:" destination="-1" eventType="touchUpInside" id="Ahk-rw-uNP"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m70-NF-D3N">
-                    <rect key="frame" x="16" y="182" width="25" height="25"/>
+                    <rect key="frame" x="225" y="109" width="25" height="25"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="25" id="1wt-RF-egG"/>
-                        <constraint firstAttribute="width" constant="25" id="4Ig-tR-llk"/>
+                        <constraint firstAttribute="height" constant="25" id="H1v-nd-8qv"/>
+                        <constraint firstAttribute="width" constant="25" id="KoW-Fu-o7R"/>
                     </constraints>
                     <state key="normal" backgroundImage="checkbox_normal"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEr-bH-euV">
-                    <rect key="frame" x="49" y="173.5" width="110" height="43"/>
+                    <rect key="frame" x="258" y="100" width="101" height="43"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="110" id="M7V-ZN-4id"/>
-                        <constraint firstAttribute="height" constant="43" id="tpD-eU-3B7"/>
+                        <constraint firstAttribute="width" constant="101" id="Cnl-NG-jcg"/>
+                        <constraint firstAttribute="height" constant="43" id="lFS-pL-Tv3"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <state key="normal" title="微信支付" image="ic_weixin">
@@ -145,30 +110,11 @@
                         <action selector="weixinBtn:" destination="-1" eventType="touchUpInside" id="vW8-8g-sbN"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="std-QY-tdo">
-                    <rect key="frame" x="259" y="173" width="100" height="43"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="100" id="aUs-SR-ldD"/>
-                        <constraint firstAttribute="height" constant="43" id="kiv-lU-uYS"/>
-                    </constraints>
-                    <state key="normal" backgroundImage="ic_tenpay"/>
-                    <connections>
-                        <action selector="tenpayBtn:" destination="-1" eventType="touchUpInside" id="ebf-84-sqg"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pdu-Pa-xEE">
-                    <rect key="frame" x="226" y="182" width="25" height="25"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="25" id="7QZ-f9-VSV"/>
-                        <constraint firstAttribute="height" constant="25" id="dvY-Wh-DXU"/>
-                    </constraints>
-                    <state key="normal" backgroundImage="checkbox_normal"/>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ic-i6-Hlr">
-                    <rect key="frame" x="100" y="276" width="175" height="40"/>
+                    <rect key="frame" x="100" y="313" width="175" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="175" id="Ty2-2X-SZv"/>
-                        <constraint firstAttribute="height" constant="40" id="dPd-kw-EpS"/>
+                        <constraint firstAttribute="height" constant="40" id="Bur-hY-FK8"/>
+                        <constraint firstAttribute="width" constant="175" id="cXc-fD-cyJ"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="下一步" backgroundImage="reg_btn_bg_focus">
@@ -188,30 +134,22 @@
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
                 <constraint firstItem="ArN-ep-6aC" firstAttribute="top" secondItem="NbB-uo-O4Y" secondAttribute="bottom" constant="24" id="0w7-fd-ont"/>
-                <constraint firstItem="fEr-bH-euV" firstAttribute="leading" secondItem="m70-NF-D3N" secondAttribute="trailing" constant="8" id="42R-N8-YkN"/>
-                <constraint firstItem="m70-NF-D3N" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="7uN-1T-Oil"/>
+                <constraint firstItem="9ic-i6-Hlr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="100" id="5XT-P3-hOX"/>
                 <constraint firstItem="NbB-uo-O4Y" firstAttribute="top" secondItem="l5A-h0-7c9" secondAttribute="bottom" constant="14" id="BFt-0K-2Sp"/>
-                <constraint firstItem="9ic-i6-Hlr" firstAttribute="top" secondItem="std-QY-tdo" secondAttribute="bottom" constant="60" id="DKb-L9-zp1"/>
-                <constraint firstItem="PnB-ph-EBC" firstAttribute="leading" secondItem="NXc-rd-0iZ" secondAttribute="trailing" constant="8" id="EQH-Ep-obT"/>
                 <constraint firstItem="ArN-ep-6aC" firstAttribute="centerY" secondItem="2NH-Xw-I8p" secondAttribute="centerY" id="LuQ-DK-sU9"/>
                 <constraint firstItem="NbB-uo-O4Y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Nqx-W3-YpT"/>
-                <constraint firstItem="ArN-ep-6aC" firstAttribute="centerY" secondItem="NXc-rd-0iZ" secondAttribute="centerY" id="Ofe-WH-rMK"/>
+                <constraint firstItem="fEr-bH-euV" firstAttribute="leading" secondItem="m70-NF-D3N" secondAttribute="trailing" constant="8" id="PnW-cV-4jp"/>
                 <constraint firstAttribute="trailing" secondItem="NbB-uo-O4Y" secondAttribute="trailing" constant="167" id="S0o-Wr-04y"/>
-                <constraint firstAttribute="trailing" secondItem="std-QY-tdo" secondAttribute="trailing" constant="16" id="VyZ-G3-I5P"/>
-                <constraint firstItem="m70-NF-D3N" firstAttribute="top" secondItem="ArN-ep-6aC" secondAttribute="bottom" constant="48" id="WKm-sN-CKR"/>
-                <constraint firstAttribute="trailing" secondItem="9ic-i6-Hlr" secondAttribute="trailing" constant="100" id="Wn9-dm-N2q"/>
-                <constraint firstItem="m70-NF-D3N" firstAttribute="centerY" secondItem="fEr-bH-euV" secondAttribute="centerY" id="e4K-02-1cD"/>
-                <constraint firstItem="m70-NF-D3N" firstAttribute="centerY" secondItem="std-QY-tdo" secondAttribute="centerY" id="hZN-Bf-A57"/>
+                <constraint firstItem="2NH-Xw-I8p" firstAttribute="centerY" secondItem="m70-NF-D3N" secondAttribute="centerY" id="Tl1-wp-b6K"/>
+                <constraint firstAttribute="trailing" secondItem="fEr-bH-euV" secondAttribute="trailing" constant="16" id="W94-hV-hva"/>
                 <constraint firstAttribute="trailing" secondItem="l5A-h0-7c9" secondAttribute="trailing" id="km4-0X-PdW"/>
                 <constraint firstItem="l5A-h0-7c9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mIV-4p-vcm"/>
                 <constraint firstItem="2NH-Xw-I8p" firstAttribute="leading" secondItem="ArN-ep-6aC" secondAttribute="trailing" constant="8" id="mJR-Bc-nGF"/>
-                <constraint firstItem="Pdu-Pa-xEE" firstAttribute="centerY" secondItem="std-QY-tdo" secondAttribute="centerY" id="n4y-8d-TVT"/>
-                <constraint firstItem="std-QY-tdo" firstAttribute="leading" secondItem="Pdu-Pa-xEE" secondAttribute="trailing" constant="8" id="oYY-0I-upX"/>
-                <constraint firstItem="NXc-rd-0iZ" firstAttribute="centerY" secondItem="PnB-ph-EBC" secondAttribute="centerY" id="r1e-qh-s5G"/>
+                <constraint firstAttribute="trailing" secondItem="9ic-i6-Hlr" secondAttribute="trailing" constant="100" id="oi8-Iv-ioS"/>
+                <constraint firstItem="2NH-Xw-I8p" firstAttribute="centerY" secondItem="fEr-bH-euV" secondAttribute="centerY" id="sty-eX-esG"/>
                 <constraint firstItem="ArN-ep-6aC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="t3Q-o8-HEQ"/>
                 <constraint firstItem="l5A-h0-7c9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="tYA-Ot-UbZ"/>
-                <constraint firstItem="9ic-i6-Hlr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="100" id="v9d-Of-hXc"/>
-                <constraint firstAttribute="trailing" secondItem="PnB-ph-EBC" secondAttribute="trailing" constant="16" id="vuZ-4Y-NvN"/>
+                <constraint firstItem="9ic-i6-Hlr" firstAttribute="top" secondItem="fEr-bH-euV" secondAttribute="bottom" constant="170" id="wwG-nc-B6C"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
@@ -223,11 +161,7 @@
     <resources>
         <image name="checkbox_focus" width="32" height="32"/>
         <image name="checkbox_normal" width="32" height="32"/>
-        <image name="et_delete_foucs" width="32" height="32"/>
-        <image name="et_delete_normal" width="32" height="32"/>
         <image name="ic_alipay" width="160" height="53"/>
-        <image name="ic_tenpay" width="160" height="62"/>
-        <image name="ic_union" width="100" height="66"/>
         <image name="ic_weixin" width="43" height="43"/>
         <image name="reg_btn_bg" width="200" height="40"/>
         <image name="reg_btn_bg_focus" width="200" height="40"/>

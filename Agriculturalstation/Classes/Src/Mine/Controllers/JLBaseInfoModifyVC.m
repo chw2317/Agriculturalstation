@@ -10,15 +10,17 @@
 #import "AFNetworking.h"
 #import "MBProgressHUD.h"
 #import "MBProgressHUD+MJ.h"
+#import "MJExtension.h"
+
+#import "ServerResult.h"
+
 
 @interface JLBaseInfoModifyVC ()
-- (IBAction)deleteBtn;
-
 
 @property (strong, nonatomic) IBOutlet UILabel *_titleLabel; // 标题
 @property (strong, nonatomic) IBOutlet UITextField *_content; // 内容
 @property (strong, nonatomic) NSString *key;
-
+@property (nonatomic, strong) NSUserDefaults *userDefaults;
 
 
 @end
@@ -28,6 +30,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    // 获取NSUserDefault单例
+    self.userDefaults = [NSUserDefaults standardUserDefaults];
     
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     rightBtn.frame = CGRectMake(0, 0, 50, 50);
@@ -67,11 +72,6 @@
     }
 }
 
-// 清空按钮
-- (IBAction)deleteBtn {
-    self._content.text = nil;
-}
-
 // 保存
 - (void)rightSaveEvent{
     // 显示MBProgressHUD
@@ -90,22 +90,30 @@
     [manager POST:url parameters:parameters progress:^(NSProgress *_Nonnull uploadProgress){
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
-        // 隐藏MBProgressHUD
-        [MBProgressHUD hideHUD];
-        //弹出“保存成功”的提示；
-        [MBProgressHUD showSuccess:@"保存失败"];
-        
+        ServerResult *result = [ServerResult mj_objectWithKeyValues:responseObject];
+        if(result.code == 200){
+            // 隐藏MBProgressHUD
+            [MBProgressHUD hideHUD];
+            //弹出“保存成功”的提示；
+            [MBProgressHUD showSuccess:result.msg];
+            
+            // 更新用户信息
+            if([self.key isEqualToString:@"username"]){
+                [self.userDefaults setObject:self._content.text forKey:self.key];
+            }else if ([self.key isEqualToString:@"phone"]){
+                [self.userDefaults setObject:self._content.text forKey:self.key];
+            }
+            
+            // 代理传值
+            [_delegate pass:self._content.text andIndex:_index];
+            // 保存成功，返回上一页面
+            [self.navigationController popViewControllerAnimated:YES];
+        }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
-        
-        
         // 隐藏MBProgressHUD
         [MBProgressHUD hideHUD];
-        //弹出“保存成功”的提示；
-        [MBProgressHUD showSuccess:@"保存成功"];
-        // 代理传值
-        [_delegate pass:self._content.text andIndex:_index];
-        // 保存成功，返回上一页面
-        [self.navigationController popViewControllerAnimated:YES];
+        //弹出“保存失败”的提示；
+        [MBProgressHUD showSuccess:@"保存失败"];
     }];
 }
 @end

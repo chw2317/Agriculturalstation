@@ -13,6 +13,8 @@
             <connections>
                 <outlet property="_certificateID" destination="WG8-SC-r6h" id="WDy-Tp-QEN"/>
                 <outlet property="_realName" destination="riM-Ue-K0c" id="xMY-sm-TaM"/>
+                <outlet property="imgBtn1" destination="ebu-1Z-yAm" id="uQv-I0-Mj2"/>
+                <outlet property="imgBtn2" destination="tyg-u0-s4b" id="bfJ-a7-QvH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -37,7 +39,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="riM-Ue-K0c">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="riM-Ue-K0c">
                                     <rect key="frame" x="98" y="15" width="227" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="ke9-7s-gNh"/>
@@ -57,7 +59,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WG8-SC-r6h">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="WG8-SC-r6h">
                                     <rect key="frame" x="98" y="61" width="227" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="227" id="4Rs-DJ-B8w"/>
@@ -83,7 +85,6 @@
                                         <constraint firstAttribute="height" constant="150" id="LG5-Sm-fJF"/>
                                         <constraint firstAttribute="width" constant="275" id="f4F-Uc-BFe"/>
                                     </constraints>
-                                    <state key="normal" backgroundImage="login_bg"/>
                                     <connections>
                                         <action selector="certificatePositive:" destination="-1" eventType="touchUpInside" id="ELE-kN-vwm"/>
                                     </connections>
@@ -104,7 +105,6 @@
                                         <constraint firstAttribute="width" constant="275" id="XqI-TD-ib3"/>
                                         <constraint firstAttribute="height" constant="150" id="qbs-IC-KEM"/>
                                     </constraints>
-                                    <state key="normal" backgroundImage="login_bg"/>
                                     <connections>
                                         <action selector="certificateReverse:" destination="-1" eventType="touchUpInside" id="moD-wu-nWU"/>
                                     </connections>
@@ -185,7 +185,6 @@
         </view>
     </objects>
     <resources>
-        <image name="login_bg" width="640" height="1136"/>
         <image name="reg_btn_bg" width="200" height="40"/>
         <image name="reg_btn_bg_focus" width="200" height="40"/>
     </resources>
