@@ -9,6 +9,7 @@
 // 收支明细
 
 #import "JLBalancePayViewController.h"
+#import "JLTransactionRecordsVC.h"
 #import "AFNetworking.h"
 #import "MBProgressHUD.h"
 #import "MBProgressHUD+MJ.h"
@@ -67,6 +68,7 @@
 
 // 交易记录
 - (IBAction)transactionRecords {
+    [self.navigationController pushViewController:[[JLTransactionRecordsVC alloc] init] animated:YES];
 }
 @end
 

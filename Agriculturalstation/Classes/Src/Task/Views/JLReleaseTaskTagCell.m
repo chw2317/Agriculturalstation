@@ -8,6 +8,7 @@
 
 #import "JLReleaseTaskTagCell.h"
 #import "UIImageView+WebCache.h"
+#import "DateUtil.h"
 
 @interface JLReleaseTaskTagCell()
 // 主图片
@@ -40,9 +41,7 @@
     _releaseTaskModel = releaseTaskModel;
     
     // 给一张默认图片，先使用默认图片，当图片加载完成后再替换
-    [self.mainImage sd_setImageWithURL:[NSURL URLWithString:[REQUEST_URL stringByAppendingString:releaseTaskModel.picfilepath]] placeholderImage:[UIImage imageNamed:@"no_pictures.png"]];
-    // 主图片
-//    self.mainImage.image = [UIImage imageNamed:[IMAGE_URL stringByAppendingString:releaseTaskModel.picfilepath]];
+    [self.mainImage sd_setImageWithURL:[NSURL URLWithString:[IMAGE_URL stringByAppendingString:releaseTaskModel.picfilepath]] placeholderImage:[UIImage imageNamed:@"no_pictures.png"]];
     
     // 标题
     self.taskTitle.text = releaseTaskModel.name;
@@ -52,23 +51,26 @@
     // 主要作物
     self.taskCrops.attributedText = attrStr;
     // 设置字体大小
-    self.taskCrops.font = [UIFont systemFontOfSize:13];
+    self.taskCrops.font = [UIFont systemFontOfSize:12];
     // 设置行数
     self.taskCrops.numberOfLines = 2;
     
     // 面积
-    self.taskArea.text = [NSString stringWithFormat:@"作业面积：%@亩",releaseTaskModel.operatingarea];
+    self.taskArea.text = [@"作业面积：" stringByAppendingFormat:@"%0.2f亩",releaseTaskModel.operatingarea];
+    
     // 项目款
-    self.taskPrice.text = [NSString stringWithFormat:@"项目款：￥%@",releaseTaskModel.totalprice];
+    self.taskPrice.text = [@"项目款：" stringByAppendingFormat:@"%0.2f元",releaseTaskModel.totalprice];
+    
     // 可接类型
-    self.acceptType.text = releaseTaskModel.meetuser;
+    self.acceptType.text = [NSString stringWithFormat:@"%d星及以上用户可接",releaseTaskModel.needstar];
+    
     // 截止日期
-    self.endTime.text = [NSString stringWithFormat:@"竞标截止日期：%lld",releaseTaskModel.endtime];
+    self.endTime.text = [@"竞标截止日期：" stringByAppendingString:[DateUtil timestampSwitchTime:releaseTaskModel.endtime andFormatter:@"YYYY-MM-dd"]];
     
 }
 
 + (instancetype)releaseTaskTagCellWithTableView:(UITableView *)tableView{
-    static NSString *identifier = @"AllTask";
+    static NSString *identifier = @"identifierCell";
     JLReleaseTaskTagCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if(!cell){
         cell = [[[NSBundle mainBundle]loadNibNamed:@"JLReleaseTaskTagCell" owner:nil options:nil] firstObject];

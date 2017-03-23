@@ -1,13 +1,13 @@
 //
-//  TestViewController.h
+//  JLTransactionRecordsVC.h
 //  Agriculturalstation
 //
-//  Created by chw on 17/2/10.
+//  Created by chw on 17/3/23.
 //  Copyright © 2017年 chw. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface TestViewController : UIViewController
+@interface JLTransactionRecordsVC : UIViewController
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "JLBBSTagCell.h"
+#import "DateUtil.h"
 
 @interface JLBBSTagCell()
 // 私有扩展
@@ -27,29 +28,27 @@
 #pragma mark - 重写set方法，完成数据的赋值操作
 - (void)setBbsModel:(JLBBSModel *)bbsModel{
     _bbsModel = bbsModel;
-//    switch (bbsModel.type) {
-//        case 1:
-//            self.statusLabel.text = @"[置顶]";
-//            break;
-//            
-//        case 2:
-//            self.statusLabel.text = @"[热帖]";
-//            break;
-//            
-//        default:
-//            
-//            break;
-//    }
     // 帖子类型
-    self.statusLabel.text = @"[热帖]";
+    switch (bbsModel.type) {
+        case 1:
+            self.statusLabel.text = @"[置顶]";
+            break;
+            
+        case 2:
+            self.statusLabel.text = @"[热帖]";
+            break;
+            
+        default:
+            self.statusLabel.text = @"[新帖]";
+            break;
+    }
+    
     // 标题
     self.titleLabel.text = bbsModel.name;
-    // 浏览量
-//    self.viewsLabel.text = [NSString stringWithFormat:@"%d",bbsModel.views];
     // 字符串拼接
-    self.viewsLabel.text = [NSString stringWithFormat:@"%@%@%@",@"浏览(",[NSString stringWithFormat:@"%d",bbsModel.viewnum],@")"];
+    self.viewsLabel.text = [NSString stringWithFormat:@"浏览(%d)",bbsModel.viewnum];
     // 时间
-    self.timeLabel.text = bbsModel.dateline;
+    self.timeLabel.text = [DateUtil timestampSwitchTime:bbsModel.dateline andFormatter:@"YYYY-MM-dd"];
 }
 
 + (instancetype)bbsTagCellWithTableView:(UITableView *)tableView{

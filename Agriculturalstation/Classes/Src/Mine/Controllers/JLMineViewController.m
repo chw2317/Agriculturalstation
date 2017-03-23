@@ -21,8 +21,6 @@
 #import "JLRewardsSystemViewController.h"
 #import "UIImageView+WebCache.h"
 
-#import "TestViewController.h"
-
 @interface JLMineViewController ()<UITableViewDelegate,UITableViewDataSource>{
     UITableView *_tableView;
     BOOL _isLogin; // 记录用户是否登陆了 true 登录了 false 未登录

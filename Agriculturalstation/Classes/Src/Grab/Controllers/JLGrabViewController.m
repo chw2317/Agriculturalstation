@@ -18,9 +18,11 @@
 
 @interface JLGrabViewController ()<UITableViewDelegate,UITableViewDataSource>{
     UITableView *_tableView;
+    int start;
+    NSString *perpage;
 }
 
-@property(strong, nonatomic)NSArray *releaseTaskModelArray;
+@property(strong, nonatomic) NSMutableArray *releaseTaskModelArray;
 
 @end
 
@@ -29,6 +31,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    start = 0;
+    perpage = @"8";
+    self.releaseTaskModelArray = [[NSMutableArray alloc] init];
     
     // 创建一个分组样式的UITableView
     CGRect tableViewFrame = CGRectMake(0, 0, self.view.frame.size.width, SCREEN_HEIGHT - STATUS_HEIGHT - NAV_HEIGHT);
@@ -42,11 +48,10 @@
     
     // 下拉刷新
     _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(20 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            // 结束刷新
-            [_tableView.mj_header endRefreshing];
-        });
+        // 清空数组中的数据
+        [self.releaseTaskModelArray removeAllObjects];
+        start = 0;
+        [self sendRequest:start];
     }];
     
     // 设置自动切换透明度（在导航栏下面自动隐藏）
@@ -54,20 +59,14 @@
     
     // 上拉刷新
     _tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-        // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            // 结束刷新
-            [_tableView.mj_footer endRefreshing];
-        });
+        [self sendRequest:start];
     }];
     
     // 加载数据
-    [self sendRequest];
+    [self sendRequest:start];
 }
 
-- (void)sendRequest{
-    // 显示MBProgressHUD
-    [MBProgressHUD showMessage:nil];
+- (void)sendRequest:(int)startNum{
     // 请求地址
     NSString *url = [REQUEST_URL stringByAppendingString:@"app-task-op-all.html"];
     // 请求管理者
@@ -75,22 +74,40 @@
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
     // 拼接请求参数
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    //    parameters[@"uid"] = userUid;
+    parameters[@"start"] = [NSString stringWithFormat:@"%d", start];
+    parameters[@"perpage"] = perpage;
     // 发起请求
     [manager POST:url parameters:parameters progress:^(NSProgress *_Nonnull uploadProgress){
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
-        // 隐藏MBProgressHUD
-        [MBProgressHUD hideHUD];
-        self.releaseTaskModelArray = [JLReleaseTaskModel mj_objectArrayWithKeyValuesArray:responseObject];
+        // 结束刷新
+        [self endRefreshing];
+        int count = [JLReleaseTaskModel mj_objectArrayWithKeyValuesArray:responseObject].count;
+        [self.releaseTaskModelArray addObjectsFromArray:[JLReleaseTaskModel mj_objectArrayWithKeyValuesArray:responseObject]];
+        start += count;
+        if(count < [perpage intValue]){
+            [MBProgressHUD showSuccess:@"没有更多数据啦"];
+        }
+        
         // 刷新UITableView
         [_tableView reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
-        // 隐藏MBProgressHUD
-        [MBProgressHUD hideHUD];
+        // 结束刷新
+        [self endRefreshing];
         //同时弹出“加载失败”的提示；
         [MBProgressHUD showError:@"加载失败"];
     }];
+}
+
+- (void)endRefreshing{
+    if([_tableView.mj_header isRefreshing]){
+        // 结束刷新
+        [_tableView.mj_header endRefreshing];
+    }
+    if([_tableView.mj_footer isRefreshing]){
+        // 结束刷新
+        [_tableView.mj_footer endRefreshing];
+    }
 }
 
 
@@ -118,7 +135,7 @@
 
 #pragma mark - 设置每行高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 160.0f;
+    return 140.0f;
 }
 
 #pragma mark - 设置头部高度

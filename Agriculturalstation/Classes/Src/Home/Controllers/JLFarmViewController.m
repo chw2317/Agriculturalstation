@@ -26,7 +26,7 @@
     NSString *perpage;
 }
 
-@property(strong, nonatomic)NSMutableArray *farmModelArray;
+@property(strong, nonatomic) NSMutableArray *farmModelArray;
 
 @end
 

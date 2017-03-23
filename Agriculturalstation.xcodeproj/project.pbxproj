@@ -126,6 +126,12 @@
 		BAAE6FE21E16145100A78053 /* JLTradeAlertsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAE6FE11E16145100A78053 /* JLTradeAlertsViewController.m */; };
 		BAAE6FE61E164BB200A78053 /* JLMineReleaseTaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAE6FE41E164BB200A78053 /* JLMineReleaseTaskCell.m */; };
 		BAAE6FE71E164BB200A78053 /* JLMineReleaseTaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAAE6FE51E164BB200A78053 /* JLMineReleaseTaskCell.xib */; };
+		BAB53E701E835F3300BF3BE7 /* JLTransactionRecordsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB53E6F1E835F3300BF3BE7 /* JLTransactionRecordsVC.m */; };
+		BAB53E731E8363C400BF3BE7 /* JLRecordsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB53E721E8363C400BF3BE7 /* JLRecordsModel.m */; };
+		BAB53E771E83654600BF3BE7 /* JLTransactionRecordsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB53E751E83654600BF3BE7 /* JLTransactionRecordsCell.m */; };
+		BAB53E781E83654600BF3BE7 /* JLTransactionRecordsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAB53E761E83654600BF3BE7 /* JLTransactionRecordsCell.xib */; };
+		BAB53E7B1E8371AB00BF3BE7 /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB53E7A1E8371AB00BF3BE7 /* DateUtil.m */; };
+		BAB53E7E1E83B15400BF3BE7 /* JLSelectTenderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB53E7D1E83B15400BF3BE7 /* JLSelectTenderVC.m */; };
 		BAB88D121E14BBF700DB315A /* cityData.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAB88D111E14BBF700DB315A /* cityData.plist */; };
 		BAB8D9AD1E1F3D5F00DB23B9 /* JLFarmDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB8D9AC1E1F3D5F00DB23B9 /* JLFarmDetailsViewController.m */; };
 		BABE8F921E11142800C5AB73 /* RatingBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BABE8F911E11142800C5AB73 /* RatingBar.m */; };
@@ -186,8 +192,6 @@
 		BAD5429C1E08DF5C00B99FC0 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD542871E08DF5C00B99FC0 /* UIScrollView+MJRefresh.m */; };
 		BAD5429D1E08DF5C00B99FC0 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD542891E08DF5C00B99FC0 /* UIView+MJExtension.m */; };
 		BAD542A41E091B8300B99FC0 /* BBSModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAD542A31E091B8300B99FC0 /* BBSModel.plist */; };
-		BADA2A481E4D70C2008AF48D /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BADA2A461E4D70C2008AF48D /* TestViewController.m */; };
-		BADA2A491E4D70C2008AF48D /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BADA2A471E4D70C2008AF48D /* TestViewController.xib */; };
 		BAF49A6C1E272FA0001DC63D /* JLHomeTaskCenterFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF49A6A1E272FA0001DC63D /* JLHomeTaskCenterFooter.m */; };
 		BAF49A6D1E272FA0001DC63D /* JLHomeTaskCenterFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAF49A6B1E272FA0001DC63D /* JLHomeTaskCenterFooter.xib */; };
 		BAF49A701E2736A2001DC63D /* JLHomeViewFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF49A6F1E2736A2001DC63D /* JLHomeViewFooter.m */; };
@@ -439,6 +443,17 @@
 		BAAE6FE31E164BB200A78053 /* JLMineReleaseTaskCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLMineReleaseTaskCell.h; sourceTree = "<group>"; };
 		BAAE6FE41E164BB200A78053 /* JLMineReleaseTaskCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLMineReleaseTaskCell.m; sourceTree = "<group>"; };
 		BAAE6FE51E164BB200A78053 /* JLMineReleaseTaskCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLMineReleaseTaskCell.xib; sourceTree = "<group>"; };
+		BAB53E6E1E835F3300BF3BE7 /* JLTransactionRecordsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTransactionRecordsVC.h; sourceTree = "<group>"; };
+		BAB53E6F1E835F3300BF3BE7 /* JLTransactionRecordsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTransactionRecordsVC.m; sourceTree = "<group>"; };
+		BAB53E711E8363C400BF3BE7 /* JLRecordsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLRecordsModel.h; sourceTree = "<group>"; };
+		BAB53E721E8363C400BF3BE7 /* JLRecordsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLRecordsModel.m; sourceTree = "<group>"; };
+		BAB53E741E83654600BF3BE7 /* JLTransactionRecordsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTransactionRecordsCell.h; sourceTree = "<group>"; };
+		BAB53E751E83654600BF3BE7 /* JLTransactionRecordsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTransactionRecordsCell.m; sourceTree = "<group>"; };
+		BAB53E761E83654600BF3BE7 /* JLTransactionRecordsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLTransactionRecordsCell.xib; sourceTree = "<group>"; };
+		BAB53E791E8371AB00BF3BE7 /* DateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtil.h; sourceTree = "<group>"; };
+		BAB53E7A1E8371AB00BF3BE7 /* DateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtil.m; sourceTree = "<group>"; };
+		BAB53E7C1E83B15400BF3BE7 /* JLSelectTenderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLSelectTenderVC.h; sourceTree = "<group>"; };
+		BAB53E7D1E83B15400BF3BE7 /* JLSelectTenderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLSelectTenderVC.m; sourceTree = "<group>"; };
 		BAB88D111E14BBF700DB315A /* cityData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cityData.plist; sourceTree = "<group>"; };
 		BAB8D9AB1E1F3D5F00DB23B9 /* JLFarmDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLFarmDetailsViewController.h; sourceTree = "<group>"; };
 		BAB8D9AC1E1F3D5F00DB23B9 /* JLFarmDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLFarmDetailsViewController.m; sourceTree = "<group>"; };
@@ -551,9 +566,6 @@
 		BAD542881E08DF5C00B99FC0 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		BAD542891E08DF5C00B99FC0 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		BAD542A31E091B8300B99FC0 /* BBSModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BBSModel.plist; sourceTree = "<group>"; };
-		BADA2A451E4D70C2008AF48D /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		BADA2A461E4D70C2008AF48D /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
-		BADA2A471E4D70C2008AF48D /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		BAE47B271E027619007F9BF1 /* Agriculturalstation.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Agriculturalstation.pch; sourceTree = "<group>"; };
 		BAF49A691E272FA0001DC63D /* JLHomeTaskCenterFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLHomeTaskCenterFooter.h; sourceTree = "<group>"; };
 		BAF49A6A1E272FA0001DC63D /* JLHomeTaskCenterFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLHomeTaskCenterFooter.m; sourceTree = "<group>"; };
@@ -878,6 +890,10 @@
 				BA6B033B1E139DE800939D41 /* JLBaseInfoModifyVC.h */,
 				BA6B033C1E139DE800939D41 /* JLBaseInfoModifyVC.m */,
 				BA6B033D1E139DE800939D41 /* JLBaseInfoModifyVC.xib */,
+				BAB53E6E1E835F3300BF3BE7 /* JLTransactionRecordsVC.h */,
+				BAB53E6F1E835F3300BF3BE7 /* JLTransactionRecordsVC.m */,
+				BAB53E7C1E83B15400BF3BE7 /* JLSelectTenderVC.h */,
+				BAB53E7D1E83B15400BF3BE7 /* JLSelectTenderVC.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -897,6 +913,8 @@
 				BA0B29671E0E49C800A461D9 /* JLUserBaseInfoModel.m */,
 				BA39300A1E8134400059377C /* JLUserModel.h */,
 				BA39300B1E8134400059377C /* JLUserModel.m */,
+				BAB53E711E8363C400BF3BE7 /* JLRecordsModel.h */,
+				BAB53E721E8363C400BF3BE7 /* JLRecordsModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -914,6 +932,9 @@
 				BAAE6FE31E164BB200A78053 /* JLMineReleaseTaskCell.h */,
 				BAAE6FE41E164BB200A78053 /* JLMineReleaseTaskCell.m */,
 				BAAE6FE51E164BB200A78053 /* JLMineReleaseTaskCell.xib */,
+				BAB53E741E83654600BF3BE7 /* JLTransactionRecordsCell.h */,
+				BAB53E751E83654600BF3BE7 /* JLTransactionRecordsCell.m */,
+				BAB53E761E83654600BF3BE7 /* JLTransactionRecordsCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -923,9 +944,6 @@
 			children = (
 				BA0B29281E0E128F00A461D9 /* JLTaskViewController.h */,
 				BA0B29291E0E128F00A461D9 /* JLTaskViewController.m */,
-				BADA2A451E4D70C2008AF48D /* TestViewController.h */,
-				BADA2A461E4D70C2008AF48D /* TestViewController.m */,
-				BADA2A471E4D70C2008AF48D /* TestViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1436,6 +1454,8 @@
 				BABF1E5C1E1CF76F00055862 /* JXButton.m */,
 				BAF6AFCC1E1B52790008EBF1 /* DOPDropDownMenu.h */,
 				BAF6AFCD1E1B52790008EBF1 /* DOPDropDownMenu.m */,
+				BAB53E791E8371AB00BF3BE7 /* DateUtil.h */,
+				BAB53E7A1E8371AB00BF3BE7 /* DateUtil.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -1559,6 +1579,7 @@
 				BAF49A751E273828001DC63D /* JLHomeFooterViewCell.xib in Resources */,
 				BABF1E501E1C9B8600055862 /* JLReleaseTaskVC.xib in Resources */,
 				BACB09C21DFF8F770003861B /* MineItem.plist in Resources */,
+				BAB53E781E83654600BF3BE7 /* JLTransactionRecordsCell.xib in Resources */,
 				BA0B28CD1E0E11D200A461D9 /* JLBBSTagCell.xib in Resources */,
 				BAD542981E08DF5C00B99FC0 /* MJRefresh.bundle in Resources */,
 				BA0B29321E0E128F00A461D9 /* JLReleaseTaskTagCell.xib in Resources */,
@@ -1572,7 +1593,6 @@
 				BA6B033F1E139DE800939D41 /* JLBaseInfoModifyVC.xib in Resources */,
 				BA0B29251E0E126E00A461D9 /* JLMineInfo.xib in Resources */,
 				BA2B84631DF943E10054C9B8 /* LaunchScreen.storyboard in Resources */,
-				BADA2A491E4D70C2008AF48D /* TestViewController.xib in Resources */,
 				BA2B84601DF943E10054C9B8 /* Assets.xcassets in Resources */,
 				BAAE6FE71E164BB200A78053 /* JLMineReleaseTaskCell.xib in Resources */,
 				BA2B845E1DF943E10054C9B8 /* Main.storyboard in Resources */,
@@ -1621,6 +1641,7 @@
 				BA4727131E1E1C3100ECAEAA /* JLHomeCell.m in Sources */,
 				BACB67571E82215800339118 /* TZImagePickerController.m in Sources */,
 				BA2B062F1E7FB4C30047426D /* SDCycleScrollView.m in Sources */,
+				BAB53E7E1E83B15400BF3BE7 /* JLSelectTenderVC.m in Sources */,
 				BA0B29571E0E194B00A461D9 /* NSData+ImageContentType.m in Sources */,
 				BAF49A781E277012001DC63D /* JLHomeTaskCenterLayout.m in Sources */,
 				BAD5429A1E08DF5C00B99FC0 /* NSBundle+MJRefresh.m in Sources */,
@@ -1638,6 +1659,7 @@
 				BA0B29231E0E126E00A461D9 /* JLMineMessageModel.m in Sources */,
 				BA2B062C1E7FB4C30047426D /* TADotView.m in Sources */,
 				BA0B28AC1E0E109C00A461D9 /* MBProgressHUD.m in Sources */,
+				BAB53E771E83654600BF3BE7 /* JLTransactionRecordsCell.m in Sources */,
 				BA0B29311E0E128F00A461D9 /* JLReleaseTaskTagCell.m in Sources */,
 				BA0B28BC1E0E11A400A461D9 /* JLLoginViewController.m in Sources */,
 				BAAE060D1E811E4C00152210 /* JLOwnerListModel.m in Sources */,
@@ -1679,6 +1701,7 @@
 				BA0B28CC1E0E11D200A461D9 /* JLBBSTagCell.m in Sources */,
 				BA0B289B1E0E107600A461D9 /* AFAutoPurgingImageCache.m in Sources */,
 				BA0B295E1E0E194B00A461D9 /* SDWebImagePrefetcher.m in Sources */,
+				BAB53E701E835F3300BF3BE7 /* JLTransactionRecordsVC.m in Sources */,
 				BA0B291B1E0E126E00A461D9 /* JLPersonalInfoViewController.m in Sources */,
 				BA2B06191E7F81870047426D /* ServerResult.m in Sources */,
 				BABF1E551E1CE64E00055862 /* JLHomeLayout.m in Sources */,
@@ -1710,6 +1733,7 @@
 				BACDACA51E121BC4007F387F /* JLMineMsgCell.m in Sources */,
 				BABED8F31E04E7A500B38476 /* MJExtensionConst.m in Sources */,
 				BA0B28DF1E0E122600A461D9 /* JLHomeViewController.m in Sources */,
+				BAB53E7B1E8371AB00BF3BE7 /* DateUtil.m in Sources */,
 				BAAE6FD81E160BA900A78053 /* JLTradeAlertsCell.m in Sources */,
 				BACB67541E82215800339118 /* TZImageCropManager.m in Sources */,
 				BABF1E5D1E1CF76F00055862 /* JXButton.m in Sources */,
@@ -1748,8 +1772,8 @@
 				BAD542911E08DF5C00B99FC0 /* MJRefreshAutoStateFooter.m in Sources */,
 				BAD5429C1E08DF5C00B99FC0 /* UIScrollView+MJRefresh.m in Sources */,
 				BAAE060A1E811D4000152210 /* JLOwnerDetailsVC.m in Sources */,
-				BADA2A481E4D70C2008AF48D /* TestViewController.m in Sources */,
 				BA47271C1E1E2C6A00ECAEAA /* JLHomeHeaderView.m in Sources */,
+				BAB53E731E8363C400BF3BE7 /* JLRecordsModel.m in Sources */,
 				BA0B28971E0E107600A461D9 /* AFSecurityPolicy.m in Sources */,
 				BACB67511E82215800339118 /* TZAssetCell.m in Sources */,
 				BAF49A6C1E272FA0001DC63D /* JLHomeTaskCenterFooter.m in Sources */,

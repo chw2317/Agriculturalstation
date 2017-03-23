@@ -21,12 +21,13 @@
 @interface JLMineMessagesViewController ()<UITableViewDelegate,UITableViewDataSource>{
     UITableView *_tableView;
     NSString *userUid;
+    int start;
+    NSString *perpage;
     NSMutableArray *_selectedArray; // 选中的数组
     UIButton *rightBtn;
 }
 
-//@property(strong,nonatomic)NSArray *mineMsgModelArray;
-@property(strong ,nonatomic)NSMutableArray *mineMsgModelArray;
+@property(strong ,nonatomic) NSMutableArray *mineMsgModelArray;
 
 @end
 
@@ -35,7 +36,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    start = 0;
+    perpage = @"15";
+    self.mineMsgModelArray = [[NSMutableArray alloc] init];
     // 获取用户uid
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     userUid = [userDefaults objectForKey:@"uid"];
@@ -71,11 +74,11 @@
     
     // 下拉刷新
     _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(20 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            // 结束刷新
-            [_tableView.mj_header endRefreshing];
-        });
+        // 清空数组中的数据
+        [self.mineMsgModelArray removeAllObjects];
+        start = 0;
+        // 加载数据
+        [self sendRequest:start];
     }];
     
     // 设置自动切换透明度（在导航栏下面自动隐藏）
@@ -83,21 +86,18 @@
     
     // 上拉刷新
     _tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-        // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            // 结束刷新
-            [_tableView.mj_footer endRefreshing];
-        });
+        // 加载数据
+        [self sendRequest:start];
     }];
     
     // 加载数据
-    [self sendRequest];
+    [self sendRequest:start];
     // 初始化选中数组
     _selectedArray = [NSMutableArray array];
 }
 
 
-- (void)sendRequest{
+- (void)sendRequest:(int)starNum{
     // 显示MBProgressHUD
     [MBProgressHUD showMessage:nil];
     // 请求地址
@@ -108,21 +108,45 @@
     // 拼接请求参数
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"uid"] = userUid;
+    parameters[@"start"] = [NSString stringWithFormat:@"%d",starNum];
+    parameters[@"perpage"] = perpage;
     // 发起请求
     [manager POST:url parameters:parameters progress:^(NSProgress *_Nonnull uploadProgress){
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
+        // 结束刷新
+        [self endRefreshing];
         // 隐藏MBProgressHUD
         [MBProgressHUD hideHUD];
-        self.mineMsgModelArray = [JLMineMessageModel mj_objectArrayWithKeyValuesArray:responseObject];
+        int count = [JLMineMessageModel mj_objectArrayWithKeyValuesArray:responseObject].count;
+        [self.mineMsgModelArray addObjectsFromArray:[JLMineMessageModel mj_objectArrayWithKeyValuesArray:responseObject]];
+        
+        start += count;
+        if(count < [perpage intValue]){
+            [MBProgressHUD showSuccess:@"没有更多数据啦"];
+        }
+        
         // 刷新UITableView
         [_tableView reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
+        // 结束刷新
+        [self endRefreshing];
         // 隐藏MBProgressHUD
         [MBProgressHUD hideHUD];
         //同时弹出“加载失败”的提示；
         [MBProgressHUD showError:@"加载失败"];
     }];
+}
+
+- (void)endRefreshing{
+    if([_tableView.mj_header isRefreshing]){
+        // 结束刷新
+        [_tableView.mj_header endRefreshing];
+    }
+    if([_tableView.mj_footer isRefreshing]){
+        // 结束刷新
+        [_tableView.mj_footer endRefreshing];
+    }
 }
 
 // “编辑”按钮事件

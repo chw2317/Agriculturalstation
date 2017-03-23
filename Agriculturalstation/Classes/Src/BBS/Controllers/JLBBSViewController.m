@@ -13,38 +13,31 @@
 #import "MJRefresh.h"
 #import "MJExtension.h"
 #import "AFNetworking.h"
+#import "MBProgressHUD+MJ.h"
 
 @interface JLBBSViewController ()<UITableViewDelegate,UITableViewDataSource>{
     UITableView *_tableView;
     NSString *userUid;
+    int start;
+    NSString *perpage;
 }
 
-@property(strong,nonatomic)NSArray *bbsModelArray;
+@property(strong,nonatomic) NSMutableArray *bbsModelArray;
 
 @end
 
 @implementation JLBBSViewController
 
 #pragma mark - 懒加载
-//- (NSArray *)bbsModelArray{
-//    if(_bbsModelArray == nil){
-//        NSString *path = [[NSBundle mainBundle]pathForResource:@"BBSModel.plist" ofType:nil];
-//        NSArray *tempArray = [NSArray arrayWithContentsOfFile:path];
-//        
-//        NSMutableArray *mutArray = [NSMutableArray arrayWithCapacity:tempArray.count];
-//        for(NSDictionary *dict in tempArray){
-//            JLBBSModel *bbsModel = [JLBBSModel statusWithDictionary:dict];
-//            [mutArray addObject:bbsModel];
-//        }
-//        _bbsModelArray = [mutArray mutableCopy];
-//    }
-//    return _bbsModelArray;
-//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
+    start = 0;
+    perpage = @"15";
+    self.bbsModelArray = [[NSMutableArray alloc] init];
+    
     // 获取用户uid
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     userUid = [userDefaults objectForKey:@"uid"];
@@ -77,12 +70,10 @@
     
     // 下拉刷新
     _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(20 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            // 结束刷新
-            [_tableView.mj_header endRefreshing];
-        });
-        [self sendRequest];
+        // 清空数组中的数据
+        [self.bbsModelArray removeAllObjects];
+        start = 0;
+        [self sendRequest:start];
     }];
     
     // 设置自动切换透明度（在导航栏下面自动隐藏）
@@ -90,22 +81,18 @@
     
     // 上拉刷新
     _tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-        // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            // 结束刷新
-            [_tableView.mj_footer endRefreshing];
-        });
+        [self sendRequest:start];
     }];
     
     // 加载数据
-    [self sendRequest];
+    [self sendRequest:start];
 }
 
 -(void)rightEditorEvent{
     NSLog(@"编辑...");
 }
 
-- (void)sendRequest{
+- (void)sendRequest:(int)startNum{
     // 请求地址
     NSString *url = [REQUEST_URL stringByAppendingString:@"app-forum-op-list.html"];
     // 请求管理者
@@ -114,17 +101,39 @@
     // 拼接请求参数
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"uid"] = userUid;
+    parameters[@"start"] = [NSString stringWithFormat:@"%d",start];
+    parameters[@"perpage"] = perpage;
     // 发起请求
     [manager POST:url parameters:parameters progress:^(NSProgress *_Nonnull uploadProgress){
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
-//        NSLog(@"responseObject = %@",responseObject);
-        self.bbsModelArray = [JLBBSModel mj_objectArrayWithKeyValuesArray:responseObject];
+        // 结束刷新
+        [self endRefreshing];
+        int count = [JLBBSModel mj_objectArrayWithKeyValuesArray:responseObject].count;
+        [self.bbsModelArray addObjectsFromArray:[JLBBSModel mj_objectArrayWithKeyValuesArray:responseObject]];
+        start += count;
+        if(count < [perpage intValue]){
+            [MBProgressHUD showSuccess:@"没有更多数据啦"];
+        }
+        
         // 刷新UITableView
         [_tableView reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
-        NSLog(@"请求失败:%@", error.description);
+        // 结束刷新
+        [self endRefreshing];
+        [MBProgressHUD showError:@"加载失败"];
     }];
+}
+
+- (void)endRefreshing{
+    if([_tableView.mj_header isRefreshing]){
+        // 结束刷新
+        [_tableView.mj_header endRefreshing];
+    }
+    if([_tableView.mj_footer isRefreshing]){
+        // 结束刷新
+        [_tableView.mj_footer endRefreshing];
+    }
 }
 
 #pragma mark - UITableView数据源方法
@@ -147,6 +156,10 @@
     cell.bbsModel = bbsModel;
     // 3. 返回cell
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
 }
 
 #pragma mark - 设置每行高度

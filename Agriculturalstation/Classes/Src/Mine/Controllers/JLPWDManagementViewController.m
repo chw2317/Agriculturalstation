@@ -12,6 +12,8 @@
 #import "AFNetworking.h"
 #import "MBProgressHUD.h"
 #import "MBProgressHUD+MJ.h"
+#import "ServerResult.h"
+#import "MJExtension.h"
 
 @interface JLPWDManagementViewController ()
 // 确认修改
@@ -48,14 +50,13 @@
         // 显示MBProgressHUD
         [MBProgressHUD showMessage:nil];
         // 请求地址
-        NSString *url = @"http://rifeng.weixinbm.com/app-personalinfo-op-password.html";
+        NSString *url = [REQUEST_URL stringByAppendingString:@"app-personalinfo-op-password.html"];
         // 请求管理者
         AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
         manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
         // 拼接请求参数
         NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
         parameters[@"uid"] = uid;
-        NSLog(@"uid=%@",uid);
         parameters[@"oldpwd"] = self._oldPassWord.text;
         parameters[@"newpwd"] = self._passWord.text;
         // 发起请求
@@ -64,9 +65,11 @@
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
             // 隐藏MBProgressHUD
             [MBProgressHUD hideHUD];
-            // 弹出服务器返回的提示；
-            [MBProgressHUD showSuccess:responseObject[@"msg"]];
-            if([responseObject[@"result"] intValue] > 0){ // 修改成功
+            
+            ServerResult *result = [ServerResult mj_objectWithKeyValues:responseObject];
+            if(result.code == 200){
+                // 弹出服务器返回的提示；
+                [MBProgressHUD showSuccess:result.msg];
                 // 修改成功，返回上一页面
                 [self.navigationController popViewControllerAnimated:YES];
             }
