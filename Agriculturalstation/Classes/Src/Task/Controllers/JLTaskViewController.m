@@ -10,6 +10,8 @@
 #import "JLReleaseTaskModel.h"
 #import "JLReleaseTaskTagCell.h"
 #import "JXButton.h"
+#import "CityChooseViewController.h"
+#import "JLTaskDetailsVC.h"
 
 #import "MJExtension.h"
 #import "MJRefresh.h"
@@ -24,7 +26,8 @@
     BOOL flag;
 }
 
-@property(strong, nonatomic) NSMutableArray *releaseTaskModelArray;
+@property (strong, nonatomic) NSMutableArray *releaseTaskModelArray;
+@property (nonatomic, strong) JLTaskDetailsVC *taskDetailsVc;
 
 @end
 
@@ -45,6 +48,7 @@
     UILabel *positionLabel = (UILabel *)[taskTopView viewWithTag:1];
     // 论坛
     JXButton *bbsBtn = (JXButton *)[taskTopView viewWithTag:2];
+    [bbsBtn addTarget:self action:@selector(bbsBtnClick) forControlEvents:UIControlEventTouchUpInside];
 //    [self initButton:bbsBtn];
     // 搜索框
     UISearchBar *searchBar = (UISearchBar *)[taskTopView viewWithTag:3];
@@ -85,6 +89,18 @@
     [self sendRequest:start];
 }
 
+- (void)bbsBtnClick{
+    //城市选择
+    CityChooseViewController *vc = [CityChooseViewController new];
+    //选择以后的回调
+    [vc returnCityInfo:^(NSString *province, NSString *area) {
+//        _province.text = province; //选择的省
+//        _area.text = area; //选择的地区
+        JLLog(@"_province.text == %@ --- _area == %@", province, area);
+    }];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 - (void)sendRequest:(int)startNum{
     if(flag){
         [MBProgressHUD showMessage:nil];
@@ -108,6 +124,24 @@
         int count = [JLReleaseTaskModel mj_objectArrayWithKeyValuesArray:responseObject].count;
         [self.releaseTaskModelArray addObjectsFromArray:[JLReleaseTaskModel mj_objectArrayWithKeyValuesArray:responseObject]];
         start += count;
+        
+        
+        // 将图片路径拼接到图片名中
+        NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+        for(JLReleaseTaskModel *taskModel in self.releaseTaskModelArray){
+            for(NSString *picPath in taskModel.picarr){
+                if(![picPath hasPrefix:@"http://"]){
+                    NSString *tempPath = [IMAGE_URL stringByAppendingString:picPath];
+                    [tempArray addObject:tempPath];
+                }else{
+                    [tempArray addObject:picPath];
+                }
+            }
+            taskModel.picarr = tempArray;
+            [tempArray removeAllObjects];
+        }
+        
+        
         if(flag){
             if(count < [perpage intValue]){
                 [MBProgressHUD showSuccess:@"没有更多数据啦"];
@@ -166,6 +200,12 @@
     cell.releaseTaskModel = releaseTaskModel;
     // 3.返回cell
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    self.taskDetailsVc = [JLTaskDetailsVC new];
+    [self.navigationController pushViewController:_taskDetailsVc animated:YES];
+    _taskDetailsVc.taskModel = self.releaseTaskModelArray[indexPath.row];
 }
 
 #pragma mark - 设置每行高度

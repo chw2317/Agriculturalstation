@@ -6,7 +6,7 @@
 //  Copyright © 2016年 chw. All rights reserved.
 //
 
-// 奖罚制度
+    // 奖罚制度
 
 #import "JLRewardsSystemViewController.h"
 #import "AFNetworking.h"

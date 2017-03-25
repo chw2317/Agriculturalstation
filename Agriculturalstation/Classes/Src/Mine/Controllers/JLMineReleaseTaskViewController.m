@@ -12,6 +12,7 @@
 #import "JLMineReleaseTaskCell.h"
 #import "JLReleaseTaskModel.h"
 #import "JLSelectTenderVC.h"
+#import "JLTaskDetailsVC.h"
 
 #import "MJRefresh.h"
 #import "MJExtension.h"
@@ -28,6 +29,7 @@
 
 @property(strong, nonatomic) NSMutableArray *mineReleaseTaskModelArray;
 @property (nonatomic, strong) JLSelectTenderVC *selectTenderVc;
+@property (nonatomic, strong) JLTaskDetailsVC *taskDetailsVc;
 
 @end
 
@@ -96,8 +98,23 @@
         
         int count = [JLReleaseTaskModel mj_objectArrayWithKeyValuesArray:responseObject].count;
         [self.mineReleaseTaskModelArray addObjectsFromArray:[JLReleaseTaskModel mj_objectArrayWithKeyValuesArray:responseObject]];
-        
         start += count;
+        
+        // 将图片路径拼接到图片名中
+        NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+        for(JLReleaseTaskModel *taskModel in self.mineReleaseTaskModelArray){
+            for(NSString *picPath in taskModel.picarr){
+                if(![picPath hasPrefix:@"http://"]){
+                    NSString *tempPath = [IMAGE_URL stringByAppendingString:picPath];
+                    [tempArray addObject:tempPath];
+                }else{
+                    [tempArray addObject:picPath];
+                }
+            }
+            taskModel.picarr = tempArray;
+            [tempArray removeAllObjects];
+        }
+        
         if(count < [perpage intValue]){
             [MBProgressHUD showSuccess:@"没有更多数据啦"];
         }
@@ -146,6 +163,12 @@
     cell.delegate = self;
     // 3.返回cell
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    self.taskDetailsVc = [JLTaskDetailsVC new];
+    [self.navigationController pushViewController:_taskDetailsVc animated:YES];
+    _taskDetailsVc.taskModel = self.mineReleaseTaskModelArray[indexPath.row];
 }
 
 #pragma mark - 设置每行高度

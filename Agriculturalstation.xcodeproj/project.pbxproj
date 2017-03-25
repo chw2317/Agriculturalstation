@@ -152,6 +152,8 @@
 		BABF1E501E1C9B8600055862 /* JLReleaseTaskVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BABF1E4E1E1C9B8600055862 /* JLReleaseTaskVC.xib */; };
 		BABF1E551E1CE64E00055862 /* JLHomeLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BABF1E541E1CE64E00055862 /* JLHomeLayout.m */; };
 		BABF1E5D1E1CF76F00055862 /* JXButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BABF1E5C1E1CF76F00055862 /* JXButton.m */; };
+		BAC01CB61E86020000D4B61F /* JLTaskDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC01CB41E86020000D4B61F /* JLTaskDetailsVC.m */; };
+		BAC01CB71E86020000D4B61F /* JLTaskDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAC01CB51E86020000D4B61F /* JLTaskDetailsVC.xib */; };
 		BACB09C21DFF8F770003861B /* MineItem.plist in Resources */ = {isa = PBXBuildFile; fileRef = BACB09C11DFF8F770003861B /* MineItem.plist */; };
 		BACB67501E82215800339118 /* NSBundle+TZImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = BACB67361E82215800339118 /* NSBundle+TZImagePicker.m */; };
 		BACB67511E82215800339118 /* TZAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BACB67381E82215800339118 /* TZAssetCell.m */; };
@@ -206,6 +208,7 @@
 		BAF6AFD31E1BA8520008EBF1 /* AddFarmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAF6AFD11E1BA8520008EBF1 /* AddFarmViewController.xib */; };
 		BAF6AFD71E1BA8780008EBF1 /* AddOwnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF6AFD51E1BA8780008EBF1 /* AddOwnerViewController.m */; };
 		BAF6AFD81E1BA8780008EBF1 /* AddOwnerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAF6AFD61E1BA8780008EBF1 /* AddOwnerViewController.xib */; };
+		BAFE1DCB1E86225400AF976E /* CityChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFE1DCA1E86225400AF976E /* CityChooseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -494,6 +497,9 @@
 		BABF1E541E1CE64E00055862 /* JLHomeLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLHomeLayout.m; sourceTree = "<group>"; };
 		BABF1E5B1E1CF76F00055862 /* JXButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXButton.h; sourceTree = "<group>"; };
 		BABF1E5C1E1CF76F00055862 /* JXButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXButton.m; sourceTree = "<group>"; };
+		BAC01CB31E86020000D4B61F /* JLTaskDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTaskDetailsVC.h; sourceTree = "<group>"; };
+		BAC01CB41E86020000D4B61F /* JLTaskDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTaskDetailsVC.m; sourceTree = "<group>"; };
+		BAC01CB51E86020000D4B61F /* JLTaskDetailsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLTaskDetailsVC.xib; sourceTree = "<group>"; };
 		BACB09C11DFF8F770003861B /* MineItem.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MineItem.plist; sourceTree = "<group>"; };
 		BACB67351E82215800339118 /* NSBundle+TZImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+TZImagePicker.h"; sourceTree = "<group>"; };
 		BACB67361E82215800339118 /* NSBundle+TZImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+TZImagePicker.m"; sourceTree = "<group>"; };
@@ -593,6 +599,8 @@
 		BAF6AFD41E1BA8780008EBF1 /* AddOwnerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddOwnerViewController.h; sourceTree = "<group>"; };
 		BAF6AFD51E1BA8780008EBF1 /* AddOwnerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddOwnerViewController.m; sourceTree = "<group>"; };
 		BAF6AFD61E1BA8780008EBF1 /* AddOwnerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddOwnerViewController.xib; sourceTree = "<group>"; };
+		BAFE1DC91E86225400AF976E /* CityChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityChooseViewController.h; sourceTree = "<group>"; };
+		BAFE1DCA1E86225400AF976E /* CityChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityChooseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -957,6 +965,9 @@
 			children = (
 				BA0B29281E0E128F00A461D9 /* JLTaskViewController.h */,
 				BA0B29291E0E128F00A461D9 /* JLTaskViewController.m */,
+				BAC01CB31E86020000D4B61F /* JLTaskDetailsVC.h */,
+				BAC01CB41E86020000D4B61F /* JLTaskDetailsVC.m */,
+				BAC01CB51E86020000D4B61F /* JLTaskDetailsVC.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1463,6 +1474,8 @@
 		BAF6AFCB1E1B52610008EBF1 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				BAFE1DC91E86225400AF976E /* CityChooseViewController.h */,
+				BAFE1DCA1E86225400AF976E /* CityChooseViewController.m */,
 				BABF1E5B1E1CF76F00055862 /* JXButton.h */,
 				BABF1E5C1E1CF76F00055862 /* JXButton.m */,
 				BAF6AFCC1E1B52790008EBF1 /* DOPDropDownMenu.h */,
@@ -1582,6 +1595,7 @@
 			files = (
 				BA2B06381E7FE4050047426D /* JLFarmDetailCell.xib in Resources */,
 				BA4727211E1E2CB300ECAEAA /* JLHomeHeaderCollectionViewCell.xib in Resources */,
+				BAC01CB71E86020000D4B61F /* JLTaskDetailsVC.xib in Resources */,
 				BAF49A6D1E272FA0001DC63D /* JLHomeTaskCenterFooter.xib in Resources */,
 				BAF6AFD81E1BA8780008EBF1 /* AddOwnerViewController.xib in Resources */,
 				BAD542A41E091B8300B99FC0 /* BBSModel.plist in Resources */,
@@ -1666,6 +1680,7 @@
 				BAF6AFD21E1BA8520008EBF1 /* AddFarmViewController.m in Sources */,
 				BA6B033E1E139DE800939D41 /* JLBaseInfoModifyVC.m in Sources */,
 				BAD542961E08DF5C00B99FC0 /* MJRefreshNormalHeader.m in Sources */,
+				BAC01CB61E86020000D4B61F /* JLTaskDetailsVC.m in Sources */,
 				BAB8D9AD1E1F3D5F00DB23B9 /* JLFarmDetailsViewController.m in Sources */,
 				BA0B28A11E0E107600A461D9 /* UIProgressView+AFNetworking.m in Sources */,
 				BA0B289D1E0E107600A461D9 /* AFNetworkActivityIndicatorManager.m in Sources */,
@@ -1688,6 +1703,7 @@
 				BA0B295D1E0E194B00A461D9 /* SDWebImageManager.m in Sources */,
 				BA0B29581E0E194B00A461D9 /* SDImageCache.m in Sources */,
 				BABED8F41E04E7A500B38476 /* MJFoundation.m in Sources */,
+				BAFE1DCB1E86225400AF976E /* CityChooseViewController.m in Sources */,
 				BA0B29181E0E126E00A461D9 /* JLMineMessagesViewController.m in Sources */,
 				BA0B28951E0E107600A461D9 /* AFHTTPSessionManager.m in Sources */,
 				BA0B28CA1E0E11D200A461D9 /* JLBBSViewController.m in Sources */,
