@@ -30,6 +30,7 @@
 @property (nonatomic, assign) double curProgress; // 当前任务进度
 @property (nonatomic, copy) NSString *detailaddress; // 具体地址
 @property (nonatomic, copy) NSString *picfilepath; // 主图片
+@property (nonatomic, copy) NSString *comment; // 任务的评论
 @property (nonatomic, copy) NSMutableArray *picarr; // 图片组
 
 @end

@@ -20,6 +20,7 @@
     NSString *userUid;
     int start;
     NSString *perpage;
+    BOOL flag;
 }
 
 @property(strong,nonatomic) NSMutableArray *bbsModelArray;
@@ -37,6 +38,7 @@
     start = 0;
     perpage = @"15";
     self.bbsModelArray = [[NSMutableArray alloc] init];
+    flag = false;
     
     // 获取用户uid
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
@@ -70,6 +72,7 @@
     
     // 下拉刷新
     _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        flag = true;
         // 清空数组中的数据
         [self.bbsModelArray removeAllObjects];
         start = 0;
@@ -81,6 +84,7 @@
     
     // 上拉刷新
     _tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        flag = true;
         [self sendRequest:start];
     }];
     
@@ -93,6 +97,9 @@
 }
 
 - (void)sendRequest:(int)startNum{
+    if(flag){
+        [MBProgressHUD showMessage:nil];
+    }
     // 请求地址
     NSString *url = [REQUEST_URL stringByAppendingString:@"app-forum-op-list.html"];
     // 请求管理者
@@ -107,18 +114,22 @@
     [manager POST:url parameters:parameters progress:^(NSProgress *_Nonnull uploadProgress){
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
+        [MBProgressHUD hideHUD];
         // 结束刷新
         [self endRefreshing];
         int count = [JLBBSModel mj_objectArrayWithKeyValuesArray:responseObject].count;
         [self.bbsModelArray addObjectsFromArray:[JLBBSModel mj_objectArrayWithKeyValuesArray:responseObject]];
         start += count;
-        if(count < [perpage intValue]){
-            [MBProgressHUD showSuccess:@"没有更多数据啦"];
+        if(flag){
+            if(count < [perpage intValue]){
+                [MBProgressHUD showSuccess:@"没有更多数据啦"];
+            }
         }
         
         // 刷新UITableView
         [_tableView reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
+        [MBProgressHUD hideHUD];
         // 结束刷新
         [self endRefreshing];
         [MBProgressHUD showError:@"加载失败"];

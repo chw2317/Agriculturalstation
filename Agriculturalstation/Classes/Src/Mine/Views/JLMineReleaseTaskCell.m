@@ -80,6 +80,14 @@
 // 参与人数
 @property (strong, nonatomic) IBOutlet UILabel *participationnum;
 
+// 选标
+@property (strong, nonatomic) IBOutlet UIButton *tenderBtn;
+
+// 竞标中
+@property (strong, nonatomic) IBOutlet UIButton *curStatus;
+
+
+@property (nonatomic, assign) int regtype; // 1农场主、2农机主
 
 @end
 
@@ -88,6 +96,10 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    
+    // 获取用户regtype
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    self.regtype = [[userDefaults objectForKey:@"regtype"] intValue];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -99,6 +111,7 @@
 #pragma mark - 重写set方法，完成数据的赋值操作
 - (void)setReleaseTaskModel:(JLReleaseTaskModel *)releaseTaskModel{
     _releaseTaskModel = releaseTaskModel;
+    
     // 主图片，给一张默认图片，先使用默认图片，当图片加载完成后再替换
     [self.picfilepath sd_setImageWithURL:[NSURL URLWithString:[IMAGE_URL stringByAppendingString:releaseTaskModel.picfilepath]] placeholderImage:[UIImage imageNamed:@"no_pictures.png"]];
     
@@ -132,6 +145,41 @@
     
     // 参与人数
     self.participationnum.text = [NSString stringWithFormat:@"已有%d人参与投标",releaseTaskModel.participationnum];
+    
+    // 农场主：1竞标中、2作业中、3已结束
+    // 农机主：1已投标、2作业中、3已结束
+    switch (releaseTaskModel.curstatu) {
+        case 1: // 竞标中
+            if(self.regtype == 1){
+                [self.curStatus setTitle:@"竞标中" forState:UIControlStateNormal];
+            }else if (self.regtype == 2){
+                [self.curStatus setTitle:@"已投标" forState:UIControlStateNormal];
+            }
+            
+            break;
+            
+        case 2: // 作业中
+            if(self.regtype == 1){
+                [self.curStatus setTitle:@"作业中..." forState:UIControlStateNormal];
+                self.tenderBtn.hidden = YES;
+            }else if (self.regtype == 2){
+                [self.tenderBtn setTitle:@"完成项目" forState:UIControlStateNormal];
+            }
+            break;
+            
+        case 3: // 已结束
+            [self.curStatus setTitle:@"已结束" forState:UIControlStateNormal];
+            NULLString(releaseTaskModel.comment) ? [self.tenderBtn setTitle:@"待评价" forState:UIControlStateNormal] : [self.tenderBtn setTitle:@"已评价" forState:UIControlStateNormal];
+            break;
+            
+        case 4:
+            
+            break;
+            
+        default:
+            break;
+    }
+    
 }
 
 + (instancetype)releaseTaskCellWithTableView:(UITableView *)tableView{
@@ -149,8 +197,8 @@
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:nil message:@"暂无人投标，请浏览其它任务" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
         [alert show];
     }else{
-        if([self.delegate respondsToSelector:@selector(selectTenderClick)]){
-            [self.delegate selectTenderClick];
+        if([self.delegate respondsToSelector:@selector(selectTenderClick:)]){
+            [self.delegate selectTenderClick:_releaseTaskModel.id];
         }
     }
 }

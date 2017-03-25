@@ -19,7 +19,7 @@
 #import "MBProgressHUD.h"
 #import "MBProgressHUD+MJ.h"
 
-@interface JLMineReleaseTaskViewController ()<UITableViewDelegate,UITableViewDataSource,ActivityCellDelegate>{
+@interface JLMineReleaseTaskViewController ()<UITableViewDelegate,UITableViewDataSource,ActivityCellDelegate,JLSelectTenderVcDelegate>{
     UITableView *_tableView;
     NSString *userUid;
     int start;
@@ -27,6 +27,7 @@
 }
 
 @property(strong, nonatomic) NSMutableArray *mineReleaseTaskModelArray;
+@property (nonatomic, strong) JLSelectTenderVC *selectTenderVc;
 
 @end
 
@@ -168,9 +169,19 @@
 }
 
 #pragma mark - ActivityCellDelegate
-- (void)selectTenderClick{
+- (void)selectTenderClick:(int)taskid{
+    self.selectTenderVc = [JLSelectTenderVC new];
     // 跳转到选标界面
-    [self.navigationController pushViewController:[[JLSelectTenderVC alloc] init] animated:YES];
+    [self.navigationController pushViewController:_selectTenderVc animated:YES];
+    _selectTenderVc.taskid = taskid;
+    // 指定代理
+    _selectTenderVc.delegate = self;
+}
+
+#pragma mark - JLSelectTenderVcDelegate
+- (void)refreshData{
+    // 通过代理来实现，返回上一页面并刷新数据
+    [_tableView.mj_header beginRefreshing];
 }
 
 @end

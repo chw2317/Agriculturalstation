@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="169"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_pictures" translatesAutoresizingMaskIntoConstraints="NO" id="HRt-C2-Upp">
@@ -192,6 +192,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="content" destination="fzZ-a1-huc" id="KWz-pc-n5D"/>
+                <outlet property="curStatus" destination="Teg-0Q-Nmb" id="FeH-gy-yJv"/>
                 <outlet property="limitedprice" destination="0tI-4i-txt" id="R5q-Dn-LzT"/>
                 <outlet property="meetuser" destination="w0s-Qg-8sc" id="9vh-Fw-DGG"/>
                 <outlet property="name" destination="gpb-IJ-QtX" id="k2f-OP-zA1"/>
@@ -199,6 +200,7 @@
                 <outlet property="participationnum" destination="ej4-LV-KtF" id="dQn-Qd-FEi"/>
                 <outlet property="picfilepath" destination="HRt-C2-Upp" id="7mW-LU-1uW"/>
                 <outlet property="starttime" destination="882-9w-psL" id="MFB-5x-QUZ"/>
+                <outlet property="tenderBtn" destination="pnM-f8-vDb" id="b6z-6U-Xin"/>
                 <outlet property="timelimit" destination="qsH-MC-9iq" id="RnD-c4-jaB"/>
                 <outlet property="totalprice" destination="GtX-Fu-W1p" id="n9J-go-eYZ"/>
             </connections>

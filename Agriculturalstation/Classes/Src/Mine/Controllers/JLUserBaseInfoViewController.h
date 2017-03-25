@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JLUserModel.h"
 
 @interface JLUserBaseInfoViewController : UIViewController
+
+@property (nonatomic, assign) JLUserModel *userModel;
 
 @end

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="JLSelectTenderCell">
+            <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_pictures" translatesAutoresizingMaskIntoConstraints="NO" id="5xm-8J-guB">
+                        <rect key="frame" x="2" y="2" width="176" height="110"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="110" id="Vnu-PC-wl6"/>
+                            <constraint firstAttribute="width" constant="176" id="xhX-zD-HJG"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="农机主：慕名奇妙" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raM-Ed-mEq">
+                        <rect key="frame" x="8" y="116" width="164" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="Bul-SC-5P5"/>
+                            <constraint firstAttribute="width" constant="164" id="JQc-gC-X7N"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.65611197740000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机：18077113224" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ij7-Sw-TXD">
+                        <rect key="frame" x="8" y="136" width="164" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="164" id="R7O-N6-yhi"/>
+                            <constraint firstAttribute="height" constant="16" id="WbM-E7-2B2"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址：广西南宁青秀东葛" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8f-y1-MCr">
+                        <rect key="frame" x="8" y="156" width="164" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="164" id="aSb-nX-p0L"/>
+                            <constraint firstAttribute="height" constant="16" id="axy-Sc-BRA"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCd-BB-qM9">
+                        <rect key="frame" x="8" y="176" width="80" height="24"/>
+                        <color key="backgroundColor" red="0.1137254902" green="0.60392156860000001" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="hGa-E8-BNI"/>
+                            <constraint firstAttribute="width" constant="80" id="zFy-5N-KW7"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="选择此人"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="selectBtnClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="1p8-0R-dQZ"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8oq-In-vKg">
+                        <rect key="frame" x="92" y="176" width="80" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="OfL-Ch-pgw"/>
+                            <constraint firstAttribute="width" constant="80" id="zgL-RM-LVO"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="查看信息">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="userInfoBtnClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="x42-Pk-djO"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="8oq-In-vKg" firstAttribute="leading" secondItem="GCd-BB-qM9" secondAttribute="trailing" constant="4" id="1Bi-a9-YYu"/>
+                <constraint firstItem="W8f-y1-MCr" firstAttribute="top" secondItem="Ij7-Sw-TXD" secondAttribute="bottom" constant="4" id="2X0-Ua-alI"/>
+                <constraint firstItem="Ij7-Sw-TXD" firstAttribute="top" secondItem="raM-Ed-mEq" secondAttribute="bottom" constant="4" id="7Ca-mz-WY0"/>
+                <constraint firstAttribute="bottom" secondItem="GCd-BB-qM9" secondAttribute="bottom" id="81t-Pp-K4j"/>
+                <constraint firstItem="8oq-In-vKg" firstAttribute="leading" secondItem="GCd-BB-qM9" secondAttribute="trailing" constant="4" id="BGD-k3-Ytu"/>
+                <constraint firstItem="8oq-In-vKg" firstAttribute="width" secondItem="GCd-BB-qM9" secondAttribute="width" id="FNt-AP-oyO"/>
+                <constraint firstAttribute="trailing" secondItem="raM-Ed-mEq" secondAttribute="trailing" constant="8" id="GK4-2P-2Zg"/>
+                <constraint firstAttribute="trailing" secondItem="W8f-y1-MCr" secondAttribute="trailing" constant="8" id="HHF-Pe-4kD"/>
+                <constraint firstItem="W8f-y1-MCr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="JTj-yb-jed"/>
+                <constraint firstItem="GCd-BB-qM9" firstAttribute="top" secondItem="W8f-y1-MCr" secondAttribute="bottom" constant="4" id="QgF-LW-n6G"/>
+                <constraint firstItem="Ij7-Sw-TXD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="SFn-OP-vat"/>
+                <constraint firstAttribute="trailing" secondItem="Ij7-Sw-TXD" secondAttribute="trailing" constant="8" id="X08-qR-OQR"/>
+                <constraint firstItem="5xm-8J-guB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="crm-Ed-5xB"/>
+                <constraint firstAttribute="trailing" secondItem="5xm-8J-guB" secondAttribute="trailing" constant="2" id="iyw-cZ-g9Q"/>
+                <constraint firstItem="GCd-BB-qM9" firstAttribute="centerY" secondItem="8oq-In-vKg" secondAttribute="centerY" id="nu3-rP-IuA"/>
+                <constraint firstItem="5xm-8J-guB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="ohD-gr-wGb"/>
+                <constraint firstAttribute="trailing" secondItem="8oq-In-vKg" secondAttribute="trailing" constant="8" id="qaP-bR-qmM"/>
+                <constraint firstItem="raM-Ed-mEq" firstAttribute="top" secondItem="5xm-8J-guB" secondAttribute="bottom" constant="4" id="rjD-kK-jzW"/>
+                <constraint firstItem="GCd-BB-qM9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="u6N-Td-jIh"/>
+                <constraint firstItem="raM-Ed-mEq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="xG7-Vv-Bu9"/>
+            </constraints>
+            <connections>
+                <outlet property="address" destination="W8f-y1-MCr" id="ta8-kF-xsd"/>
+                <outlet property="avatar" destination="5xm-8J-guB" id="atq-v2-m9h"/>
+                <outlet property="phone" destination="Ij7-Sw-TXD" id="dNb-lL-NY7"/>
+                <outlet property="username" destination="raM-Ed-mEq" id="GUA-if-ajq"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="no_pictures" width="180" height="130"/>
+    </resources>
+</document>

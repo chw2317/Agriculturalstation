@@ -40,6 +40,7 @@
     UIButton *certificate1; // 相关证件一
     UIButton *certificate2; // 相关证件二
     NSString *imgKey; // 图片key
+    BOOL isTender;
 }
 
 @property (nonatomic, strong) UIImagePickerController *imagePickerVc;
@@ -104,9 +105,16 @@
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     userUid = [userDefaults objectForKey:@"uid"];
-    [self sendRequest];
-    
     self.title = @"基础信息";
+    isTender = false;
+    
+    if(_userModel != nil){ // 说明是从选标页面过来的
+        JLLog(@"666666");
+        isTender = true;
+        [self setUserData:_userModel];
+    }else if (_userModel == nil){
+        JLLog(@"333333");
+    }
     
     // 拿到xib视图
     NSArray *userInfoXib = [[NSBundle mainBundle]loadNibNamed:@"JLUserBaseInfo" owner:nil options:nil];
@@ -140,6 +148,10 @@
     
     // 设置默认选中的省份是provinces中的第一个元素
     self.selectedProvince = self.provinces[0];
+    
+    if(!isTender){
+        [self sendRequest];
+    }
 }
 
 - (void)sendRequest{
@@ -500,6 +512,11 @@
         cell.detailTextLabel.text = _itemContentArray[indexPath.row];
     }
     cell.detailTextLabel.font = [UIFont systemFontOfSize:14];
+    
+    if(isTender){
+        cell.selectionStyle = UITableViewCellSelectionStyleNone; // 点击cell没点击阴影效果
+        cell.userInteractionEnabled = NO; // 设置cell不能点击
+    }
     
     return cell;
 }

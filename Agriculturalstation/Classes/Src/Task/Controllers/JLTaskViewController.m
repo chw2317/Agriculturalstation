@@ -21,6 +21,7 @@
     UITableView *_tableView;
     int start;
     NSString *perpage;
+    BOOL flag;
 }
 
 @property(strong, nonatomic) NSMutableArray *releaseTaskModelArray;
@@ -36,6 +37,7 @@
     start = 0;
     perpage = @"8";
     self.releaseTaskModelArray = [[NSMutableArray alloc] init];
+    flag = false;
     
     NSArray *taskTopXib = [[NSBundle mainBundle]loadNibNamed:@"JLReleaseTaskTop" owner:nil options:nil];
     UIView *taskTopView = [taskTopXib firstObject];
@@ -63,6 +65,7 @@
     
     // 下拉刷新
     _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        flag = true;
         // 清空数组中的数据
         [self.releaseTaskModelArray removeAllObjects];
         start = 0;
@@ -74,6 +77,7 @@
     
     // 上拉刷新
     _tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        flag = true;
         [self sendRequest:start];
     }];
     
@@ -82,6 +86,9 @@
 }
 
 - (void)sendRequest:(int)startNum{
+    if(flag){
+        [MBProgressHUD showMessage:nil];
+    }
     // 请求地址
     NSString *url = [REQUEST_URL stringByAppendingString:@"app-task-op-all.html"];
     // 请求管理者
@@ -95,18 +102,22 @@
     [manager POST:url parameters:parameters progress:^(NSProgress *_Nonnull uploadProgress){
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
+        [MBProgressHUD hideHUD];
         // 结束刷新
         [self endRefreshing];
         int count = [JLReleaseTaskModel mj_objectArrayWithKeyValuesArray:responseObject].count;
         [self.releaseTaskModelArray addObjectsFromArray:[JLReleaseTaskModel mj_objectArrayWithKeyValuesArray:responseObject]];
         start += count;
-        if(count < [perpage intValue]){
-            [MBProgressHUD showSuccess:@"没有更多数据啦"];
+        if(flag){
+            if(count < [perpage intValue]){
+                [MBProgressHUD showSuccess:@"没有更多数据啦"];
+            }
         }
         
         // 刷新UITableView
         [_tableView reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
+        [MBProgressHUD hideHUD];
         // 结束刷新
         [self endRefreshing];
         //同时弹出“加载失败”的提示；
