@@ -154,6 +154,8 @@
 		BABF1E5D1E1CF76F00055862 /* JXButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BABF1E5C1E1CF76F00055862 /* JXButton.m */; };
 		BAC01CB61E86020000D4B61F /* JLTaskDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC01CB41E86020000D4B61F /* JLTaskDetailsVC.m */; };
 		BAC01CB71E86020000D4B61F /* JLTaskDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAC01CB51E86020000D4B61F /* JLTaskDetailsVC.xib */; };
+		BACAD6C91E88EF6200B1D782 /* LxGridViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BACAD6C81E88EF6200B1D782 /* LxGridViewFlowLayout.m */; };
+		BACAD6CC1E88F1CB00B1D782 /* JLImgGridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BACAD6CB1E88F1CB00B1D782 /* JLImgGridCell.m */; };
 		BACB09C21DFF8F770003861B /* MineItem.plist in Resources */ = {isa = PBXBuildFile; fileRef = BACB09C11DFF8F770003861B /* MineItem.plist */; };
 		BACB67501E82215800339118 /* NSBundle+TZImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = BACB67361E82215800339118 /* NSBundle+TZImagePicker.m */; };
 		BACB67511E82215800339118 /* TZAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BACB67381E82215800339118 /* TZAssetCell.m */; };
@@ -209,6 +211,8 @@
 		BAF6AFD71E1BA8780008EBF1 /* AddOwnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF6AFD51E1BA8780008EBF1 /* AddOwnerViewController.m */; };
 		BAF6AFD81E1BA8780008EBF1 /* AddOwnerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAF6AFD61E1BA8780008EBF1 /* AddOwnerViewController.xib */; };
 		BAFE1DCB1E86225400AF976E /* CityChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFE1DCA1E86225400AF976E /* CityChooseViewController.m */; };
+		BAFE1DCF1E86672100AF976E /* JLTouBiaoPayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFE1DCD1E86672100AF976E /* JLTouBiaoPayVC.m */; };
+		BAFE1DD01E86672100AF976E /* JLTouBiaoPayVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAFE1DCE1E86672100AF976E /* JLTouBiaoPayVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -500,6 +504,10 @@
 		BAC01CB31E86020000D4B61F /* JLTaskDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTaskDetailsVC.h; sourceTree = "<group>"; };
 		BAC01CB41E86020000D4B61F /* JLTaskDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTaskDetailsVC.m; sourceTree = "<group>"; };
 		BAC01CB51E86020000D4B61F /* JLTaskDetailsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLTaskDetailsVC.xib; sourceTree = "<group>"; };
+		BACAD6C71E88EF6200B1D782 /* LxGridViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxGridViewFlowLayout.h; sourceTree = "<group>"; };
+		BACAD6C81E88EF6200B1D782 /* LxGridViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LxGridViewFlowLayout.m; sourceTree = "<group>"; };
+		BACAD6CA1E88F1CB00B1D782 /* JLImgGridCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLImgGridCell.h; sourceTree = "<group>"; };
+		BACAD6CB1E88F1CB00B1D782 /* JLImgGridCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLImgGridCell.m; sourceTree = "<group>"; };
 		BACB09C11DFF8F770003861B /* MineItem.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MineItem.plist; sourceTree = "<group>"; };
 		BACB67351E82215800339118 /* NSBundle+TZImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+TZImagePicker.h"; sourceTree = "<group>"; };
 		BACB67361E82215800339118 /* NSBundle+TZImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+TZImagePicker.m"; sourceTree = "<group>"; };
@@ -601,6 +609,9 @@
 		BAF6AFD61E1BA8780008EBF1 /* AddOwnerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddOwnerViewController.xib; sourceTree = "<group>"; };
 		BAFE1DC91E86225400AF976E /* CityChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityChooseViewController.h; sourceTree = "<group>"; };
 		BAFE1DCA1E86225400AF976E /* CityChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityChooseViewController.m; sourceTree = "<group>"; };
+		BAFE1DCC1E86672100AF976E /* JLTouBiaoPayVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTouBiaoPayVC.h; sourceTree = "<group>"; };
+		BAFE1DCD1E86672100AF976E /* JLTouBiaoPayVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTouBiaoPayVC.m; sourceTree = "<group>"; };
+		BAFE1DCE1E86672100AF976E /* JLTouBiaoPayVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLTouBiaoPayVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -843,6 +854,8 @@
 				BAAE060E1E811FD900152210 /* JLOwnerDetailsCell.h */,
 				BAAE060F1E811FD900152210 /* JLOwnerDetailsCell.m */,
 				BAAE06101E811FD900152210 /* JLOwnerDetailsCell.xib */,
+				BACAD6CA1E88F1CB00B1D782 /* JLImgGridCell.h */,
+				BACAD6CB1E88F1CB00B1D782 /* JLImgGridCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -968,6 +981,9 @@
 				BAC01CB31E86020000D4B61F /* JLTaskDetailsVC.h */,
 				BAC01CB41E86020000D4B61F /* JLTaskDetailsVC.m */,
 				BAC01CB51E86020000D4B61F /* JLTaskDetailsVC.xib */,
+				BAFE1DCC1E86672100AF976E /* JLTouBiaoPayVC.h */,
+				BAFE1DCD1E86672100AF976E /* JLTouBiaoPayVC.m */,
+				BAFE1DCE1E86672100AF976E /* JLTouBiaoPayVC.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1288,6 +1304,8 @@
 		BABF1E511E1CE4E700055862 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				BACAD6C71E88EF6200B1D782 /* LxGridViewFlowLayout.h */,
+				BACAD6C81E88EF6200B1D782 /* LxGridViewFlowLayout.m */,
 				BABF1E531E1CE64E00055862 /* JLHomeLayout.h */,
 				BABF1E541E1CE64E00055862 /* JLHomeLayout.m */,
 				BA4727101E1E1C3100ECAEAA /* JLHomeCell.h */,
@@ -1625,6 +1643,7 @@
 				BA2B845E1DF943E10054C9B8 /* Main.storyboard in Resources */,
 				BABE8F971E111EE700C5AB73 /* JLRechargeViewController.xib in Resources */,
 				BA4727141E1E1C3100ECAEAA /* JLHomeCell.xib in Resources */,
+				BAFE1DD01E86672100AF976E /* JLTouBiaoPayVC.xib in Resources */,
 				BAB88D121E14BBF700DB315A /* cityData.plist in Resources */,
 				BA0B29171E0E126E00A461D9 /* JLIdentityViewController.xib in Resources */,
 				BA0B28AB1E0E109C00A461D9 /* MBProgressHUD.bundle in Resources */,
@@ -1722,10 +1741,12 @@
 				BACB67521E82215800339118 /* TZAssetModel.m in Sources */,
 				BAD5428D1E08DF5C00B99FC0 /* MJRefreshFooter.m in Sources */,
 				BABE8F961E111EE700C5AB73 /* JLRechargeViewController.m in Sources */,
+				BACAD6CC1E88F1CB00B1D782 /* JLImgGridCell.m in Sources */,
 				BABED8FB1E04E7A500B38476 /* NSObject+MJProperty.m in Sources */,
 				BA0B28A21E0E107600A461D9 /* UIRefreshControl+AFNetworking.m in Sources */,
 				BAD542991E08DF5C00B99FC0 /* MJRefreshConst.m in Sources */,
 				BA0B28991E0E107600A461D9 /* AFURLResponseSerialization.m in Sources */,
+				BAFE1DCF1E86672100AF976E /* JLTouBiaoPayVC.m in Sources */,
 				BA0B295F1E0E194B00A461D9 /* UIButton+WebCache.m in Sources */,
 				BA0B29561E0E194B00A461D9 /* MKAnnotationView+WebCache.m in Sources */,
 				BA2B06301E7FB4C30047426D /* UIView+SDExtension.m in Sources */,
@@ -1766,6 +1787,7 @@
 				BA0B28DF1E0E122600A461D9 /* JLHomeViewController.m in Sources */,
 				BAB53E7B1E8371AB00BF3BE7 /* DateUtil.m in Sources */,
 				BAAE6FD81E160BA900A78053 /* JLTradeAlertsCell.m in Sources */,
+				BACAD6C91E88EF6200B1D782 /* LxGridViewFlowLayout.m in Sources */,
 				BACB67541E82215800339118 /* TZImageCropManager.m in Sources */,
 				BABF1E5D1E1CF76F00055862 /* JXButton.m in Sources */,
 				BACB675B1E82215800339118 /* TZProgressView.m in Sources */,
