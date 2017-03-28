@@ -60,6 +60,28 @@
     return confromTimespStr;
 }
 
+// 获取当前时间的年、月、日、时、分、秒
++ (NSInteger)getTimeByFormatter:(NSString *)formatter{
+    // 获取当前时间
+    NSDate *nowDate = [NSDate date];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSUInteger unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
+    NSDateComponents *dateComponent = [calendar components:unitFlags fromDate:nowDate];
+    if([formatter isEqualToString:@"yyyy"]){
+        return [dateComponent year];
+    }else if ([formatter isEqualToString:@"MM"]){
+        return [dateComponent month];
+    }else if ([formatter isEqualToString:@"dd"]){
+        return [dateComponent day];
+    }else if ([formatter isEqualToString:@"HH"]){
+        return [dateComponent hour];
+    }else if ([formatter isEqualToString:@"mm"]){
+        return [dateComponent minute];
+    }else if ([formatter isEqualToString:@"ss"]){
+        return [dateComponent second];
+    }
+    return -1;
+}
 @end
 
 

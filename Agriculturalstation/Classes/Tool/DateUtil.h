@@ -19,4 +19,6 @@
 #pragma mark - 将某个时间戳转化成 时间
 + (NSString *)timestampSwitchTime:(NSInteger)timestamp andFormatter:(NSString *)format;
 
+#pragma mark - 获取当前时间的年、月、日、时、分、秒
++ (NSInteger)getTimeByFormatter:(NSString *)formatter;
 @end

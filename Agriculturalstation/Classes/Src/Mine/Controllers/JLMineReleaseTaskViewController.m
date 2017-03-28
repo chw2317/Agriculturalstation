@@ -13,6 +13,7 @@
 #import "JLReleaseTaskModel.h"
 #import "JLSelectTenderVC.h"
 #import "JLTaskDetailsVC.h"
+#import "JLReleaseTaskVC.h"
 
 #import "MJRefresh.h"
 #import "MJExtension.h"
@@ -44,6 +45,20 @@
     // 获取用户uid
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     userUid = [userDefaults objectForKey:@"uid"];
+    int regtype = [[userDefaults objectForKey:@"regtype"] intValue];
+    
+    if(regtype == 1){ // 农场主 ---> 可发布任务
+        // 设置“添加”按钮
+        UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        rightBtn.frame = CGRectMake(0, 0, 25, 25);
+        [rightBtn addTarget:self action:@selector(rightAddTaskEvent) forControlEvents:UIControlEventTouchUpInside];
+        // 普通状态
+        [rightBtn setBackgroundImage:[UIImage imageNamed:@"add_farm_right.png"] forState:UIControlStateNormal];
+        //    [rightBtn setImage:[UIImage imageNamed:@"add_farm_right.png"] forState:UIControlStateNormal];
+        // 添加
+        UIBarButtonItem *rightBarItem = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
+        self.navigationItem.rightBarButtonItem = rightBarItem;
+    }
     
     CGRect tableViewFrame = CGRectMake(0, 0, self.view.frame.size.width, SCREEN_HEIGHT - STATUS_HEIGHT - NAV_HEIGHT);
     // 创建一个分组样式的UITableView
@@ -72,6 +87,10 @@
     
     // 加载数据
     [self sendRequest:start];
+}
+
+- (void)rightAddTaskEvent{
+    [self.navigationController pushViewController:[JLReleaseTaskVC new] animated:YES];
 }
 
 - (void)sendRequest:(int)startNum{

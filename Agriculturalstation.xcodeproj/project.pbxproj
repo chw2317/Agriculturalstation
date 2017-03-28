@@ -210,6 +210,7 @@
 		BAF6AFD31E1BA8520008EBF1 /* AddFarmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAF6AFD11E1BA8520008EBF1 /* AddFarmViewController.xib */; };
 		BAF6AFD71E1BA8780008EBF1 /* AddOwnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF6AFD51E1BA8780008EBF1 /* AddOwnerViewController.m */; };
 		BAF6AFD81E1BA8780008EBF1 /* AddOwnerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAF6AFD61E1BA8780008EBF1 /* AddOwnerViewController.xib */; };
+		BAFD486F1E8A467C008EEB38 /* BLDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFD486E1E8A467C008EEB38 /* BLDatePickerView.m */; };
 		BAFE1DCB1E86225400AF976E /* CityChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFE1DCA1E86225400AF976E /* CityChooseViewController.m */; };
 		BAFE1DCF1E86672100AF976E /* JLTouBiaoPayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFE1DCD1E86672100AF976E /* JLTouBiaoPayVC.m */; };
 		BAFE1DD01E86672100AF976E /* JLTouBiaoPayVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAFE1DCE1E86672100AF976E /* JLTouBiaoPayVC.xib */; };
@@ -607,6 +608,8 @@
 		BAF6AFD41E1BA8780008EBF1 /* AddOwnerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddOwnerViewController.h; sourceTree = "<group>"; };
 		BAF6AFD51E1BA8780008EBF1 /* AddOwnerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddOwnerViewController.m; sourceTree = "<group>"; };
 		BAF6AFD61E1BA8780008EBF1 /* AddOwnerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddOwnerViewController.xib; sourceTree = "<group>"; };
+		BAFD486D1E8A467C008EEB38 /* BLDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLDatePickerView.h; sourceTree = "<group>"; };
+		BAFD486E1E8A467C008EEB38 /* BLDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLDatePickerView.m; sourceTree = "<group>"; };
 		BAFE1DC91E86225400AF976E /* CityChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityChooseViewController.h; sourceTree = "<group>"; };
 		BAFE1DCA1E86225400AF976E /* CityChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityChooseViewController.m; sourceTree = "<group>"; };
 		BAFE1DCC1E86672100AF976E /* JLTouBiaoPayVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTouBiaoPayVC.h; sourceTree = "<group>"; };
@@ -1492,6 +1495,7 @@
 		BAF6AFCB1E1B52610008EBF1 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				BAFD486C1E8A467C008EEB38 /* BLDatePickerView */,
 				BAFE1DC91E86225400AF976E /* CityChooseViewController.h */,
 				BAFE1DCA1E86225400AF976E /* CityChooseViewController.m */,
 				BABF1E5B1E1CF76F00055862 /* JXButton.h */,
@@ -1502,6 +1506,15 @@
 				BAB53E7A1E8371AB00BF3BE7 /* DateUtil.m */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		BAFD486C1E8A467C008EEB38 /* BLDatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				BAFD486D1E8A467C008EEB38 /* BLDatePickerView.h */,
+				BAFD486E1E8A467C008EEB38 /* BLDatePickerView.m */,
+			);
+			path = BLDatePickerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1690,6 +1703,7 @@
 				BA2B062F1E7FB4C30047426D /* SDCycleScrollView.m in Sources */,
 				BAB53E7E1E83B15400BF3BE7 /* JLSelectTenderVC.m in Sources */,
 				BA0B29571E0E194B00A461D9 /* NSData+ImageContentType.m in Sources */,
+				BAFD486F1E8A467C008EEB38 /* BLDatePickerView.m in Sources */,
 				BAF49A781E277012001DC63D /* JLHomeTaskCenterLayout.m in Sources */,
 				BAD5429A1E08DF5C00B99FC0 /* NSBundle+MJRefresh.m in Sources */,
 				BA0B29641E0E194B00A461D9 /* UIImageView+WebCache.m in Sources */,
