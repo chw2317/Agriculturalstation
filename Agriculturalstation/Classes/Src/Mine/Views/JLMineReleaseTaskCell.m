@@ -154,6 +154,7 @@
                 [self.curStatus setTitle:@"竞标中" forState:UIControlStateNormal];
             }else if (self.regtype == 2){
                 [self.curStatus setTitle:@"已投标" forState:UIControlStateNormal];
+                self.tenderBtn.hidden = YES; // 隐藏选标按钮
             }
             
             break;
@@ -161,7 +162,7 @@
         case 2: // 作业中
             if(self.regtype == 1){
                 [self.curStatus setTitle:@"作业中..." forState:UIControlStateNormal];
-                self.tenderBtn.hidden = YES;
+                self.tenderBtn.hidden = YES; // 隐藏选标按钮
             }else if (self.regtype == 2){
                 [self.tenderBtn setTitle:@"完成项目" forState:UIControlStateNormal];
             }
@@ -173,7 +174,10 @@
             break;
             
         case 4:
-            
+            [self.curStatus setTitle:@"等待接单" forState:UIControlStateNormal];
+            if(self.regtype == 2){
+                [self.tenderBtn setTitle:@"接下项目" forState:UIControlStateNormal];
+            }
             break;
             
         default:
@@ -198,7 +202,7 @@
         [alert show];
     }else{
         if([self.delegate respondsToSelector:@selector(selectTenderClick:)]){
-            [self.delegate selectTenderClick:_releaseTaskModel.id];
+            [self.delegate selectTenderClick:_releaseTaskModel];
         }
     }
 }

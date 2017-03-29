@@ -121,6 +121,7 @@
                 self.toubiaoPayVc = [JLTouBiaoPayVC new];
                 [self.navigationController pushViewController:_toubiaoPayVc animated:YES];
                 _toubiaoPayVc.totalprice = _taskModel.totalprice;
+                _toubiaoPayVc.taskid = _taskModel.id;
             }
             break;
             

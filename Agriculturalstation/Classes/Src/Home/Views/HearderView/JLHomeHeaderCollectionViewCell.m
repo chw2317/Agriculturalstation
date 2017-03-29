@@ -7,6 +7,8 @@
 //
 
 #import "JLHomeHeaderCollectionViewCell.h"
+#import "UIImageView+WebCache.h"
+#import "DateUtil.h"
 
 @interface JLHomeHeaderCollectionViewCell ()
 // 主图片
@@ -47,5 +49,66 @@
     return self;
 }
 
+- (void)setReleaseModel:(JLReleaseTaskModel *)releaseModel{
+    _releaseModel = releaseModel;
+    // 主图片，给一张默认图片，先使用默认图片，当图片加载完成后再替换
+    [self.picfilepath sd_setImageWithURL:[NSURL URLWithString:[IMAGE_URL stringByAppendingString:releaseModel.picfilepath]] placeholderImage:[UIImage imageNamed:@"no_pictures.png"]];
+    // 标题
+    self.name.text = releaseModel.name;
+    // 内容
+    self.content.text = releaseModel.content;
+    // 作业面积
+    self.operatingarea.text = [NSString stringWithFormat:@"作业面积：%0.2f亩",releaseModel.operatingarea];
+    // 项目款
+    self.totalprice.text = [NSString stringWithFormat:@"项目款：￥%0.2f",releaseModel.totalprice];
+    // 可接类型
+    self.meetuser.text = [NSString stringWithFormat:@"%d星及以上用户可接",releaseModel.needstar];
+    // 竞标截止日期
+    self.endtime.text = [NSString stringWithFormat:@"%@",[DateUtil timestampSwitchTime:releaseModel.endtime andFormatter:@"yyyy-MM-dd"]];
+}
+
++ (instancetype)releaseCellWithCollectionView:(UICollectionView *)collectionView forIndexPath:(NSIndexPath *)indexPath{
+    static NSString *identifier = @"collectionViewCell";
+    JLHomeHeaderCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+    if(!cell){
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"JLHomeHeaderCollectionViewCell" owner:nil options:nil] firstObject];
+    }
+    return cell;
+}
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

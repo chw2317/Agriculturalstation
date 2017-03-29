@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JLReleaseTaskModel.h"
 
 @interface JLHomeHeaderCollectionViewCell : UICollectionViewCell
 
+@property (nonatomic,strong) JLReleaseTaskModel *releaseModel;
+
++ (instancetype)releaseCellWithCollectionView:(UICollectionView *)collectionView forIndexPath:(nonnull NSIndexPath *)indexPath;
 
 @end
