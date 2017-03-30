@@ -8,7 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+// 代理
+@protocol JLSelectTenderVcDelegate <NSObject>
+
+- (void)refreshData;
+
+@end
+
 @interface JLEvaluationVC : UIViewController
+
+@property (nonatomic, assign) id<JLSelectTenderVcDelegate> delegate; // 声明代理
 
 @property (nonatomic, assign) int taskid;
 

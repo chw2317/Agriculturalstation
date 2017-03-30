@@ -253,6 +253,7 @@
             _evaluationVc = [JLEvaluationVC new];
             [self.navigationController pushViewController:_evaluationVc animated:YES];
             _evaluationVc.taskid = taskModel.id;
+            _evaluationVc.delegate = self;
             break;
             
         case 4: // 待接单

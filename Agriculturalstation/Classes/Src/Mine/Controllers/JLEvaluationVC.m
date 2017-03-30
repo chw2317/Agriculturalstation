@@ -20,6 +20,7 @@
     int regtype;
     NSString *uid;
     int level; // 评论等级：1好评（默认）、0中评、-1差评
+    UIButton *rightBtn;
 }
 // 好评
 - (IBAction)goodBtnClick:(id)sender;
@@ -62,7 +63,7 @@
     // Do any additional setup after loading the view from its nib.
     self.title = @"评价";
     // 设置“提交”按钮
-    UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     rightBtn.frame = CGRectMake(0, 0, 40, 24);
     [rightBtn addTarget:self action:@selector(submitEvaluationClick) forControlEvents:UIControlEventTouchUpInside];
     [rightBtn setTitle:@"提交" forState:UIControlStateNormal];
@@ -138,6 +139,7 @@
         self.goodFontBtn.userInteractionEnabled = NO;
         self.mediumFontBtn.userInteractionEnabled = NO;
         self.poorFontBtn.userInteractionEnabled = NO;
+        rightBtn.hidden = YES;
     }
     // 如果农机主的评论不为空，则说明农机主已经评论了
     if(!NULLString(evaluationModel.ownercomment)){
@@ -181,6 +183,7 @@
         self.goodFontBtn.userInteractionEnabled = NO;
         self.mediumFontBtn.userInteractionEnabled = NO;
         self.poorFontBtn.userInteractionEnabled = NO;
+        rightBtn.hidden = YES;
     }
     // 如果农机主的评论不为空，则说明农机主已经评论了
     if(!NULLString(evaluationModel.farmercomment)){
@@ -236,7 +239,7 @@
         // 显示MBProgressHUD
         [MBProgressHUD showMessage:nil];
         // 请求地址
-        NSString *url = [REQUEST_URL stringByAppendingString:@"app-task-op-accept.html"];
+        NSString *url = [REQUEST_URL stringByAppendingString:@"app-task-op-evaluation.html"];
         // 请求管理者
         AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
         manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
@@ -269,7 +272,7 @@
 
 - (void)closeCurrentPage{
     // 通过代理来实现，返回上一页面并刷新数据
-//    [_delegate refreshData];
+    [_delegate refreshData];
     // 选标成功，返回上一页面
     [self.navigationController popViewControllerAnimated:YES];
 }

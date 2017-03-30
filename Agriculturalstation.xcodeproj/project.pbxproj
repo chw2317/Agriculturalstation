@@ -132,6 +132,14 @@
 		BAB53E781E83654600BF3BE7 /* JLTransactionRecordsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAB53E761E83654600BF3BE7 /* JLTransactionRecordsCell.xib */; };
 		BAB53E7B1E8371AB00BF3BE7 /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB53E7A1E8371AB00BF3BE7 /* DateUtil.m */; };
 		BAB53E7E1E83B15400BF3BE7 /* JLSelectTenderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB53E7D1E83B15400BF3BE7 /* JLSelectTenderVC.m */; };
+		BAB6C7041E8CBA5900F680F7 /* JLFenQiPriceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB6C7031E8CBA5900F680F7 /* JLFenQiPriceVC.m */; };
+		BAB6C7081E8CBAD700F680F7 /* JLFenQiPriceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB6C7061E8CBAD700F680F7 /* JLFenQiPriceCell.m */; };
+		BAB6C7091E8CBAD700F680F7 /* JLFenQiPriceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAB6C7071E8CBAD700F680F7 /* JLFenQiPriceCell.xib */; };
+		BAB6C70C1E8CE57400F680F7 /* UITextField+IndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB6C70B1E8CE57400F680F7 /* UITextField+IndexPath.m */; };
+		BAB6C70F1E8D0E6C00F680F7 /* JLStagesPayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB6C70E1E8D0E6C00F680F7 /* JLStagesPayModel.m */; };
+		BAB6C7121E8D114400F680F7 /* JLPayStagesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB6C7111E8D114400F680F7 /* JLPayStagesVC.m */; };
+		BAB6C7161E8D11A800F680F7 /* JLPayStagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB6C7141E8D11A800F680F7 /* JLPayStagesCell.m */; };
+		BAB6C7171E8D11A800F680F7 /* JLPayStagesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAB6C7151E8D11A800F680F7 /* JLPayStagesCell.xib */; };
 		BAB88D121E14BBF700DB315A /* cityData.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAB88D111E14BBF700DB315A /* cityData.plist */; };
 		BAB8D9AD1E1F3D5F00DB23B9 /* JLFarmDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB8D9AC1E1F3D5F00DB23B9 /* JLFarmDetailsViewController.m */; };
 		BABE8F921E11142800C5AB73 /* RatingBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BABE8F911E11142800C5AB73 /* RatingBar.m */; };
@@ -469,6 +477,20 @@
 		BAB53E7A1E8371AB00BF3BE7 /* DateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtil.m; sourceTree = "<group>"; };
 		BAB53E7C1E83B15400BF3BE7 /* JLSelectTenderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLSelectTenderVC.h; sourceTree = "<group>"; };
 		BAB53E7D1E83B15400BF3BE7 /* JLSelectTenderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLSelectTenderVC.m; sourceTree = "<group>"; };
+		BAB6C7021E8CBA5900F680F7 /* JLFenQiPriceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLFenQiPriceVC.h; sourceTree = "<group>"; };
+		BAB6C7031E8CBA5900F680F7 /* JLFenQiPriceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLFenQiPriceVC.m; sourceTree = "<group>"; };
+		BAB6C7051E8CBAD700F680F7 /* JLFenQiPriceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLFenQiPriceCell.h; sourceTree = "<group>"; };
+		BAB6C7061E8CBAD700F680F7 /* JLFenQiPriceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLFenQiPriceCell.m; sourceTree = "<group>"; };
+		BAB6C7071E8CBAD700F680F7 /* JLFenQiPriceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLFenQiPriceCell.xib; sourceTree = "<group>"; };
+		BAB6C70A1E8CE57400F680F7 /* UITextField+IndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+IndexPath.h"; sourceTree = "<group>"; };
+		BAB6C70B1E8CE57400F680F7 /* UITextField+IndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+IndexPath.m"; sourceTree = "<group>"; };
+		BAB6C70D1E8D0E6C00F680F7 /* JLStagesPayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLStagesPayModel.h; sourceTree = "<group>"; };
+		BAB6C70E1E8D0E6C00F680F7 /* JLStagesPayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLStagesPayModel.m; sourceTree = "<group>"; };
+		BAB6C7101E8D114400F680F7 /* JLPayStagesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLPayStagesVC.h; sourceTree = "<group>"; };
+		BAB6C7111E8D114400F680F7 /* JLPayStagesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLPayStagesVC.m; sourceTree = "<group>"; };
+		BAB6C7131E8D11A800F680F7 /* JLPayStagesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLPayStagesCell.h; sourceTree = "<group>"; };
+		BAB6C7141E8D11A800F680F7 /* JLPayStagesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLPayStagesCell.m; sourceTree = "<group>"; };
+		BAB6C7151E8D11A800F680F7 /* JLPayStagesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLPayStagesCell.xib; sourceTree = "<group>"; };
 		BAB88D111E14BBF700DB315A /* cityData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cityData.plist; sourceTree = "<group>"; };
 		BAB8D9AB1E1F3D5F00DB23B9 /* JLFarmDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLFarmDetailsViewController.h; sourceTree = "<group>"; };
 		BAB8D9AC1E1F3D5F00DB23B9 /* JLFarmDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLFarmDetailsViewController.m; sourceTree = "<group>"; };
@@ -1005,6 +1027,10 @@
 				BAFE1DCC1E86672100AF976E /* JLTouBiaoPayVC.h */,
 				BAFE1DCD1E86672100AF976E /* JLTouBiaoPayVC.m */,
 				BAFE1DCE1E86672100AF976E /* JLTouBiaoPayVC.xib */,
+				BAB6C7021E8CBA5900F680F7 /* JLFenQiPriceVC.h */,
+				BAB6C7031E8CBA5900F680F7 /* JLFenQiPriceVC.m */,
+				BAB6C7101E8D114400F680F7 /* JLPayStagesVC.h */,
+				BAB6C7111E8D114400F680F7 /* JLPayStagesVC.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1012,6 +1038,8 @@
 		BA0B292A1E0E128F00A461D9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BAB6C70D1E8D0E6C00F680F7 /* JLStagesPayModel.h */,
+				BAB6C70E1E8D0E6C00F680F7 /* JLStagesPayModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1023,6 +1051,12 @@
 				BA0B292D1E0E128F00A461D9 /* JLReleaseTaskTagCell.m */,
 				BA0B292E1E0E128F00A461D9 /* JLReleaseTaskTagCell.xib */,
 				BA0B292F1E0E128F00A461D9 /* JLReleaseTaskTop.xib */,
+				BAB6C7051E8CBAD700F680F7 /* JLFenQiPriceCell.h */,
+				BAB6C7061E8CBAD700F680F7 /* JLFenQiPriceCell.m */,
+				BAB6C7071E8CBAD700F680F7 /* JLFenQiPriceCell.xib */,
+				BAB6C7131E8D11A800F680F7 /* JLPayStagesCell.h */,
+				BAB6C7141E8D11A800F680F7 /* JLPayStagesCell.m */,
+				BAB6C7151E8D11A800F680F7 /* JLPayStagesCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1513,6 +1547,8 @@
 		BAF6AFCB1E1B52610008EBF1 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				BAB6C70A1E8CE57400F680F7 /* UITextField+IndexPath.h */,
+				BAB6C70B1E8CE57400F680F7 /* UITextField+IndexPath.m */,
 				BAFD486C1E8A467C008EEB38 /* BLDatePickerView */,
 				BAFE1DC91E86225400AF976E /* CityChooseViewController.h */,
 				BAFE1DCA1E86225400AF976E /* CityChooseViewController.m */,
@@ -1677,8 +1713,10 @@
 				BAFE1DD01E86672100AF976E /* JLTouBiaoPayVC.xib in Resources */,
 				BAB88D121E14BBF700DB315A /* cityData.plist in Resources */,
 				BAFA678A1E8B9BEB001866CD /* JLEvaluationVC.xib in Resources */,
+				BAB6C7171E8D11A800F680F7 /* JLPayStagesCell.xib in Resources */,
 				BA0B29171E0E126E00A461D9 /* JLIdentityViewController.xib in Resources */,
 				BA0B28AB1E0E109C00A461D9 /* MBProgressHUD.bundle in Resources */,
+				BAB6C7091E8CBAD700F680F7 /* JLFenQiPriceCell.xib in Resources */,
 				BAAE06121E811FD900152210 /* JLOwnerDetailsCell.xib in Resources */,
 				BAAE6FD91E160BA900A78053 /* JLTradeAlertsCell.xib in Resources */,
 				BA0B29131E0E126E00A461D9 /* JLAccountInfoViewController.xib in Resources */,
@@ -1711,6 +1749,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAAE6FDF1E16142F00A78053 /* JLOwnerViewController.m in Sources */,
+				BAB6C70C1E8CE57400F680F7 /* UITextField+IndexPath.m in Sources */,
 				BAD542971E08DF5C00B99FC0 /* MJRefreshStateHeader.m in Sources */,
 				BABF1E4F1E1C9B8600055862 /* JLReleaseTaskVC.m in Sources */,
 				BACB67591E82215800339118 /* TZPhotoPreviewCell.m in Sources */,
@@ -1750,6 +1789,7 @@
 				BAAE6FD31E1608FE00A78053 /* JLOwnerCell.m in Sources */,
 				BA0B29601E0E194B00A461D9 /* UIImage+GIF.m in Sources */,
 				BABED8F81E04E7A500B38476 /* NSObject+MJClass.m in Sources */,
+				BAB6C7161E8D11A800F680F7 /* JLPayStagesCell.m in Sources */,
 				BAD542931E08DF5C00B99FC0 /* MJRefreshBackNormalFooter.m in Sources */,
 				BABED8FA1E04E7A500B38476 /* NSObject+MJKeyValue.m in Sources */,
 				BA0B295D1E0E194B00A461D9 /* SDWebImageManager.m in Sources */,
@@ -1771,6 +1811,7 @@
 				BA2B06371E7FE4050047426D /* JLFarmDetailCell.m in Sources */,
 				BAD5428E1E08DF5C00B99FC0 /* MJRefreshHeader.m in Sources */,
 				BA2B845B1DF943E10054C9B8 /* ViewController.m in Sources */,
+				BAB6C7081E8CBAD700F680F7 /* JLFenQiPriceCell.m in Sources */,
 				BACB67521E82215800339118 /* TZAssetModel.m in Sources */,
 				BAD5428D1E08DF5C00B99FC0 /* MJRefreshFooter.m in Sources */,
 				BABE8F961E111EE700C5AB73 /* JLRechargeViewController.m in Sources */,
@@ -1840,6 +1881,7 @@
 				BA2B062D1E7FB4C30047426D /* TAPageControl.m in Sources */,
 				BAAE6FE21E16145100A78053 /* JLTradeAlertsViewController.m in Sources */,
 				BAD542951E08DF5C00B99FC0 /* MJRefreshGifHeader.m in Sources */,
+				BAB6C70F1E8D0E6C00F680F7 /* JLStagesPayModel.m in Sources */,
 				BA0B295C1E0E194B00A461D9 /* SDWebImageDownloaderOperation.m in Sources */,
 				BA0B29161E0E126E00A461D9 /* JLIdentityViewController.m in Sources */,
 				BA0B28981E0E107600A461D9 /* AFURLRequestSerialization.m in Sources */,
@@ -1860,12 +1902,14 @@
 				BA0B28BD1E0E11A400A461D9 /* JLRegisterViewController.m in Sources */,
 				BAD542911E08DF5C00B99FC0 /* MJRefreshAutoStateFooter.m in Sources */,
 				BAD5429C1E08DF5C00B99FC0 /* UIScrollView+MJRefresh.m in Sources */,
+				BAB6C7041E8CBA5900F680F7 /* JLFenQiPriceVC.m in Sources */,
 				BAAE060A1E811D4000152210 /* JLOwnerDetailsVC.m in Sources */,
 				BA47271C1E1E2C6A00ECAEAA /* JLHomeHeaderView.m in Sources */,
 				BAB53E731E8363C400BF3BE7 /* JLRecordsModel.m in Sources */,
 				BA0B28971E0E107600A461D9 /* AFSecurityPolicy.m in Sources */,
 				BACB67511E82215800339118 /* TZAssetCell.m in Sources */,
 				BAF49A6C1E272FA0001DC63D /* JLHomeTaskCenterFooter.m in Sources */,
+				BAB6C7121E8D114400F680F7 /* JLPayStagesVC.m in Sources */,
 				BA0B29211E0E126E00A461D9 /* JLMineItem.m in Sources */,
 				BA0B29631E0E194B00A461D9 /* UIImageView+HighlightedWebCache.m in Sources */,
 				BAF3054D1E84B8AB00E11B72 /* JLSelectTenderLayout.m in Sources */,

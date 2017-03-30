@@ -10,8 +10,14 @@
 #import "SDCycleScrollView.h"
 #import "DateUtil.h"
 #import "JLTouBiaoPayVC.h"
+#import "JLFenQiPriceVC.h"
+#import "JLStagesPayModel.h"
 
-@interface JLTaskDetailsVC (){
+#import "AFNetworking.h"
+#import "MBProgressHUD+MJ.h"
+#import "MJExtension.h"
+
+@interface JLTaskDetailsVC ()<UIAlertViewDelegate>{
     int regtype;
 }
 
@@ -51,7 +57,9 @@
 // 参与投标
 @property (strong, nonatomic) IBOutlet UIButton *touBiaoBtn;
 
-@property (nonatomic, strong) JLTouBiaoPayVC *toubiaoPayVc;
+@property (nonatomic, strong) JLTouBiaoPayVC *toubiaoPayVc; // 投标支付
+@property (nonatomic, strong) JLFenQiPriceVC *fenQiPrice; // 分期金额
+@property (nonatomic, strong) NSMutableArray *stagesArray;
 
 @end
 
@@ -64,6 +72,7 @@
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     regtype = [[userDefaults objectForKey:@"regtype"] intValue];
     [self setTaskData];
+    _stagesArray = [NSMutableArray array];
 }
 
 - (void)setTaskData{
@@ -128,8 +137,23 @@
         case 2: // 作业中
             if(regtype == 1){
                 // 支付进度款
+                if(_stagesArray.count > 0){ // 已经设置过了分期次数
+                    
+                }else{
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"支付期数" message:@"请输入需要分期的期数" delegate:self
+                                                          cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+                    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+                    alert.tag = 110;
+                    UITextField *textField = [alert textFieldAtIndex:0];
+                    textField.keyboardType = UIKeyboardTypeNumberPad;
+                    [alert show];
+                }
+                
             }else if (regtype == 2){
                 // 确认支付进度款
+                if(_stagesArray.count > 0){ // 已经设置过了分期次数
+                    
+                }
             }
             break;
             
@@ -137,6 +161,51 @@
             self.touBiaoBtn.hidden = YES; // 隐藏按钮
             break;
     }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if(alertView.tag == 110){
+        if(buttonIndex == 1){
+            UITextField *textField = [alertView textFieldAtIndex:0];
+            JLLog(@"textField == %@",textField.text);
+            _fenQiPrice = [JLFenQiPriceVC new];
+            [self.navigationController pushViewController:_fenQiPrice animated:YES];
+            _fenQiPrice.fenQiNum = textField.text;
+            _fenQiPrice.taskid = _taskModel.id;
+        }
+    }
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    // 获取进度款记录
+    [self getStagesPay];
+}
+
+// 获取进度款记录
+- (void)getStagesPay{
+    if(_stagesArray.count > 0){
+        [_stagesArray removeAllObjects];
+    }
+    [MBProgressHUD showMessage:nil];
+    // 请求地址
+    NSString *url = [REQUEST_URL stringByAppendingString:@"app-task-op-paystagesrecord.html"];
+    // 请求管理者
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
+    // 拼接请求参数
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"taskid"] = [NSString stringWithFormat:@"%d", _taskModel.id];
+    // 发起请求
+    [manager POST:url parameters:parameters progress:^(NSProgress *_Nonnull uploadProgress){
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
+        [MBProgressHUD hideHUD];
+        [_stagesArray addObjectsFromArray:[JLStagesPayModel mj_objectArrayWithKeyValuesArray:responseObject]];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
+        [MBProgressHUD hideHUD];
+        [MBProgressHUD showError:@"加载失败"];
+    }];
 }
 @end
 
