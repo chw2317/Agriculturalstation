@@ -10,4 +10,6 @@
 
 @interface JLPayStagesVC : UIViewController
 
+@property (nonatomic, copy) NSMutableArray *stagesArray;
+
 @end

@@ -12,6 +12,7 @@
 #import "JLTouBiaoPayVC.h"
 #import "JLFenQiPriceVC.h"
 #import "JLStagesPayModel.h"
+#import "JLPayStagesVC.h"
 
 #import "AFNetworking.h"
 #import "MBProgressHUD+MJ.h"
@@ -59,6 +60,7 @@
 
 @property (nonatomic, strong) JLTouBiaoPayVC *toubiaoPayVc; // 投标支付
 @property (nonatomic, strong) JLFenQiPriceVC *fenQiPrice; // 分期金额
+@property (nonatomic, strong) JLPayStagesVC *payStagesVc; // 支付分期款
 @property (nonatomic, strong) NSMutableArray *stagesArray;
 
 @end
@@ -138,7 +140,9 @@
             if(regtype == 1){
                 // 支付进度款
                 if(_stagesArray.count > 0){ // 已经设置过了分期次数
-                    
+                    _payStagesVc = [JLPayStagesVC new];
+                    [self.navigationController pushViewController:_payStagesVc animated:YES];
+                    _payStagesVc.stagesArray = _stagesArray;
                 }else{
                     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"支付期数" message:@"请输入需要分期的期数" delegate:self
                                                           cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
@@ -152,7 +156,9 @@
             }else if (regtype == 2){
                 // 确认支付进度款
                 if(_stagesArray.count > 0){ // 已经设置过了分期次数
-                    
+                    _payStagesVc = [JLPayStagesVC new];
+                    [self.navigationController pushViewController:_payStagesVc animated:YES];
+                    _payStagesVc.stagesArray = _stagesArray;
                 }
             }
             break;

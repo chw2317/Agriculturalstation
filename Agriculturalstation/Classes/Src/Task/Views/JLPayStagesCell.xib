@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="JLPayStagesCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第1期" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xM4-4H-XFI">
+                        <rect key="frame" x="8" y="11" width="100" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="Okz-u6-JNf"/>
+                            <constraint firstAttribute="height" constant="21" id="kCa-dU-YhN"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oj-Wa-Emp">
+                        <rect key="frame" x="140" y="11" width="100" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="GO9-t9-fd8"/>
+                            <constraint firstAttribute="height" constant="21" id="Whs-Zw-3Xx"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KC0-2f-yl6">
+                        <rect key="frame" x="275" y="6" width="100" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="WwJ-xJ-ZRk"/>
+                            <constraint firstAttribute="width" constant="100" id="faL-j3-Lag"/>
+                        </constraints>
+                        <state key="normal" title="支付"/>
+                        <connections>
+                            <action selector="payBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="v6g-3b-Gyc"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xM4-4H-XFI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="50J-jo-2Bz"/>
+                    <constraint firstItem="KC0-2f-yl6" firstAttribute="width" secondItem="xM4-4H-XFI" secondAttribute="width" id="C6p-e9-g5T"/>
+                    <constraint firstAttribute="trailing" secondItem="KC0-2f-yl6" secondAttribute="trailing" id="Ekp-e2-pIc"/>
+                    <constraint firstItem="3oj-Wa-Emp" firstAttribute="leading" secondItem="xM4-4H-XFI" secondAttribute="trailing" constant="32" id="EoS-ps-bDf"/>
+                    <constraint firstItem="3oj-Wa-Emp" firstAttribute="width" secondItem="xM4-4H-XFI" secondAttribute="width" id="G0k-O2-2wF"/>
+                    <constraint firstItem="xM4-4H-XFI" firstAttribute="centerY" secondItem="3oj-Wa-Emp" secondAttribute="centerY" id="Hye-Rj-4w6"/>
+                    <constraint firstItem="KC0-2f-yl6" firstAttribute="leading" secondItem="3oj-Wa-Emp" secondAttribute="trailing" constant="35" id="Mw8-if-W9h"/>
+                    <constraint firstItem="3oj-Wa-Emp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="QwK-9U-g9G"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="xM4-4H-XFI" secondAttribute="bottom" constant="3" id="Zcy-te-Bw9"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="3oj-Wa-Emp" secondAttribute="bottom" constant="3" id="cx0-hq-HE2"/>
+                    <constraint firstItem="3oj-Wa-Emp" firstAttribute="centerY" secondItem="KC0-2f-yl6" secondAttribute="centerY" id="kGq-Af-O7Z"/>
+                    <constraint firstItem="3oj-Wa-Emp" firstAttribute="leading" secondItem="xM4-4H-XFI" secondAttribute="trailing" constant="32" id="qFg-au-PB3"/>
+                    <constraint firstItem="xM4-4H-XFI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="vyB-jb-E9P"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="payBtn" destination="KC0-2f-yl6" id="wya-Tg-VSg"/>
+                <outlet property="priceLabel" destination="3oj-Wa-Emp" id="eb9-Iv-v4H"/>
+                <outlet property="qiNum" destination="xM4-4H-XFI" id="3uX-FI-m5R"/>
+            </connections>
+            <point key="canvasLocation" x="24.5" y="52"/>
+        </tableViewCell>
+    </objects>
+</document>
